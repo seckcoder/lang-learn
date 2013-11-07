@@ -1,0 +1,210 @@
+
+[2012-09-28 10:58:35,497: ERROR/MainProcess] Consumer: Connection Error: Error 61 connecting 127.0.0.1:6379. Connection refused.. Trying again in 8 seconds...
+[2012-09-28 10:59:13,283: INFO/MainProcess] Got task from broker: proj.tasks.add_exc[5e5cdc54-045b-437b-8c3e-317d2128f148]
+[2012-09-28 10:59:13,355: INFO/MainProcess] Got task from broker: proj.tasks.add_exc_callback[badec0f2-aea5-4f18-a546-ffa1980b362f]
+[2012-09-28 10:59:13,355: ERROR/MainProcess] Task proj.tasks.add_exc[5e5cdc54-045b-437b-8c3e-317d2128f148] raised exception: RuntimeError('add_exc',)
+Traceback (most recent call last):
+  File "/Library/Python/2.6/site-packages/celery-3.0.9-py2.6.egg/celery/task/trace.py", line 224, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/seckcoder/code/python/celery_user/proj/tasks.py", line 53, in add_exc
+    raise RuntimeError('add_exc')
+RuntimeError: add_exc
+[2012-09-28 10:59:13,393: WARNING/PoolWorker-2] *******
+[2012-09-28 10:59:13,394: WARNING/PoolWorker-2] exc:
+[2012-09-28 10:59:13,394: WARNING/PoolWorker-2] add_exc
+[2012-09-28 10:59:13,395: WARNING/PoolWorker-2] *******
+[2012-09-28 10:59:13,395: WARNING/PoolWorker-2] info:
+[2012-09-28 10:59:13,396: WARNING/PoolWorker-2] add_exc
+[2012-09-28 10:59:13,396: WARNING/PoolWorker-2] *******
+[2012-09-28 10:59:13,396: WARNING/PoolWorker-2] result:
+[2012-09-28 10:59:13,397: WARNING/PoolWorker-2] add_exc
+[2012-09-28 10:59:13,397: WARNING/PoolWorker-2] *******
+[2012-09-28 10:59:13,397: WARNING/PoolWorker-2] state:
+[2012-09-28 10:59:13,398: WARNING/PoolWorker-2] FAILURE
+[2012-09-28 10:59:13,398: WARNING/PoolWorker-2] *******
+[2012-09-28 10:59:13,399: WARNING/PoolWorker-2] status:
+[2012-09-28 10:59:13,399: WARNING/PoolWorker-2] FAILURE
+[2012-09-28 10:59:13,399: WARNING/PoolWorker-2] *******
+[2012-09-28 10:59:13,399: WARNING/PoolWorker-2] traceback:
+[2012-09-28 10:59:13,400: WARNING/PoolWorker-2] Traceback (most recent call last):
+  File "/Library/Python/2.6/site-packages/celery-3.0.9-py2.6.egg/celery/task/trace.py", line 224, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/seckcoder/code/python/celery_user/proj/tasks.py", line 53, in add_exc
+    raise RuntimeError('add_exc')
+RuntimeError: add_exc
+[2012-09-28 10:59:13,400: WARNING/PoolWorker-2] *******
+[2012-09-28 10:59:13,401: INFO/MainProcess] Task proj.tasks.add_exc_callback[badec0f2-aea5-4f18-a546-ffa1980b362f] succeeded in 0.0125370025635s: None
+[2012-09-28 11:01:19,592: WARNING/MainProcess] celery@w1.seckcoder_mbp has started.
+[2012-09-28 11:01:24,866: INFO/MainProcess] Got task from broker: proj.tasks.add_exc[1396a42b-af24-445c-86c4-9db801959e9c]
+[2012-09-28 11:01:24,880: INFO/MainProcess] Got task from broker: proj.tasks.add_exc_callback[3528f78f-7c10-4700-b0ab-f670f61cc9c9]
+[2012-09-28 11:01:24,881: ERROR/MainProcess] Task proj.tasks.add_exc[1396a42b-af24-445c-86c4-9db801959e9c] raised exception: RuntimeError('add_exc',)
+Traceback (most recent call last):
+  File "/Library/Python/2.6/site-packages/celery-3.0.9-py2.6.egg/celery/task/trace.py", line 224, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/seckcoder/code/python/celery_user/proj/tasks.py", line 45, in add_exc
+    raise RuntimeError('add_exc')
+RuntimeError: add_exc
+[2012-09-28 11:01:24,889: WARNING/PoolWorker-3] *******
+[2012-09-28 11:01:24,890: WARNING/PoolWorker-3] result:
+[2012-09-28 11:01:24,890: WARNING/PoolWorker-3] add_exc
+[2012-09-28 11:01:24,890: WARNING/PoolWorker-3] result type:
+[2012-09-28 11:01:24,891: WARNING/PoolWorker-3] <type 'exceptions.RuntimeError'>
+[2012-09-28 11:01:24,891: WARNING/PoolWorker-3] *******
+[2012-09-28 11:01:24,891: WARNING/PoolWorker-3] traceback:
+[2012-09-28 11:01:24,891: WARNING/PoolWorker-3] Traceback (most recent call last):
+  File "/Library/Python/2.6/site-packages/celery-3.0.9-py2.6.egg/celery/task/trace.py", line 224, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/Users/seckcoder/code/python/celery_user/proj/tasks.py", line 45, in add_exc
+    raise RuntimeError('add_exc')
+RuntimeError: add_exc
+[2012-09-28 11:01:24,892: WARNING/PoolWorker-3] *******
+[2012-09-28 11:01:24,892: INFO/MainProcess] Task proj.tasks.add_exc_callback[3528f78f-7c10-4700-b0ab-f670f61cc9c9] succeeded in 0.00541186332703s: None
+[2012-09-28 11:30:00,779: ERROR/MainProcess] Received unregistered task of type 'water_army.tasks.task_preprocessing'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you are using relative imports?
+Please see http://bit.ly/gLye1c for more information.
+
+The full contents of the message body was:
+{'retries': 0, 'task': 'water_army.tasks.task_preprocessing', 'eta': '2012-09-28T03:30:00.776088', 'args': [], 'expires': None, 'callbacks': [water_army.tasks.handle_task()], 'errbacks': None, 'kwargs': {}, 'id': '35bc33af-0051-40c7-b7ef-a85e2a4be4ae', 'utc': True} (557b)
+Traceback (most recent call last):
+  File "/Library/Python/2.6/site-packages/celery-3.0.9-py2.6.egg/celery/worker/consumer.py", line 411, in on_task_received
+    strategies[name](message, body, message.ack_log_error)
+KeyError: 'water_army.tasks.task_preprocessing'
+[2012-09-28 11:45:31,178: WARNING/MainProcess] celery@w1.seckcoder_mbp has started.
+[2012-09-28 11:46:23,594: INFO/MainProcess] Got task from broker: proj.tasks.add_class[a873d95e-b7b9-4655-af6f-fca3ae00c453]
+[2012-09-28 11:46:23,633: ERROR/MainProcess] Task proj.tasks.add_class[a873d95e-b7b9-4655-af6f-fca3ae00c453] raised exception: TypeError('add_class() takes exactly 3 arguments (2 given)',)
+Traceback (most recent call last):
+  File "/Library/Python/2.6/site-packages/celery-3.0.9-py2.6.egg/celery/task/trace.py", line 224, in trace_task
+    R = retval = fun(*args, **kwargs)
+TypeError: add_class() takes exactly 3 arguments (2 given)
+[2012-09-28 11:46:29,594: INFO/MainProcess] Got task from broker: proj.tasks.add_class[9cac96e2-5b4c-4deb-8359-9051ca1575f3]
+[2012-09-28 11:46:29,624: ERROR/MainProcess] Task proj.tasks.add_class[9cac96e2-5b4c-4deb-8359-9051ca1575f3] raised exception: TypeError('add_class() takes exactly 3 arguments (2 given)',)
+Traceback (most recent call last):
+  File "/Library/Python/2.6/site-packages/celery-3.0.9-py2.6.egg/celery/task/trace.py", line 224, in trace_task
+    R = retval = fun(*args, **kwargs)
+TypeError: add_class() takes exactly 3 arguments (2 given)
+[2012-09-28 11:46:39,539: INFO/MainProcess] Got task from broker: proj.tasks.add_class[2de239a7-f0aa-49ac-8a60-a0e71be5ee36]
+[2012-09-28 11:46:39,568: INFO/MainProcess] Task proj.tasks.add_class[2de239a7-f0aa-49ac-8a60-a0e71be5ee36] succeeded in 0.00269889831543s: 4
+[2012-09-28 11:47:08,138: WARNING/MainProcess] celery@w1.seckcoder_mbp has started.
+[2012-09-28 11:47:08,141: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 2 seconds...
+[2012-09-28 11:47:11,143: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 4 seconds...
+[2012-09-28 11:47:21,148: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 6 seconds...
+[2012-09-28 11:47:42,154: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 8 seconds...
+[2012-09-28 11:48:00,128: WARNING/MainProcess] celery@w1.seckcoder_mbp has started.
+[2012-09-28 11:48:00,131: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 2 seconds...
+[2012-09-28 11:48:03,134: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 4 seconds...
+[2012-09-28 11:48:13,139: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 6 seconds...
+[2012-09-28 11:48:34,146: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 8 seconds...
+[2012-09-28 11:49:10,153: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 10 seconds...
+[2012-09-28 11:50:05,168: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 12 seconds...
+[2012-09-28 11:51:23,178: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 14 seconds...
+[2012-09-28 11:53:08,191: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 16 seconds...
+[2012-09-28 11:55:24,204: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 18 seconds...
+[2012-09-28 11:58:15,221: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 20 seconds...
+[2012-09-28 12:01:45,238: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 22 seconds...
+[2012-09-28 12:05:58,255: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 24 seconds...
+[2012-09-28 12:10:58,272: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 26 seconds...
+[2012-09-28 12:16:49,293: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 28 seconds...
+[2012-09-28 12:23:35,313: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 30 seconds...
+[2012-09-28 12:31:20,334: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 12:40:08,355: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 12:48:56,374: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 12:57:44,392: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 13:06:32,415: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 13:15:20,435: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 13:24:08,455: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 13:32:56,477: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 13:41:44,499: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 13:50:32,519: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 13:59:20,542: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 14:08:08,563: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 14:16:56,583: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 14:25:44,604: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 14:34:32,627: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 14:43:20,647: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 14:52:08,666: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 15:00:56,720: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 15:09:44,773: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 15:18:32,802: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 15:27:20,828: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 15:36:08,857: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 15:44:56,888: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 15:53:44,922: ERROR/MainProcess] Consumer: Connection Error: [Errno 61] Connection refused. Trying again in 32 seconds...
+[2012-09-28 15:59:55,999: WARNING/MainProcess] celery@w1.seckcoder_mbp has started.
+[2012-09-28 15:59:56,057: ERROR/MainProcess] Received unregistered task of type 'proj.tasks.add_class'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you are using relative imports?
+Please see http://bit.ly/gLye1c for more information.
+
+The full contents of the message body was:
+{'retries': 0, 'task': 'proj.tasks.add_class', 'eta': None, 'args': (2, 2), 'expires': None, 'callbacks': None, 'errbacks': None, 'kwargs': {}, 'id': '6039ed16-6fbb-440c-9e6b-5ef271be8493', 'utc': True} (182b)
+Traceback (most recent call last):
+  File "/Library/Python/2.6/site-packages/celery-3.0.9-py2.6.egg/celery/worker/consumer.py", line 411, in on_task_received
+    strategies[name](message, body, message.ack_log_error)
+KeyError: 'proj.tasks.add_class'
+[2012-09-28 15:59:56,079: ERROR/MainProcess] Received unregistered task of type 'proj.tasks.add_class'.
+The message has been ignored and discarded.
+
+Did you remember to import the module containing this task?
+Or maybe you are using relative imports?
+Please see http://bit.ly/gLye1c for more information.
+
+The full contents of the message body was:
+{'retries': 0, 'task': 'proj.tasks.add_class', 'eta': None, 'args': (2, 2), 'expires': None, 'callbacks': None, 'errbacks': None, 'kwargs': {}, 'id': 'ac444e97-f9b5-480b-b5ad-eb6cb7b142c6', 'utc': True} (182b)
+Traceback (most recent call last):
+  File "/Library/Python/2.6/site-packages/celery-3.0.9-py2.6.egg/celery/worker/consumer.py", line 411, in on_task_received
+    strategies[name](message, body, message.ack_log_error)
+KeyError: 'proj.tasks.add_class'
+[2012-09-28 16:03:31,834: WARNING/MainProcess] celery@w1.seckcoder_mbp has started.
+[2012-09-28 16:03:52,280: WARNING/MainProcess] celery@w1.seckcoder_mbp has started.
+[2012-09-28 16:03:56,133: INFO/MainProcess] Got task from broker: StudyCase.add_class[5550eb7c-6234-498c-8a2f-2edbcdd03198]
+[2012-09-28 16:03:56,175: INFO/MainProcess] Task StudyCase.add_class[5550eb7c-6234-498c-8a2f-2edbcdd03198] succeeded in 0.00409603118896s: 4
+[2012-09-28 16:05:09,847: WARNING/MainProcess] celery@w1.seckcoder_mbp has started.
+[2012-09-28 16:05:13,959: INFO/MainProcess] Got task from broker: StudyCase.add_class[a7ceb596-befe-4a30-8b74-3bdbf9cb6f57]
+[2012-09-28 16:05:13,972: INFO/MainProcess] Task StudyCase.add_class[a7ceb596-befe-4a30-8b74-3bdbf9cb6f57] succeeded in 0.00243306159973s: 6
+[2012-09-28 16:05:14,463: INFO/MainProcess] Got task from broker: StudyCase2.add_class[5441d185-d9ef-4f13-9fce-1522ff49e447]
+[2012-09-28 16:05:14,504: INFO/MainProcess] Task StudyCase2.add_class[5441d185-d9ef-4f13-9fce-1522ff49e447] succeeded in 0.0068371295929s: 9
+[2012-09-28 16:13:33,659: WARNING/MainProcess] celery@w1.seckcoder_mbp has started.
+[2012-09-28 16:13:35,546: INFO/MainProcess] Got task from broker: StudyCase.add_class[b9c530af-4770-4aa3-a87e-7012f4a4604b]
+[2012-09-28 16:13:35,551: WARNING/PoolWorker-2] StudyCase.add_class
+[2012-09-28 16:13:35,552: INFO/MainProcess] Task StudyCase.add_class[b9c530af-4770-4aa3-a87e-7012f4a4604b] succeeded in 0.00322389602661s: 6
+[2012-09-28 16:13:36,050: INFO/MainProcess] Got task from broker: StudyCase.foo[9bdde363-efbb-4094-8038-c50652b734b4]
+[2012-09-28 16:13:36,083: WARNING/PoolWorker-4] StudyCase.foo
+[2012-09-28 16:13:36,092: WARNING/PoolWorker-4] f9823333-3b50-4871-8257-f83436f58967
+[2012-09-28 16:13:36,093: INFO/MainProcess] Got task from broker: StudyCase.bar[f9823333-3b50-4871-8257-f83436f58967]
+[2012-09-28 16:13:36,095: INFO/MainProcess] Task StudyCase.foo[9bdde363-efbb-4094-8038-c50652b734b4] succeeded in 0.0180821418762s: 10
+[2012-09-28 16:13:36,096: WARNING/PoolWorker-1] StudyCase.bar
+[2012-09-28 16:13:36,098: INFO/MainProcess] Task StudyCase.bar[f9823333-3b50-4871-8257-f83436f58967] succeeded in 0.00336599349976s: 15
+[2012-09-28 16:13:36,555: INFO/MainProcess] Got task from broker: StudyCase2.add_class[aad65b0f-030a-4dda-a92c-3178b08e0347]
+[2012-09-28 16:13:36,570: INFO/MainProcess] Task StudyCase2.add_class[aad65b0f-030a-4dda-a92c-3178b08e0347] succeeded in 0.00210881233215s: 9
+[2012-09-28 16:13:37,058: INFO/MainProcess] Got task from broker: StudyCase2.foo[fe6dbc1b-fb69-4acc-b7d7-dfee50757ca0]
+[2012-09-28 16:13:37,095: WARNING/PoolWorker-1] StudyCase2.foo
+[2012-09-28 16:13:37,103: WARNING/PoolWorker-1] 60d120da-6a9a-4d02-ba98-2279ce15d63d
+[2012-09-28 16:13:37,105: INFO/MainProcess] Got task from broker: StudyCase.bar[60d120da-6a9a-4d02-ba98-2279ce15d63d]
+[2012-09-28 16:13:37,105: INFO/MainProcess] Task StudyCase2.foo[fe6dbc1b-fb69-4acc-b7d7-dfee50757ca0] succeeded in 0.0106399059296s: 100
+[2012-09-28 16:13:37,113: WARNING/PoolWorker-2] StudyCase.bar
+[2012-09-28 16:13:37,114: INFO/MainProcess] Task StudyCase.bar[60d120da-6a9a-4d02-ba98-2279ce15d63d] succeeded in 0.0017421245575s: 15
+[2012-09-28 16:15:06,304: WARNING/MainProcess] celery@w1.seckcoder_mbp has started.
+[2012-09-28 16:15:08,454: INFO/MainProcess] Got task from broker: StudyCase.add_class[38ed0994-73fc-4a72-b777-cec13f1fd8ad]
+[2012-09-28 16:15:08,480: WARNING/PoolWorker-2] StudyCase.add_class
+[2012-09-28 16:15:08,481: INFO/MainProcess] Task StudyCase.add_class[38ed0994-73fc-4a72-b777-cec13f1fd8ad] succeeded in 0.00489401817322s: 6
+[2012-09-28 16:15:08,960: INFO/MainProcess] Got task from broker: StudyCase.foo[a4d196e6-277b-42cc-9058-a6e37e622900]
+[2012-09-28 16:15:09,009: WARNING/PoolWorker-1] StudyCase.foo
+[2012-09-28 16:15:09,019: WARNING/PoolWorker-1] 27a074e8-0e81-4364-b009-77d1c271c60c
+[2012-09-28 16:15:09,020: INFO/MainProcess] Got task from broker: StudyCase.bar[27a074e8-0e81-4364-b009-77d1c271c60c]
+[2012-09-28 16:15:09,021: INFO/MainProcess] Task StudyCase.foo[a4d196e6-277b-42cc-9058-a6e37e622900] succeeded in 0.0177409648895s: 10
+[2012-09-28 16:15:09,038: WARNING/PoolWorker-2] StudyCase.bar
+[2012-09-28 16:15:09,040: INFO/MainProcess] Task StudyCase.bar[27a074e8-0e81-4364-b009-77d1c271c60c] succeeded in 0.00170397758484s: 15
+[2012-09-28 16:15:09,465: INFO/MainProcess] Got task from broker: StudyCase2.add_class[349d1f0e-e66f-4486-8b47-ef034e296ab8]
+[2012-09-28 16:15:09,519: INFO/MainProcess] Task StudyCase2.add_class[349d1f0e-e66f-4486-8b47-ef034e296ab8] succeeded in 0.00728797912598s: 9
+[2012-09-28 16:15:09,970: INFO/MainProcess] Got task from broker: StudyCase2.foo[be5a267d-83a7-4019-88e7-38dedfd01c2a]
+[2012-09-28 16:15:09,991: WARNING/PoolWorker-3] StudyCase2.foo
+[2012-09-28 16:15:10,000: WARNING/PoolWorker-3] dbb406fa-e23b-437e-bd22-f503f525c8f1
+[2012-09-28 16:15:10,001: INFO/MainProcess] Got task from broker: StudyCase2.bar[dbb406fa-e23b-437e-bd22-f503f525c8f1]
+[2012-09-28 16:15:10,002: INFO/MainProcess] Task StudyCase2.foo[be5a267d-83a7-4019-88e7-38dedfd01c2a] succeeded in 0.0136749744415s: 100
+[2012-09-28 16:15:10,007: WARNING/PoolWorker-1] StudyCase2.bar
+[2012-09-28 16:15:10,008: INFO/MainProcess] Task StudyCase2.bar[dbb406fa-e23b-437e-bd22-f503f525c8f1] succeeded in 0.00141882896423s: 150

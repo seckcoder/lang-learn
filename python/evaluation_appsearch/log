@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "search.py", line 9, in <module>
+    print 'sheet ' + name
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 6-7: ordinal not in range(128)

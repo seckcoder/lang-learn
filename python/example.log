@@ -1,0 +1,9 @@
+2013-06-06 16:53:18,928 info---log
+2013-06-06 16:53:18,928 warning---log
+2013-06-06 16:53:18,928 error---log
+2013-06-06 16:53:18,929 critical---log
+2013-06-06 16:53:18,929 an exception happened
+Traceback (most recent call last):
+  File "logging_user.py", line 21, in simple_test
+    raise MyException("this is an exception")
+MyException: this is an exception
