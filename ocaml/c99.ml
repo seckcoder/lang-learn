@@ -177,10 +177,10 @@ let rec solve words sites site_map =
                        | Some site_map -> true)
                     (List.map
                        (fun (word, rest_words) ->
-                      solve
-                        rest_words
-                        rest_sites (fill_map site_map a_site word))
-                    pairs)
+                          solve
+                            rest_words
+                            rest_sites (fill_map site_map a_site word))
+                       pairs)
                 with Not_found ->
                   None
 ;;
