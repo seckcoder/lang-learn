@@ -12,18 +12,18 @@ let rec mplus ma get_ma =
                     (mplus (get_ma0 ())
                        get_ma)))
 
-let bind ma f =
+let rec bind ma f =
   match ma with
     | MZero -> MZero
     | Unit a -> f a
     | Cons (a, get_ma) ->
-        mplus (f a) get_ma
+        mplus (f a) (fun () ->
+                       (bind (get_ma ()) f))
 
 let rec map n ma f =
-  Format.(printf "%d \n" n);
   match ma with
     | MZero -> []
-    | Unit a -> [a]
+    | Unit a -> [f a]
     | Cons (a, get_ma) ->
         (f a) :: (if n < 0 then
                     map n (get_ma ()) f
