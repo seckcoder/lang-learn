@@ -1,3 +1,2 @@
-power:
-	as power.s -o power.o
-	ld power.o -o power
+power: power.s
+	gcc -m32 -g power.s -o power
