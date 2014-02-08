@@ -1,0 +1,1240 @@
+[15047:0321/213442:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(297)] ./yrdata/news_search/pageanalysis/data/topicclassify/conf_news_classify
+[15047:0321/213442:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(299)] Init topicclassify OK
+[15047:0321/213442:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(306)] Init PlaceFinder OK
+[15047:0321/213442:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(313)] Init NewsContentClean OK
+[15047:0321/213442:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(65)] Init news parser OK!
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(74)] Init TopicClassifyWrapper OK!
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(88)] Init PageDetection OK!
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(97)] Init SharedPage OK!
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(106)] Init ContentExtractor OK!
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(123)] Init ParseMaster OK!
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(132)] Init TimeDetector OK!
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(141)] Init TimeStringParser OK!
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(151)] Init Language Detector OK!
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(161)] Init Language Detector OK!
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(164)] Init member variable OK!
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(187)] Load url_name.txt OK!, there are 3516source
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(231)] Init NewsContentClean Config file OK
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(234)] Init NewsLinesClean Config file OK
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(245)] Init Mobile Video Config file OK
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(261)] Init yr timeparser OK
+[15047:0321/213446:INFO:news_search/page_analysis/newsanalysis/internal/news_analysis.cc(280)] Init news media comment OK
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(122)] Load OK!
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.zhijia.com/20130304/27657.shtml house_zhengce
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367672741.shtml ent_zongyi
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.takungpao.com/tech/q/2013/0304/1470732.html civil_difang
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.northnews.cn/2013/0304/1057519.shtml tech_yejie
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.jznews.com.cn/system/2013/03/04/010808531.shtml society_minsheng
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://policy.catr.cn/fgtg/201303/t20130301_907889.htm internet_yejie
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.yyt360.com/news/4/16233.html tech_kexue
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.citygf.com/FSNews/FS_002003/FS_002003003/201303/t20130304_4213736.html finance_hongguan
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.xinmin.cn/2013/03/04/18984418.html finance_hongguan
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.cnmn.com.cn/ShowNews1.aspx?id=263437 civil_shishi
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance1.ce.cn/rolling/201303/04/t20130304_17067429.shtml finance_gupiaojijin
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.dayoo.com/society/57401/201303/04/57401_109861549.htm edu_kaoshi
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.howbuy.com/news/2013-03-04/1835371.html finance_licai
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.northnews.cn/2013/0304/1057823.shtml edu_kaoshi
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213446:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.gushi360.com/finance/cydt/2013-03-04/1774255.shtml finance_gupiaojijin
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.wehefei.com/html/201303/0491833045.html finance_hongguan
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://gz.house.sina.com.cn/news/2013-03-04/10282205021.shtml house_zhengce
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.cs.com.cn/hw/rmbdt/201303/t20130304_3882485.html finance_licai
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.xinmin.cn/2013/03/04/18972339.html finance_hongguan
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://sh.house.sina.com.cn/news/2013-03-04/08092203989.shtml house_zhengce
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.ccstock.cn/HKstock/guoqinews/2013-03-04/A1086227.html tech_yejie
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.zznews.gov.cn/news/2013/0304/article_84465.html civil_shishi
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://forex.cnfol.com/130304/134,1381,14520671,00.shtml finance_licai
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.21cn.com/mil/2013/03/04/14757112.shtml military_gn
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.ifeng.com/stock/zqyw/20130304/7727835.shtml finance_gupiaojijin
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tech.xinmin.cn/internet/2013/03/04/18985295.html internet_yejie
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367671469.shtml civil_difang
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.dayoo.com/china/57400/201303/04/57400_109859674.htm civil_difang
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.xinmin.cn/2013/03/04/18973257.html finance_hongguan
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.e086.cn/html/pageSub/news/newone_363132.htm house_dongtai
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213447:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.66wz.com/system/2013/03/04/103555736.shtml civil_difang
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.xinmin.cn/2013/03/04/18979779.html finance_hongguan
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://gsrb.gansudaily.com.cn/system/2013/03/04/013726579.shtml edu_jiuye
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://military.china.com/news/568/20130304/17708649.html civil_gangaotai
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.jschina.com.cn/system/2013/03/04/016430208.shtml civil_difang
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367770813.shtml finance_licai
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://invest.jr18.com/show-419401-1.html civil_shishi
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.lxjunshi.com/html/20133/4/a5bcd7.html society_minsheng
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://ent.xinmin.cn/2013/03/04/18989278.html ent_yingshi
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.gushi360.com/finance/cydt/2013-03-04/1773586.shtml finance_gupiaojijin
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367767770.shtml internet_ce
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://sd.house.sina.com.cn/news/2013-03-04/11031787514.shtml house_zhengce
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.xin94.com/html/2013/shehuirentu_0111/1012.html society_shishang
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://cul.jschina.com.cn/system/2013/03/04/016434029.shtml finance_hongguan
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.ifeng.com/news/macro/20130304/7728272.shtml finance_hongguan
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://ent.china.com.cn/2013-03/04/content_28124954.htm ent_yingshi
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.sina.com.cn/money/future/20130304/135114710935.shtml finance_licai
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.dnkb.com.cn/archive/info/20130304/082308787.shtml civil_difang
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367730427.shtml edu_jiuye
+[15047:0321/213448:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://sjz.focus.cn/news/2013-03-04/2922452.html house_jiaju
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tech.xinmin.cn/internet/2013/03/04/18979925.html internet_yejie
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://ent.xinmin.cn/2013/03/04/18975607.html ent_zongyi
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.zhicheng.com/html/archive/142/201303/2975792.html finance_hongguan
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.hn.chinanews.com/news/szws/2013/0228/168049.html civil_shishi
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.dayoo.com/finance/201303/04/54401_109859361.htm finance_hongguan
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.cn.yahoo.com/ypen/20130304/1635651.html finance_hongguan
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.xinmin.cn/domestic/2013/03/04/18981207.html civil_difang
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367756808.shtml house_dongtai
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://ent.cqnews.net/html/2013-03/04/content_24931429.htm ent_baoliao_yuping_chanye
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.xhby.net/system/2013/03/04/016437340.shtml finance_hongguan
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.qingdaonews.com/content/2013-03/04/content_9629140.htm civil_difang
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.cthy.com/Allnews/11116.html civil_difang
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.xinmin.cn/shehui/2013/03/04/18971991.html society_shishang
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213449:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.jschina.com.cn/system/2013/03/04/016441523.shtml ent_yingshi
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.jsjjw.cn/option/csj/userobject1ai190124.html civil_difang
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.cinic.org.cn/site951/schj/2013-03-04/629223.shtml house_zhengce
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.chexun.com/2013-03-04/101762114.html finance_licai
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.tsxww.com/e/action/ShowInfo.php?classid=4&id=99729 civil_difang
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.022net.com/2013/3-4/502755142438266.html civil_difang
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.p5w.net/news/cjxw/201303/t20130304_52550.htm finance_hongguan
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://miit.ccidnet.com/art/34975/20130304/4771845_1.html tech_yejie
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://games.enet.com.cn/article/A6920130301194.html internet_ng
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.ahradio.com.cn/news/system/2013/03/04/002643756.shtml civil_difang
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.kaixian.tv/R1/n1115586c7.shtml ent_yingshi
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://business.sohu.com/20130304/n367730993.shtml finance_hongguan
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://games.enet.com.cn/article/A6920130226022.html internet_ng
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.chinanews.com/fortune/2013/03-04/4612202.shtml finance_licai
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://edu.cnwest.com/content/2013-03/04/content_8628206.htm edu_jiuye
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://zt-hzrb.hangzhou.com.cn/system/2013/03/04/012351533.shtml sports_nba
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367742233.shtml civil_difang
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.xinhuanet.com/local/2013-03/04/c_124410712.htm civil_shishi
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://money.huagu.com/mxlc/1303/198198.html finance_licai
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.21cn.com/stock/zqyw/a/2013/0304/08/20525287.shtml finance_gupiaojijin
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213450:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.shenguang.com/news/2013-03/6669D9DD6B264B5BAA946E08DC9E925C.html finance_hongguan
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.zibosky.com/gn/2088537.shtml civil_difang
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.cqcb.com/cbnews/gngjnews/2013-03-04/2682986.html civil_gangaotai
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://games.enet.com.cn/article/A11920130226031.html internet_ng
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://hn.rednet.cn/c/2013/02/03/2902186.htm edu_kaoshi
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367721443.shtml house_jiaju
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130303/n367658126.shtml internet_ce
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.chinanews.com/edu/2013/03-03/4610153.shtml edu_kaoshi
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.kaixian.tv/R1/n1128630c7.shtml internet_ce
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://stock.sohu.com/20130304/n367753623.shtml finance_gupiaojijin
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://auto.news18a.com/news/20130207/story_304476.html auto_dfdongtai
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://lady.cn.yahoo.com/ypen/20130304/1637257.html tech_kexue
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://hf.focus.cn/news/2013-03-04/2926021.html house_dongtai
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://money.eastmoney.com/news/1282,20130304276477862.html finance_hongguan
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://sy.house.sina.com.cn/news/2013-03-02/22301786476_2.shtml house_zhengce
+[15047:0321/213451:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.donews.com/it/201303/1429308.shtm tech_shuma
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://house.people.com.cn/n/2013/0304/c193638-20665243.html house_dongtai
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.66wz.com/system/2013/03/04/103556938.shtml civil_difang
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.gushi360.com/finance/cydt/2013-03-04/1773775.shtml finance_gupiaojijin
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://cq.ifeng.com/zhongqingxinwen/detail_2013_03/04/612535_0.shtml civil_difang
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367724517.shtml finance_hongguan
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.bitauto.com/dealer/20130304/1106034067.html auto_zixun
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.cnnb.com.cn/system/2013/03/04/007646365.shtml finance_hongguan
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.xinmin.cn/2013/03/04/18977260.html finance_hongguan
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367662159.shtml civil_difang
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tj.house.sina.com.cn/news/2013-03-04/16431787833.shtml house_zhengce
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.chinaiiss.com/html/20133/4/a5bcaf.html ent_baoliao_yuping_chanye
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tech.xinmin.cn/2013/03/04/18981099.html house_zhengce
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.ifeng.com/news/house/20130304/7728412.shtml civil_difang
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213452:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://economy.jschina.com.cn/system/2013/03/04/016433675.shtml finance_hongguan
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.chinanews.com/fz/2013/03-04/4610914.shtml civil_difang
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.kaixian.tv/R1/n1127144c7.shtml ent_yingshi
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tech.xinmin.cn/internet/2013/03/04/18976905.html internet_yejie
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.ftchinese.com/story/001049213 finance_hongguan
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.cnfol.com/130304/101,1280,14529688,00.shtml finance_hongguan
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.yule.com.cn/html/201303/143719.html ent_yinyue
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://ent.xinmin.cn/2013/03/04/18993011.html ent_baoliao_yuping_chanye
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://people.pedaily.cn/html/20130304778868.shtml civil_difang
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.tvtour.com.cn/travel/html/world/2013/0304/136165.html civil_difang
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://money.eastmoney.com/news/1583,20130304276469065.html finance_hongguan
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://bj.house.sina.com.cn/news/2013-03-04/10091787373.shtml house_zhengce
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.s1979.com/shenzhen/201303/0378611603.shtml civil_difang
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.ahradio.com.cn/news/system/2013/03/04/002644526.shtml civil_difang
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367677821.shtml edu_liuxue
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.66ruian.com/system/2013/03/04/011222033.shtml ent_baoliao_yuping_chanye
+[15047:0321/213453:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.21cn.com/world/huaren/2013/03/04/14755121.shtml world_qiwen
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.bj.xinhuanet.com/bjyw/2013-03/04/c_114878913.htm house_dongtai
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://auto.hexun.com/2013-03-04/151667522.html auto_xinche
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.xinmin.cn/2013/03/04/18992974.html finance_licai
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.people.com.cn/n/2013/0304/c1004-20669206.html finance_hongguan
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://jingji.cntv.cn/2013/03/04/ARTI1362365561343497.shtml finance_hongguan
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.hexun.com/2013-03-04/151664493.html world_qiwen
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://money.msn.com.cn/windows8/Business/20130304/10451536920.shtml finance_licai
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.163.com/13/0304/11/8P4BU1QC00014JB6.html tech_kexue
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.xinmin.cn/2013/03/04/18986174.html finance_hongguan
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.online.sh.cn/news/gb/content/2013-03/04/content_5883240.htm civil_difang
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367674623.shtml tech_shuma
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://world.cankaoxiaoxi.com/2013/0304/173054.shtml world_qiwen
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213454:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.jznews.com.cn/system/2013/03/04/010810055.shtml sports_gjzuqiu
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://sports.qq.com/a/20130304/000366.htm sports_lottery
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130303/n367658053.shtml internet_ce
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://it.hangzhou.com.cn/jrjd/yjnews/content/2013-03/04/content_4631122.htm tech_shuma
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.zghzp.com/news/hyzx/qykt/49285.html internet_ce
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.66wz.com/system/2013/03/04/103555695.shtml world_qiwen
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.xinmin.cn/2013/03/04/18986916.html finance_hongguan
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367670294.shtml civil_difang
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://guizhou.house.sina.com.cn/news/2013-03-04/092338452.shtml house_zhengce
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.ceweekly.cn/html/Article/20130304168526.html civil_difang
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.jinti.com/guonei/1499955969.htm civil_shishi
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.ce.cn/culture/gd/201303/04/t20130304_24165106.shtml finance_hongguan
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://miit.ccidnet.com/art/32559/20130304/4769283_1.html house_zhengce
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://env.people.com.cn/n/2013/0304/c1010-20663206.html civil_difang
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.studentboss.com/html/news/2013-03-04/129963.htm edu_kaoshi
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367681592.shtml house_zhengce
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://hz.house.sina.com.cn/news/2013-03-03/19442203672.shtml house_zhengce
+[15047:0321/213455:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.xinmin.cn/2013/03/04/18985316.html finance_hongguan
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.afinance.cn/new/tpxw/201303/546101.html finance_hongguan
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.china.com.cn/news/txt/2013-03/04/content_28120859.htm civil_difang
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.cnwest.com/content/2013-03/04/content_8628311.htm society_minsheng
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.jinti.com/guonei/1499955978.htm civil_difang
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.580k.com/h/201303/04/n20130304_385801.shtml military_gn
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tech.gmw.cn/2013-03/04/content_6889037.htm tech_kexue
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://games.qq.com/a/20130304/000002.htm internet_ng
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.chinaunix.net/digi/2013/0304/2659580.shtml tech_shuma
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.chinaunix.net/digi/2013/0303/2658286.shtml tech_shuma
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.xinhuanet.com/politics/2013-03/04/c_124415102.htm civil_shishi
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.dsqq.cn/ylty/bgph/2013/03/04142955884.html ent_baoliao_yuping_chanye
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.163.com/13/0304/17/8P4V9G1200014AED.html tech_kexue
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.marketdaily.com.cn/GB/96781/96782/6783981.html finance_hongguan
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://sports.people.com.cn/n/2013/0304/c22176-20666309.html sports_nba
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://hunan.voc.com.cn/article/201303/201303041124383475.html civil_shishi
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213456:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.xhby.net/system/2013/03/04/016435404.shtml finance_hongguan
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://fzwb.ynet.com/3.1/1303/03/7860166.html internet_ng
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.163.com/13/0304/07/8P3SJ3AU00014AED.html internet_yejie
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.srzc.com/news/srxw/a/2013/0304/1498319.html tech_kexue
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://miit.ccidnet.com/art/32559/20130304/4771943_1.html house_zhengce
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.chinacars.com/xinche/guonei/1007759.shtml civil_shishi
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.ifeng.com/stock/zqyw/20130304/7726419.shtml finance_gupiaojijin
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.chinanews.com/edu/2013/03-04/4613841.shtml edu_kaoshi
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://nhnews.zjol.com.cn/nhnews/system/2013/03/04/016146426.shtml edu_jiuye
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://miit.ccidnet.com/art/32559/20130304/4771361_1.html world_qiwen
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://hd.yesky.com/digital/284/34484284.shtml tech_shuma
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.ce.cn/culture/gd/201303/04/t20130304_24164633.shtml world_yaowen
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.jn001.com/news/2013-03/01/content_599719.htm civil_shishi
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.people.com.cn/n/2013/0304/c66323-20669741.html finance_hongguan
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.nxtv.cn/article/ent/20130304296325.html ent_baoliao_yuping_chanye
+[15047:0321/213457:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.qq.com/a/20130304/007026.htm finance_hongguan
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://sh.focus.cn/news/2013-03-04/2928621.html house_dongtai
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.gushi360.com/finance/guonei/2013-03-04/1773556.shtml finance_gupiaojijin
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.xhby.net/system/2013/03/04/016431018.shtml finance_hongguan
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.xinmin.cn/2013/03/04/18992799.html finance_licai
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.xbsb.com.cn/xbsbnews/financial/cjxw/2013-03-04/449551.html internet_yejie
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.qianhuaweb.com/content/2013-03/04/content_3825270.htm house_zhengce
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://hb.people.com.cn/n/2013/0304/c194063-18244048.html civil_difang
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://digi.daqi.com/article/3420646.html tech_shuma
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.cntv.cn/2013/03/04/ARTI1362355243943359.shtml world_qiwen
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://edu.dbw.cn/system/2013/03/04/054618513.shtml edu_jiuye
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tech.ifeng.com/digi/news/detail_2013_03/04/22702607_0.shtml tech_shuma
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.teachercn.com/EduNews/News_Jtjy/2013-2/25/2013022517271474949.html edu_jiuye
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.youth.cn/gn/201303/t20130304_2931540.htm edu_kaoshi
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213458:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.ifeng.com/money/roll/20130304/7726869.shtml world_qiwen
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://japan.people.com.cn/35468/8152475.html world_qiwen
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://money.huagu.com/cgyx/1303/198166.html finance_licai
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://money.eastmoney.com/news/1583,20130304276344944.html finance_hongguan
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.cnwest.com/content/2013-03/04/content_8630817.htm internet_yejie
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.nfgb.com.cn/NewsContent.aspx?id=39280 edu_kaoshi
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.qlfz365.cn/Article/wqzx/201303/20130304105657.html finance_hongguan
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://qingdao.auto.sohu.com/20130301/n367495559.shtml auto_xinche
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tech.xinmin.cn/internet/2013/03/04/18978944.html internet_yejie
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.xinmin.cn/world/2013/03/04/18973192.html world_qiwen
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://money.jrj.com.cn/2013/03/04200715108391.shtml finance_licai
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.house365.com/gbk/wxestate/system/2013/03/02/021471335.html house_jiaju
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://fs.house.sina.com.cn/news/2013-03-04/08322204120.shtml house_zhengce
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://fz.66house.com/fznews/lskd/lsxw/201302/t20130225_445155.htm world_qiwen
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.dry.com.cn/news/html/2013/3/4/newsView_17531.html house_zhengce
+[15047:0321/213459:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.china-ef.com/20130304/376986.html society_shishang
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.chinaunix.net/digi/2013/0304/2660066.shtml tech_shuma
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://economy.lsnews.com.cn/system/2013/03/04/010391168.shtml civil_difang
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://ent.huanqiu.com/yuleyaowen/2013-03/3700099.html ent_baoliao_yuping_chanye
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://yuqing.voc.com.cn/article/201303/201303041606473978.html house_jiaju
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367685070.shtml internet_ce
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.yuanlin.com/detail/201334/138169.htm civil_difang
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://zjnews.zjol.com.cn/05zjnews/system/2013/03/04/019183135.shtml civil_difang
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tour.dbw.cn/system/2013/03/04/054617206.shtml civil_shishi
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.99ys.com/20130304/article--130304--119986_1.shtml world_qiwen
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://money.msn.com.cn/joblife/20130304/10591536925.shtml finance_licai
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.hh.cn/news_1/xw06/201303/t20130304_473815.html world_qiwen
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.jjckb.cn/2013-03/04/content_431528.htm military_gn
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://cn.ibtimes.com/articles/22701/20130304/rentouma-suhuaji-fengbo-chengqing-jiance.htm civil_difang
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.donews.com/it/201303/1428751.shtm tech_shuma
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.dayoo.com/ent/201303/04/54102_109861611.htm ent_baoliao_yuping_chanye
+[15047:0321/213500:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://nj.yesky.com/4/34486504.shtml internet_ce
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tech.163.com/digi/13/0304/10/8P47GARL001665EV.html tech_shuma
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.xinhuanet.com/politics/2013-03/04/c_124410601.htm civil_shishi
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367713225.shtml internet_ce
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.howbuy.com/news/2013-03-04/1835282.html internet_yejie
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://money.591hx.com/article/2013-03-04/0000221998s.shtml finance_hongguan
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.cippe.net/news/html/201303/120831.html civil_shishi
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.ghjie.com/guonei/2013/03/1711383.shtml civil_shishi
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.he.xinhuanet.com/news/2013-03/04/c_114874067.htm civil_shishi
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.cqcb.com/cbnews/gngjnews/2013-03-04/2681481.html civil_shishi
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://zt-hzrb.hangzhou.com.cn/system/2013/03/04/012351962.shtml sports_nba
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.kaixian.tv/R1/n1115645c6.shtml internet_yejie
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://miit.ccidnet.com/art/34975/20130304/4768459_1.html military_gn
+[15047:0321/213501:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.qq.com/a/20130304/006708.htm finance_hongguan
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.66163.com/2013-03-04/739973.shtml finance_hongguan
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.house365.com/gbk/czestate/system/2013/03/04/021479870.html house_zhengce
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://stock.cfi.cn/p20130302000723.html finance_gupiaojijin
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tech.xinmin.cn/internet/2013/03/04/18990922.html internet_ng
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.hexun.com/2013-03-04/151662612.html house_dongtai
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.cb.com.cn/1634427/20130304/450394.html world_qiwen
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.cs.com.cn/xwzx/hg/201303/t20130304_3883244.html civil_difang
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.sznews.com/content/2013-03/04/content_7766539.htm society_quwen
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367719098.shtml edu_kaoshi
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://tech.xinmin.cn/internet/2013/03/04/18993646.html internet_ng
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.ccstock.cn/finance/hangyedongtai/2013-03-04/A1085681.html finance_hongguan
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://cs.js.chinanews.com.cn/content/2013/0121/00000656322416z126913790.html house_dongtai
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.cn.yahoo.com/ypen/20130304/1636874.html finance_hongguan
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://jhwcw.zjol.com.cn/wcnews/system/2013/03/04/016147498.shtml house_dongtai
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367702713.shtml finance_hongguan
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.ce.cn/cysc/sp/info/201303/04/t20130304_21436267.shtml civil_difang
+[15047:0321/213502:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.hinews.cn/news/system/2013/03/04/015497103.shtml ent_baoliao_yuping_chanye
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://stock.sohu.com/20130304/n367698275.shtml finance_gupiaojijin
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.xbsb.com.cn/xbsbnews/kyz/2013-03-04/450198.html edu_jiuye
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.ttcj.cn/3367360.html finance_gupiaojijin
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.southcn.com/f/2013-03/04/content_64956394.htm finance_hongguan
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.runsky.com/2013-03/04/content_4602223.htm society_quwen
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://money.591hx.com/article/2013-03-04/0000222050s.shtml finance_hongguan
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://china.newssc.org/system/2013/03/04/013734557.shtml civil_difang
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://games.enet.com.cn/article/A103620130301039.html internet_ng
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.cssn.cn/news/680571.htm edu_kaoshi
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367696659.shtml civil_difang
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.ccstock.cn/shishiywen/2013-03-04/A1086882.html ent_baoliao_yuping_chanye
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.xinmin.cn/shehui/2013/03/04/18970969.html society_shishang
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://biz.xinmin.cn/2013/03/04/18987314.html finance_hongguan
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.xj.chinanews.com/html/V51/2013/03/04/67786383003.htm civil_difang
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://yn.people.com.cn/news/yunnan/n/2013/0304/c228496-18244652.html civil_difang
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213503:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://miit.ccidnet.com/art/34975/20130304/4768507_1.html civil_difang
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://hlj.people.com.cn/n/2013/0304/c222646-18242993.html society_minsheng
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://bj.house.sina.com.cn/news/2013-03-04/08141786917.shtml house_zhengce
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.163.com/13/0304/21/8P5EPCEM00014JB5.html internet_yejie
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.taizhou.com.cn/news/2013-03/04/content_985804.htm civil_difang
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367700377.shtml house_dongtai
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.baotounews.com.cn/content/2013-03/04/content_249318.htm house_dongtai
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://ts.hebnews.cn/2013-03/04/content_3123057.htm house_dongtai
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.zcom.com/article/87855/ world_qiwen
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://fashion.ifeng.com/news/detail_2013_03/04/22697119_0.shtml society_minsheng
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://bj.house.sina.com.cn/news/2013-03-04/08411787044.shtml house_zhengce
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:2|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.022net.com/2013/3-4/471656142480222.html ent_baoliao_yuping_chanye
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://news.xinmin.cn/domestic/2013/03/04/18987402.html civil_shishi
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://it.21cn.com/prnews/a/2013/0304/06/20523885.shtml ent_baoliao_yuping_chanye
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://sports.xinmin.cn/2013/03/03/18967810.html sports_gjzuqiu
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:1|
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://stock.huagu.com/rmht/1303/775143.html finance_gupiaojijin
+[15047:0321/213504:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://www.cncms.com/a/201302/217276.shtml auto_xinche
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:0|
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://finance.sina.com.cn/emba/acemsf/20130304/094114708243.shtml finance_hongguan
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/internal/sc_naive_bayes_model.cc(162)] |MODEL|
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367673168.shtml civil_shishi
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(154)] <<<START>>>
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/internal/sc_bag_rule.cc(189)] |RULE:3|
+[15047:0321/213505:INFO:news_search/page_analysis/topicclassify/test/confidence/confidence.cc(165)] <<<END>>> http://roll.sohu.com/20130304/n367732730.shtml tech_shuma

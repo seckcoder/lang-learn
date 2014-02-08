@@ -1,0 +1,1 @@
+KIKYO_HAHA = "hhaa"

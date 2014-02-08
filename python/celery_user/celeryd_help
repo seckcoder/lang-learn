@@ -1,0 +1,70 @@
+Usage: celeryd [options] 
+
+Options:
+  -A APP, --app=APP     app instance to use (e.g. module.attr_name)
+  -b BROKER, --broker=BROKER
+                        url to broker.  default is 'amqp://guest@localhost//'
+  --loader=LOADER       name of custom loader class to use.
+  --config=CONFIG_MODULE
+                        name of the configuration module (default:
+                        celeryconfig)
+  -c CONCURRENCY, --concurrency=CONCURRENCY
+                        Number of child processes processing the queue. The
+                        default is the number of CPUs available on your
+                        system.
+  -P POOL_CLS, --pool=POOL_CLS
+                        Pool implementation: processes (default), eventlet,
+                        gevent, solo or threads.
+  --purge, --discard    Purges all waiting tasks before the daemon is started.
+                        **WARNING**: This is unrecoverable, and the tasks will
+                        be deleted from the messaging server.
+  -f LOGFILE, --logfile=LOGFILE
+                        Path to log file. If no logfile is specified, stderr
+                        is used.
+  -l LOGLEVEL, --loglevel=LOGLEVEL
+                        Logging level, choose between DEBUG, INFO, WARNING,
+                        ERROR, CRITICAL, or FATAL.
+  -n HOSTNAME, --hostname=HOSTNAME
+                        Set custom hostname, e.g. 'foo.example.com'.
+  -B, --beat            Also run the celerybeat periodic task scheduler.
+                        Please note that there must only be one instance of
+                        this service.
+  -s SCHEDULE_FILENAME, --schedule=SCHEDULE_FILENAME
+                        Path to the schedule database if running with the -B
+                        option. Defaults to celerybeat-schedule. The extension
+                        ".db" may be appended to the filename.
+  --scheduler=SCHEDULER_CLS
+                        Scheduler class to use. Default is
+                        celery.beat.PersistentScheduler
+  -S STATE_DB, --statedb=STATE_DB
+                        Path to the state database. The extension '.db' may be
+                        appended to the filename. Default: None
+  -E, --events          Send events that can be captured by monitors like
+                        celeryev, celerymon, and others.
+  --time-limit=TASK_TIME_LIMIT
+                        Enables a hard time limit (in seconds int/float) for
+                        tasks.
+  --soft-time-limit=TASK_SOFT_TIME_LIMIT
+                        Enables a soft time limit (in seconds int/float) for
+                        tasks.
+  --maxtasksperchild=MAX_TASKS_PER_CHILD
+                        Maximum number of tasks a pool worker can execute
+                        before it's terminated and replaced by a new worker.
+  -Q QUEUES, --queues=QUEUES
+                        List of queues to enable for this worker, separated by
+                        comma. By default all configured queues are enabled.
+                        Example: -Q video,image
+  -I INCLUDE, --include=INCLUDE
+                        Comma separated list of additional modules to import.
+                        Example: -I foo.tasks,bar.tasks
+  --pidfile=PIDFILE     Optional file used to store the process pid. The
+                        program will not start if this file already exists and
+                        the pid is still alive.
+  --autoscale=AUTOSCALE
+                        Enable autoscaling by providing max_concurrency,
+                        min_concurrency. Example:: --autoscale=10,3 (always
+                        keep 3 processes, but grow to 10 if necessary)
+  --autoreload          Enable autoreloading.
+  --no-execv            Don't do execv after multiprocessing child fork.
+  --version             show program's version number and exit
+  -h, --help            show this help message and exit
