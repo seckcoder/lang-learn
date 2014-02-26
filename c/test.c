@@ -1,7 +1,24 @@
+
+
+
+
+
+
+
+
+
+
+
+
 #include <stdio.h>
 
 int foo() {
-  return 3;
+  int c = 1;
+  {
+    int c = c;
+    printf("%d\n",c);
+  }
+  return c;
 }
 
 int main(int argc, const char *argv[]) {
