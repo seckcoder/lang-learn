@@ -1,11 +1,30 @@
 counting sort
-bucket sort
+bcket sort
 radix sort
 heap/priority queue
-suffix tree
 NFA/DFA/Pattern matching
-segment tree
 hot query based on hashing
+query suggestion
+force-directed graph representation
+implement object system
 
 toread:
-    trie tree
+    C++ static, virtual function implementation, new, malloc difference
+    cardinaily estimation
+    B tree/B+ tree
+    Geohash
+    R tree
+    倒排索引
+    segment tree
+    suffix tree
+    terasort
+
+todo:
+    bloom filter: further exploration, a blog post on this?
+    consistent hashing further analysis
+    pca further analysis : a blog post?
+    minhash, further analysis
+    understanding difference between select and epoll by implementing it.
+        - without implementing select and epoll but just remember it is a waste of time.
+    how to implement libevent/libuv based on epoll/select
+    how to implement gevent based on libevent
