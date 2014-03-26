@@ -26,7 +26,7 @@ int yylex(void);
 %%
 
 program:
-       cmd { eval($1); freeNode($1); }
+       cmd { printf("cmd begin\n"); eval($1); freeNode($1);  printf("cmd end\n");}
        ;
 
 cmd:

@@ -35,3 +35,6 @@ param_tok [^|<> \t\n]
 %%
 
 
+int yywrap(void) {
+    return 1;
+}

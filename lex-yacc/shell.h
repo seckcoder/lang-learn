@@ -5,25 +5,25 @@ typedef enum { TypeCmd, TypePipe, TypeRedir, TypePair } NodeEnum;
 
 typedef struct {
   char *cmd;
-  struct NodeType *params;
+  struct NodeTypeTag *params;
 } NodeCmd;
 
 typedef struct {
-  struct NodeType *cmd; // TypeCmd
-  struct NodeType *pipe; // TypePipe
+  struct NodeTypeTag *cmd; // TypeCmd
+  struct NodeTypeTag *pipe; // TypePipe
 } NodePipe;
 
 typedef struct {
-  struct NodeType *cmd;
+  struct NodeTypeTag *cmd;
   char *file;
 } NodeRedir;
 
 typedef struct {
   char *car;
-  struct NodeType *cdr;
+  struct NodeTypeTag *cdr;
 } NodePair;
 
-typedef struct {
+typedef struct NodeTypeTag {
   NodeEnum type;
   union {
     NodeCmd cmd;

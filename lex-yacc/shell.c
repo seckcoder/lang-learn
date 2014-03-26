@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "shell.h"
 #include "y.tab.h"
@@ -61,6 +62,50 @@ NodeType *create_pair(char *car, NodeType *cdr) {
   return pn;
 }
 
-int eval(NodeType *pn) {
+int eval_cmd(char *cmd, NodeType *params) {
+  printf("%s", cmd);
+  if (eval(params) < 0) {
+    return -1;
+  }
   return 0;
+}
+
+int eval_redir(NodeType *cmd, char *file) {
+  if (eval(cmd) < 0) {
+    return -1;
+  }
+  printf(" > %s", file);
+  return 0;
+}
+
+int eval_pipe(NodeType *cmd, NodeType *pipe) {
+  if (eval(cmd) < 0) return -1;
+  printf(" | ");
+  if (eval(pipe) < 0) return -1;
+  return 0;
+}
+
+int eval_pair(char *car, NodeType *cdr) {
+  printf("%s", car);
+  if (eval(cdr) < 0) return -1;
+  return 0;
+}
+
+int eval(NodeType *pn) {
+  if (pn == NULL) {
+    return 0;
+  } else {
+    switch(pn->type) {
+      case TypeCmd:
+        return eval_cmd((pn->cmd).cmd, (pn->cmd).params);
+      case TypeRedir:
+        return eval_redir((pn->redir).cmd, (pn->redir).file);
+      case TypePipe:
+        return eval_pipe((pn->pipe).cmd, (pn->pipe).pipe);
+      case TypePair:
+        return eval_pair((pn->pair).car, (pn->pair).cdr);
+    }
+    printf("\n");
+    return 0;
+  }
 }
