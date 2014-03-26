@@ -24,10 +24,9 @@ param_tok [^|<> \t\n]
 
 ({letter}|{digit})({letter}|{digit}|_)* { yylval.var = strclone(yytext, yyleng); return VARIABLE;  }
 
-[|><-] return *yytext;
+[|><\-\n] return *yytext;
 
 [ \t]+   ; /* ignore whitespace */
-\n    { return END; }
 
 .  yyerror("invalid character");
 

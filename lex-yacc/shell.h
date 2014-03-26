@@ -1,7 +1,7 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
-typedef enum { TypeCmd, TypePipe, TypeRedir, TypePair, TypeParam } NodeEnum;
+typedef enum { TypeCmd, TypePipe, TypeRedir, TypePair, TypeParam} NodeEnum;
 typedef char bool;
 
 typedef struct {
@@ -25,7 +25,6 @@ typedef struct {
 } NodePair;
 
 typedef struct {
-  bool is_option;
   char *param;
 } NodeParam;
 
@@ -52,6 +51,7 @@ NodeType *create_param(bool is_param, char *param);
 char* strclone(char *src, int len);
 void err_sys(char *msg);
 
+int print_node(NodeType *pn);
 int eval(NodeType *pn);
 
 #endif

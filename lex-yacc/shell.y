@@ -16,21 +16,18 @@ int yylex(void);
 %token <int_v> INTEGER;
 /*...*/
 %token <var> VARIABLE;
-%token '>' '<' END
+%token '>' '<'
 %left '|' '<' '>'
 
 %type <nptr> cmd pipe redir param_list param
 
 %%
 
-program:
-       function END {exit(0);}
-       ;
-
 function:
-         cmd { eval($1); freeNode($1); }
-       | redir { eval($1); freeNode($1); }
-       | pipe { eval($1); freeNode($1); }
+         function cmd '\n' { print_node($2); freeNode($2); }
+       | function redir '\n' { print_node($2); freeNode($2); }
+       | function pipe '\n' { print_node($2); freeNode($2); }
+       | /*null*/
        ;
 
 cmd:
