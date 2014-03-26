@@ -1,40 +1,45 @@
-typedef enum { TypeId } NodeEnum;
+#ifndef _SHELL_H_
+#define _SHELL_H_
 
+typedef enum { TypeCmd, TypePipe, TypeRedir, TypePair } NodeEnum;
 
 typedef struct {
   char *cmd;
   struct NodeType *params;
-} TypeCmd;
+} NodeCmd;
 
 typedef struct {
-  TypeCmd *cmds;
-  int cmd_num;
-} TypePipe;
+  struct NodeType *cmd; // TypeCmd
+  struct NodeType *pipe; // TypePipe
+} NodePipe;
 
 typedef struct {
-  struct NodeType *left;
-  struct NodeType *right;
-} TypeRedir;
+  struct NodeType *cmd;
+  char *file;
+} NodeRedir;
+
+typedef struct {
+  char *car;
+  struct NodeType *cdr;
+} NodePair;
 
 typedef struct {
   NodeEnum type;
   union {
-    TypeCmd cmd;
-    TypePipe pipe;
-    TypeRedir redir;
+    NodeCmd cmd;
+    NodePipe pipe;
+    NodeRedir redir;
+    NodePair pair;
   };
 } NodeType;
 
-typedef struct {
-  NodeType *car;
-  NodeType *cdr;
-} NodePair;
 
 void freeNode(NodeType *pnode);
-
 NodeType *create_cmd(char* cmd, NodeType *params);
 NodeType *create_pipe(NodeType *cmd, NodeType *pipe);
-NodeType *create_redir(NodeType *cmd, NodeType *file);
-NodeType *create_pair(NodeType *car, NodeType *cdr);
+NodeType *create_redir(NodeType *cmd, char *file);
+NodeType *create_pair(char *car, NodeType *cdr);
 
 int eval(NodeType *pn);
+
+#endif

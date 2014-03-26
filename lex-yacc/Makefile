@@ -25,9 +25,10 @@ calc3b:calc3
 calc3g:calc3
 	gcc -o calc3g y.tab.c lex.yy.c calc3g.c
 
-shell:shell.l shell.y
+shell:shell.l shell.y shell.c shell.h
 	bison -y -d shell.y
 	flex shell.l
+	gcc -o shell y.tab.c lex.yy.c shell.c
 
 clean:
 	rm -f calc1 calc2 calc3a calc3b calc3g

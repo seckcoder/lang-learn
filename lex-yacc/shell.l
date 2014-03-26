@@ -1,7 +1,14 @@
 %{
 #include <stdio.h>
+// yacc sucks. We have to include shell.h here
+// even the lexer will never use anything of it.
+// since in file "y.tab.h", it depends on NodeType
+// definition in shell.h. But yacc doesn't include
+// shell.h in y.tab.h, so we have to include it
+// the firsttime we include y.tab.h...
+#include "shell.h"
 #include "y.tab.h"
-void yyerror(char *s);
+/*void yyerror(char *);*/
 
 %}
 
@@ -18,14 +25,12 @@ param_tok [^|<> \t\n]
 ({letter}|{digit})({letter}|{digit}|_)* { yylval.var = yytext; return VARIABLE;  }
 
 
-
 [-|><] return *yytext;
 
 {param_tok}+ { yylval.param = yytext; return PARAM; }
 
 [ \t\n]+   ; /* ignore whitespace */
 
-. yerror("invalid character");
 
 %%
 
