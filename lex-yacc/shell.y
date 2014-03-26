@@ -18,7 +18,7 @@ int yylex(void);
 /*...*/
 %token <var> VARIABLE;
 %token <param> PARAM;
-%token '>' '<'
+%token '>' '<' END
 %left '|' '<' '>'
 
 %type <nptr> cmd pipe param_list
@@ -26,11 +26,11 @@ int yylex(void);
 %%
 
 program:
-       cmd { printf("cmd begin\n"); eval($1); freeNode($1);  printf("cmd end\n");}
+       cmd END { printf("cmd begin\n"); eval($1); freeNode($1);  printf("cmd end\n");}
        ;
 
 cmd:
-     VARIABLE { $$ = create_cmd($1, NULL); }
+     VARIABLE { printf("create simple cmd\n"); $$ = create_cmd($1, NULL); }
     | VARIABLE param_list { $$ = create_cmd($1, $2); }
     | pipe { $$ = $1; }
     | cmd '>' PARAM { $$ = create_redir($1, $3); }

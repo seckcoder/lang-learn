@@ -31,5 +31,5 @@ shell:shell.l shell.y shell.c shell.h
 	gcc -o shell y.tab.c lex.yy.c shell.c
 
 clean:
-	rm -f calc1 calc2 calc3a calc3b calc3g
+	rm -f calc1 calc2 calc3a calc3b calc3g shell
 	rm -f *.o rm lex.yy.c y.tab.c y.tab.h

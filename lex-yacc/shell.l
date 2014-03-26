@@ -29,12 +29,13 @@ param_tok [^|<> \t\n]
 
 {param_tok}+ { yylval.param = yytext; return PARAM; }
 
-[ \t\n]+   ; /* ignore whitespace */
-
+[ \t]+   ; /* ignore whitespace */
+\n    { return END; }
 
 %%
 
 
 int yywrap(void) {
+    printf("yywrap\n");
     return 1;
 }

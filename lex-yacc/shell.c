@@ -5,22 +5,26 @@
 
 
 void freeNode(NodeType *pnode) {
-  switch(pnode->type) {
-    case TypeCmd:
-      freeNode((pnode->cmd).params);
-      break;
-    case TypePair:
-      freeNode((pnode->pair).cdr);
-      break;
-    case TypeRedir:
-      freeNode((pnode->redir).cmd);
-      break;
-    case TypePipe:
-      freeNode((pnode->pipe).cmd);
-      freeNode((pnode->pipe).pipe);
-      break;
+  if (pnode == NULL) {
+    return;
+  } else {
+    switch(pnode->type) {
+      case TypeCmd:
+        freeNode((pnode->cmd).params);
+        break;
+      case TypePair:
+        freeNode((pnode->pair).cdr);
+        break;
+      case TypeRedir:
+        freeNode((pnode->redir).cmd);
+        break;
+      case TypePipe:
+        freeNode((pnode->pipe).cmd);
+        freeNode((pnode->pipe).pipe);
+        break;
+    }
+    free(pnode);
   }
-  free(pnode);
 }
 
 NodeType *_create_node(NodeEnum type) {
