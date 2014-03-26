@@ -24,9 +24,9 @@ int yylex(void);
 %%
 
 function:
-         function cmd '\n' { print_node($2); freeNode($2); }
-       | function redir '\n' { print_node($2); freeNode($2); }
-       | function pipe '\n' { print_node($2); freeNode($2); }
+         function cmd '\n' { eval($2); freeNode($2); }
+       | function redir '\n' { eval($2); freeNode($2); }
+       | function pipe '\n' { eval($2); freeNode($2); }
        | /*null*/
        ;
 

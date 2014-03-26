@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
+#include <sys/wait.h>
+#include <fcntl.h>
 #include "shell.h"
 #include "y.tab.h"
 
@@ -176,10 +179,101 @@ int print_node(NodeType *pn) {
 }
 
 
-int eval_node_cmd(char *cmd, NodeType *params) {
+
+int list_length(NodeType* param_lst) {
+  int counter = 0;
+  while (param_lst != NULL) {
+    counter += 1;
+    param_lst = pair_cdr(param_lst);
+  }
+  return counter;
 }
-int eval_node_redir(NodeType *cmd, NodeType *file) {
+
+// arr is null terminated
+// Deprecated
+char **pair_of_str_to_arr(NodeType *param_lst) {
+  int len = list_length(param_lst);
+  if (len == 0) {
+    return NULL;
+  } else {
+    char **arr = (char**)malloc((len+1)*sizeof(char*));
+    int i = 0; 
+    for(i = 0; i < len; i++) {
+      arr[i+1] = param_str(pair_car(param_lst));
+      param_lst = pair_cdr(param_lst);
+    }
+    arr[len+1] = (char*)0; // cast it to a pointer.
+    return arr;
+  }
 }
+
+int eval_node_cmd1(char *cmd, NodeType *params) {
+  pid_t pid;
+  if ((pid = fork()) < 0) {
+    err_sys("fork error");
+    return -1;
+  } else if (pid == 0) { // child
+    int len = list_length(params);
+    char **param_arr = (char**)malloc((len+2) * sizeof(char*));
+    int i = 0;
+    param_arr[0] = cmd;
+    param_arr[len+1] = NULL;
+    NodeType *head = params;
+    for(i = 0; i < len; i++) {
+      param_arr[i+1] = param_str(pair_car(head));
+      head = pair_cdr(head);
+    }
+    if (execvp(cmd, param_arr) < 0) {
+      err_sys("execvp failed");
+      free(param_arr);
+      return -1;
+    } else {
+      free(param_arr);
+      return 0;
+    }
+  } else { // parent
+    if (waitpid(pid, NULL, 0) < 0) {
+      err_sys("wait error");
+      return -1;
+    }
+  }
+  return 0;
+}
+
+int eval_node_cmd(NodeType *pn) {
+  return eval_node_cmd1(cmd_cmd_str(pn), cmd_params(pn));
+}
+
+int eval_node_redir1(NodeType *cmd, NodeType *file) {
+  if (close(1) < 0) {
+    err_sys("cannot close stdout");
+    return -1;
+  } else {
+    char *fname = param_str(file);
+    int fd = open(fname, O_CREAT|O_WRONLY, 0666);
+    if (fd < 0) {
+      char err_msg[256];
+      sprintf(err_msg, "open file ~s failed", fname);
+      err_sys(err_msg);
+      return -1;
+    } else {
+      // fd is 1
+      int ret = eval_node_cmd(cmd);
+      if (close(fd)) {
+        char err_msg[256];
+        sprintf(err_msg, "open file ~s failed", fname);
+        err_sys(err_msg);
+        return -1;
+      }
+      return 0;
+    }
+  }
+}
+
+int eval_node_redir(NodeType *pn) {
+  return eval_node_redir1((pn->redir).cmd, (pn->redir).file);
+}
+
 int eval_node_pipe(NodeType *cmd, NodeType *pipe) {
 }
 int eval_node_pair(NodeType *car, NodeType *cdr) {
@@ -194,10 +288,11 @@ int eval(NodeType *pn) {
     int ret;
     switch(pn->type) {
       case TypeCmd:
-        ret = eval_node_cmd((pn->cmd).cmd, (pn->cmd).params);
+        ret = eval_node_cmd(pn);
         break;
       case TypeRedir:
-        ret = eval_node_redir((pn->redir).cmd, (pn->redir).file);
+        ret = eval_node_redir(pn);
+        
         break;
       case TypePipe:
         ret = eval_node_pipe((pn->pipe).cmd, (pn->pipe).pipe);
@@ -225,4 +320,8 @@ char* strclone(char *src, int len) {
   memcpy(dst, src, len);
   dst[len] = '\0';
   return dst;
+}
+
+void safe_free(void *p) {
+  if (p != NULL) free(p);
 }

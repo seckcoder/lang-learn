@@ -4,6 +4,10 @@
 typedef enum { TypeCmd, TypePipe, TypeRedir, TypePair, TypeParam} NodeEnum;
 typedef char bool;
 
+
+#define cmd_cmd_str(n) (((n)->cmd).cmd)
+#define cmd_params(n) (((n)->cmd).params)
+
 typedef struct {
   char *cmd;
   struct NodeTypeTag *params;
@@ -19,10 +23,17 @@ typedef struct {
   struct NodeTypeTag *file;
 } NodeRedir;
 
+
+#define pair_car(n) (((n)->pair).car)
+#define pair_cdr(n) (((n)->pair).cdr)
+
 typedef struct {
   struct NodeTypeTag *car;
   struct NodeTypeTag *cdr;
 } NodePair;
+
+
+#define param_str(n) (((n)->param).param)
 
 typedef struct {
   char *param;
@@ -53,5 +64,6 @@ void err_sys(char *msg);
 
 int print_node(NodeType *pn);
 int eval(NodeType *pn);
+void safe_free(void *p);
 
 #endif
