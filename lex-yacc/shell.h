@@ -1,7 +1,8 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
-typedef enum { TypeCmd, TypePipe, TypeRedir, TypePair } NodeEnum;
+typedef enum { TypeCmd, TypePipe, TypeRedir, TypePair, TypeParam } NodeEnum;
+typedef char bool;
 
 typedef struct {
   char *cmd;
@@ -15,13 +16,19 @@ typedef struct {
 
 typedef struct {
   struct NodeTypeTag *cmd;
-  char *file;
+  struct NodeTypeTag *file;
 } NodeRedir;
 
 typedef struct {
-  char *car;
+  struct NodeTypeTag *car;
   struct NodeTypeTag *cdr;
 } NodePair;
+
+typedef struct {
+  bool is_option;
+  char *param;
+} NodeParam;
+
 
 typedef struct NodeTypeTag {
   NodeEnum type;
@@ -30,6 +37,7 @@ typedef struct NodeTypeTag {
     NodePipe pipe;
     NodeRedir redir;
     NodePair pair;
+    NodeParam param;
   };
 } NodeType;
 
@@ -37,8 +45,12 @@ typedef struct NodeTypeTag {
 void freeNode(NodeType *pnode);
 NodeType *create_cmd(char* cmd, NodeType *params);
 NodeType *create_pipe(NodeType *cmd, NodeType *pipe);
-NodeType *create_redir(NodeType *cmd, char *file);
-NodeType *create_pair(char *car, NodeType *cdr);
+NodeType *create_redir(NodeType *cmd, NodeType *file);
+NodeType *create_pair(NodeType *car, NodeType *cdr);
+NodeType *create_param(bool is_param, char *param);
+
+char* strclone(char *src, int len);
+void err_sys(char *msg);
 
 int eval(NodeType *pn);
 

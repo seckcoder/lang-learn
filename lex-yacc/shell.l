@@ -22,15 +22,14 @@ param_tok [^|<> \t\n]
 
 [1-9][0-9]* { yylval.int_v = atoi(yytext); return INTEGER; }
 
-({letter}|{digit})({letter}|{digit}|_)* { yylval.var = yytext; return VARIABLE;  }
+({letter}|{digit})({letter}|{digit}|_)* { yylval.var = strclone(yytext, yyleng); return VARIABLE;  }
 
-
-[-|><] return *yytext;
-
-{param_tok}+ { yylval.param = yytext; return PARAM; }
+[|><-] return *yytext;
 
 [ \t]+   ; /* ignore whitespace */
 \n    { return END; }
+
+.  yyerror("invalid character");
 
 %%
 

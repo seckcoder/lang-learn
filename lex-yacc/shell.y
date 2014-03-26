@@ -9,7 +9,6 @@ int yylex(void);
 %union {
     int int_v;
     char* var;
-    char* param;
     NodeType *nptr;
 };
 
@@ -17,34 +16,44 @@ int yylex(void);
 %token <int_v> INTEGER;
 /*...*/
 %token <var> VARIABLE;
-%token <param> PARAM;
 %token '>' '<' END
 %left '|' '<' '>'
 
-%type <nptr> cmd pipe param_list
+%type <nptr> cmd pipe redir param_list param
 
 %%
 
 program:
-       cmd END { printf("cmd begin\n"); eval($1); freeNode($1);  printf("cmd end\n");}
+       function END {exit(0);}
+       ;
+
+function:
+         cmd { eval($1); freeNode($1); }
+       | redir { eval($1); freeNode($1); }
+       | pipe { eval($1); freeNode($1); }
        ;
 
 cmd:
-     VARIABLE { printf("create simple cmd\n"); $$ = create_cmd($1, NULL); }
+      VARIABLE { $$ = create_cmd($1, NULL); }
     | VARIABLE param_list { $$ = create_cmd($1, $2); }
-    | pipe { $$ = $1; }
-    | cmd '>' PARAM { $$ = create_redir($1, $3); }
-    | PARAM '<' cmd { $$ = create_redir($3, $1); }
+    ; 
+
+redir:
+      cmd '>' param { $$ = create_redir($1, $3); }
+    | param '<' cmd { $$ = create_redir($3, $1); }
+
+param:
+      VARIABLE { $$ = create_param(0, $1); }
+    | '-' VARIABLE { $$ = create_param(1, $2); }
     ;
 
-pipe:
-      pipe '|' cmd { $$ = create_pipe($3, $1); }
+pipe: pipe '|' cmd { $$ = create_pipe($3, $1); }
     | cmd { $$ = create_pipe($1, NULL); }
-    ;
+    ; 
 
 param_list:
-          param_list PARAM { $$ = create_pair($2, $1); }
-        | PARAM { $$ = create_pair($1, NULL); }
+          param_list param { $$ = create_pair($2, $1); }
+        | param { $$ = create_pair($1, NULL); }
         ;
 %%
 
