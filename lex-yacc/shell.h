@@ -13,6 +13,9 @@ typedef struct {
   struct NodeTypeTag *params;
 } NodeCmd;
 
+
+#define pipe_cmd(n) (((n)->pipe).cmd)
+#define pipe_pipe(n) (((n)->pipe).pipe)
 typedef struct {
   struct NodeTypeTag *cmd; // TypeCmd
   struct NodeTypeTag *pipe; // TypePipe

@@ -207,47 +207,48 @@ char **pair_of_str_to_arr(NodeType *param_lst) {
   }
 }
 
-int eval_node_cmd1(char *cmd, NodeType *params) {
+// eval the command in current process
+int eval_cmd_in_proc(NodeType *pn) {
+  char *cmd = cmd_cmd_str(pn);
+  NodeType *params = cmd_params(pn);
+  int len = list_length(params);
+  char **param_arr = (char**)malloc((len+2) * sizeof(char*));
+  int i = 0;
+  param_arr[0] = cmd;
+  param_arr[len+1] = NULL;
+  NodeType *head = params;
+  for(i = 0; i < len; i++) {
+    param_arr[i+1] = param_str(pair_car(head));
+    head = pair_cdr(head);
+  }
+  if (execvp(cmd, param_arr) < 0) {
+    err_sys("execvp failed");
+    free(param_arr);
+    return -1;
+  } else {
+    free(param_arr);
+    return 0;
+  }
+}
+
+// create another process and eval the command
+int eval_node_cmd(NodeType *pn) {
   pid_t pid;
   if ((pid = fork()) < 0) {
     err_sys("fork error");
-    return -1;
   } else if (pid == 0) { // child
-    int len = list_length(params);
-    char **param_arr = (char**)malloc((len+2) * sizeof(char*));
-    int i = 0;
-    param_arr[0] = cmd;
-    param_arr[len+1] = NULL;
-    NodeType *head = params;
-    for(i = 0; i < len; i++) {
-      param_arr[i+1] = param_str(pair_car(head));
-      head = pair_cdr(head);
-    }
-    if (execvp(cmd, param_arr) < 0) {
-      err_sys("execvp failed");
-      free(param_arr);
-      return -1;
-    } else {
-      free(param_arr);
-      return 0;
-    }
+    return eval_cmd_in_proc(pn);
   } else { // parent
     if (waitpid(pid, NULL, 0) < 0) {
       err_sys("wait error");
-      return -1;
     }
   }
   return 0;
 }
 
-int eval_node_cmd(NodeType *pn) {
-  return eval_node_cmd1(cmd_cmd_str(pn), cmd_params(pn));
-}
-
 int eval_node_redir1(NodeType *cmd, NodeType *file) {
   if (close(1) < 0) {
     err_sys("cannot close stdout");
-    return -1;
   } else {
     char *fname = param_str(file);
     int fd = open(fname, O_CREAT|O_WRONLY, 0666);
@@ -255,7 +256,6 @@ int eval_node_redir1(NodeType *cmd, NodeType *file) {
       char err_msg[256];
       sprintf(err_msg, "open file ~s failed", fname);
       err_sys(err_msg);
-      return -1;
     } else {
       // fd is 1
       int ret = eval_node_cmd(cmd);
@@ -263,7 +263,6 @@ int eval_node_redir1(NodeType *cmd, NodeType *file) {
         char err_msg[256];
         sprintf(err_msg, "open file ~s failed", fname);
         err_sys(err_msg);
-        return -1;
       }
       return 0;
     }
@@ -274,13 +273,42 @@ int eval_node_redir(NodeType *pn) {
   return eval_node_redir1((pn->redir).cmd, (pn->redir).file);
 }
 
-int eval_node_pipe(NodeType *cmd, NodeType *pipe) {
+int eval_node_pipe(NodeType *pn) {
+  NodeType *cmd1 = pipe_cmd(pipe_pipe(pn));
+  NodeType *cmd2 = pipe_cmd(pn);
+  pid_t pid1;
+  if ((pid1 = fork()) < 0) {
+    err_sys("fork error");
+  } else if (pid1 == 0) { // child
+    pid_t pid2;
+    int fd[2];
+    if (pipe(fd) < 0) err_sys("pipe failed");
+    if ((pid2 = fork()) < 0) {
+      err_sys("fork error");
+      return -1;
+    } else if (pid2 == 0) { // child
+      close(STDOUT_FILENO);
+      dup(fd[1]); // fd[1] is the write end,  This call dup fd[1] to stdout
+      close(fd[0]);
+      close(fd[1]);
+      // write to stdout
+      return eval_cmd_in_proc(cmd1); // output of cmd1 will directed to pipe write end
+    } else { // parent
+      close(STDIN_FILENO);
+      dup(fd[0]); // fd[0] is the read end.
+      close(fd[0]);
+      close(fd[1]);
+      // read from(stdin) an empty pipe blocks reader.
+      return eval_cmd_in_proc(cmd2);
+    }
+  } else { // parent
+    if (waitpid(pid1, NULL, 0) < 0) {
+      err_sys("wait error");
+    }
+  }
+  return 0;
 }
-int eval_node_pair(NodeType *car, NodeType *cdr) {
-}
-int eval_node_param(char *param) {
 
-}
 int eval(NodeType *pn) {
   if (pn == NULL) {
     return 0;
@@ -295,13 +323,8 @@ int eval(NodeType *pn) {
         
         break;
       case TypePipe:
-        ret = eval_node_pipe((pn->pipe).cmd, (pn->pipe).pipe);
+        ret = eval_node_pipe(pn);
         break;
-      case TypePair:
-        ret = eval_node_pair((pn->pair).car, (pn->pair).cdr);
-        break;
-      case TypeParam:
-        ret = eval_node_param((pn->param).param);
       default:
         err_sys("not handled type");
         break;
