@@ -153,11 +153,28 @@ void max_ret(const Return &ret1, Return &ret) {
   }
 }
 
+void brute_force(const vector<int> &A, Return &ret) {
+  init_ret(ret);
+  for(int i = 0; i < A.size(); i++) {
+    int sum = 0 ;
+    for(int j = i; j < A.size(); j++) {
+      sum += A[j];
+      if (sum >= ret.sum) {
+        update_ret(ret, i, j, sum);
+      }
+    }
+  }
+}
+
 void divide_conquer_rec(const vector<int> &A, int low, int high, Return &ret) {
   init_ret(ret);
   if (low > high) {
     return;
-  } else {
+  }
+  else if (high-low+1 <= 10) {
+    brute_force(A, ret);
+  }
+  else {
     int mid = (low+high) >> 1;
     Return ret1;
     // not include mid
@@ -209,18 +226,7 @@ void divide_conquer(const vector<int> &A, Return &ret) {
   divide_conquer_rec(A, 0, A.size() - 1, ret);
 }
 
-void brute_force(const vector<int> &A, Return &ret) {
-  init_ret(ret);
-  for(int i = 0; i < A.size(); i++) {
-    int sum = 0 ;
-    for(int j = i; j < A.size(); j++) {
-      sum += A[j];
-      if (sum >= ret.sum) {
-        update_ret(ret, i, j, sum);
-      }
-    }
-  }
-}
+
 
 int c_A [] = {13, -3, -25, 20, -3, -16, -23, 18, 20,-7,12,-5,-22,15,-4,7};
 int n = 16;
@@ -261,14 +267,53 @@ void test_divide_conquer_mit() {
   print_ret(ret);
 }
 
+#include <chrono>
+
+using std::chrono::duration_cast;
+using std::chrono::microseconds;
+using std::chrono::steady_clock;
+
+void test_perf(void(*f)(const vector<int> &, Return &),
+               const vector<int> &A,
+               Return &ret) {
+  steady_clock::time_point start = steady_clock::now();
+  const int times = 100000;
+  for(int i = 1; i <= times; i++) {
+    f(A, ret);
+  }
+  steady_clock::time_point end = steady_clock::now();
+  cout << "took " << duration_cast<microseconds>(end - start).count()
+      << "us.\n";
+}
+
+#include <random>
+#include <fstream>
+using std::ifstream;
+using std::cerr;
+
+void test_performance() {
+  int n = 10;
+  vector<int> A(n, 0);
+  ifstream ifs("test.dat");
+  for(int i = 0; i < n; i++) {
+    ifs >> A[i];
+    if (ifs.eof()) {
+      cerr << "input data is not enough" << endl;
+    }
+  }
+  Return ret;
+  test_perf(divide_conquer, A, ret);
+}
+
 int main(int argc, const char *argv[])
 {
   //test_brute_force();
   //test_divide_conquer();
-  test_divide_conquer_mit();
+  //test_divide_conquer_mit();
   /*vector<int> A(c_A3, c_A3 + n3);
   Return ret;
   divide_conquer_include_mid(A, 0, 1, 2, ret);
   print_ret(ret);*/
+  test_performance();
   return 0;
 }
