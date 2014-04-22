@@ -4,6 +4,10 @@ using std::vector;
 using std::cout;
 using std::endl;
 
+// The algorithms listed here is different when dealing with A with size 1.
+// This is ok. If the problem claims that we should have at least on element,
+// then we should include A[0] when size == 1;
+// Else, if we allow sum(A[]) = 0, if A[0] < 0, the max sum should be 0.
 struct Return {
   int left, right, sum;
 };
@@ -79,6 +83,8 @@ void divide_conquer_include_mid(const vector<int> &A, int low, int mid,
         v_hat = v;
         left_idx = i + 1; // include i+1 but not include i
       }
+      // Note this is different from the linear method. Since v has different
+      // meaning. Here, v means sum starts from i, ends to mid-1.
       v = v + A[i]; // v include A[i]
     }
     if (v > v_hat) {
@@ -171,9 +177,9 @@ void divide_conquer_rec(const vector<int> &A, int low, int high, Return &ret) {
   if (low > high) {
     return;
   }
-  else if (high-low+1 <= 10) {
+  /*else if (high-low+1 <= 10) {
     brute_force(A, ret);
-  }
+  }*/
   else {
     int mid = (low+high) >> 1;
     Return ret1;
@@ -227,6 +233,44 @@ void divide_conquer(const vector<int> &A, Return &ret) {
 }
 
 
+// fastest
+void linear(const vector<int> &A, Return &ret) {
+  init_ret(ret);
+  if (A.size() == 0) {
+    return;
+  } else {
+    Return v;
+    init_ret(v);
+    // It's also ok if we change initial value of v.sum and v_hat.sum to zero.
+    // In this case, we allow that no element is chosed. But this case will not
+    // work for the problem of the book introduction to algorithm, in which
+    // case, at least one element should be included.
+    //v.sum = 0;
+    Return v_hat;
+    init_ret(v_hat);
+    //v_hat.sum = 0;
+    for(int i = 0; i < A.size(); i++) {
+      if (v_hat.sum < v.sum) {
+        v_hat = v;
+      }
+      if (v.sum <= 0) {
+        v.sum = A[i];
+        v.left = i;
+        v.right = i;
+      } else {
+        v.sum = v.sum + A[i];
+        v.right = i;
+      }
+    }
+    if (v.sum > v_hat.sum) {
+      ret = v;
+    } else {
+      ret = v_hat;
+    }
+  } 
+}
+
+
 
 int c_A [] = {13, -3, -25, 20, -3, -16, -23, 18, 20,-7,12,-5,-22,15,-4,7};
 int n = 16;
@@ -264,6 +308,16 @@ void test_divide_conquer_mit() {
   print_ret(ret);
   vector<int> A1(c_A1, c_A1 + n1);
   divide_conquer_mit(A1, ret);
+  print_ret(ret);
+}
+
+void test_linear() {
+  vector<int> A(c_A, c_A + n);
+  Return ret;
+  linear(A, ret);
+  print_ret(ret);
+  vector<int> A1(c_A1, c_A1 + n1);
+  linear(A1, ret);
   print_ret(ret);
 }
 
@@ -314,6 +368,7 @@ int main(int argc, const char *argv[])
   Return ret;
   divide_conquer_include_mid(A, 0, 1, 2, ret);
   print_ret(ret);*/
-  test_performance();
+  //test_performance();
+  test_linear();
   return 0;
 }
