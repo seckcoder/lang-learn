@@ -242,7 +242,7 @@ void linear(const vector<int> &A, Return &ret) {
     Return v;
     init_ret(v);
     // It's also ok if we change initial value of v.sum and v_hat.sum to zero.
-    // In this case, we allow that no element is chosed. But this case will not
+    // In this case, we allow that no element is chosen. But this case will not
     // work for the problem of the book introduction to algorithm, in which
     // case, at least one element should be included.
     //v.sum = 0;

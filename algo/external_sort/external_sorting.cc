@@ -128,6 +128,7 @@ class BufferedFile {
   int tail_;
 };
 
+// k-way merge, heap can provide better performance
 void merge_sort(vector<BufferedFile> bfs, BufferedFile cache) {
   while (true) {
     int min_idx = -1;
