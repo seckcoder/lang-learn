@@ -13,6 +13,7 @@
 
 using namespace std;
 
+#define int64 long long int
 
 int main(int argc, const char *argv[])
 {
