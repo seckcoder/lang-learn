@@ -13,7 +13,10 @@
 
 using namespace std;
 
-#define int64 long long int
+typedef long long int int64;
+typedef unsigned char uint8;
+//#define int64 long long int
+//#define uint8 unsigned char
 
 int main(int argc, const char *argv[])
 {
