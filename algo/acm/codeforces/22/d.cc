@@ -1,4 +1,4 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
 
 #include <iostream>
 #include <vector>
@@ -67,6 +67,17 @@ int pmod(int a, int b) {
   return ret;
 }
 
+#define N 1000
+#define M N<<1 // [0-M)
+int n;
+std::pair<int, int> coords[N];
+/*int dp[N][2*N];
+int xmap[2*N];*/
+
+bool cmp_coord(const std::pair<int, int> &c1,
+               const std::pair<int, int> &c2) {
+  return c1.second < c2.second;
+}
 int main(int argc, const char *argv[])
 {
   
@@ -74,6 +85,26 @@ int main(int argc, const char *argv[])
   freopen("test.in", "r", stdin);
 #endif
 
+  cin >> n;
+  for (int i = 0; i < n; i++) {
+    int x1, x2;
+    cin >> x1 >> x2;
+    coords[i].first = std::min(x1, x2);
+    coords[i].second = std::max(x1, x2);
+  }
+  std::sort(coords, coords+n, cmp_coord);
+  std::vector<int> nails;
+  for (int i = 0; i < n;) {
+    int e = coords[i].second;
+    nails.push_back(e);
+    int j = i+1;
+    while (j < n && coords[j].first <= e) j+=1;
+    i = j;
+  }
+  cout << nails.size() << endl;
+  for (int i = 0; i < nails.size(); i++) {
+    cout << nails[i] << " ";
+  }
 
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;

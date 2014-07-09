@@ -1,7 +1,8 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
 
 #include <iostream>
 #include <vector>
+#include <queue>
 #include <string>
 #include <cstring>
 #include <cstdlib>
@@ -41,35 +42,58 @@ ostream &operator<<(ostream &os, const uint8 v) {
   return os;
 }
 
-/*istream &operator>>(istream &is, uint8 &v) {
+istream &operator>>(istream &is, uint8 &v) {
   int tmp;
   is >> tmp;
   v = (uint8)tmp;
   return is;
-}*/
+}
 
+inline uint8 min(uint8 a, uint8 b) {
+  return (a<b)?a:b;
+}
+inline uint8 max(uint8 a, uint8 b) {
+  return (a>b)?a:b;
+}
 
-class Object {
- public:
-  const int *arr;
-  Object(const int parr[]) {
-    arr = parr;
+// a,b could be negative
+// it always return positive remainder.
+int pmod(int a, int b) {
+  if (b < 0) {
+    return pmod(-a, -b);
   }
-  void f() const {
-    cout << arr[0] << endl;
-  }
-};
+  int ret = a % b;
+  if (ret < 0) ret += b;
+  return ret;
+}
 
+#define N 100000
+int n;
+int a[N];
+int sumi[N];
 int main(int argc, const char *argv[])
 {
   
-  int h[] = {1,2};
-  Object obj(h);
-  obj.f();
 #ifdef SECK_DEBUG
   freopen("test.in", "r", stdin);
 #endif
-  
+  cin >> n;
+  int sum = 0;
+  for (int i = 0; i < n; i++) {
+    cin >> a[i];
+    sum += a[i];
+    sumi[i] = sum;
+  }
+
+  int cnt = 0;
+  for (int i = 0; i < n-1; i++) {
+    int left_sum = sumi[i];
+    int right_sum = sum - left_sum;
+    if (left_sum == right_sum) {
+      cnt += 1;
+    }
+  }
+  cout << cnt << endl;
 
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;

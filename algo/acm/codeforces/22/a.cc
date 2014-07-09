@@ -1,7 +1,8 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
 
 #include <iostream>
 #include <vector>
+#include <queue>
 #include <string>
 #include <cstring>
 #include <cstdlib>
@@ -41,36 +42,52 @@ ostream &operator<<(ostream &os, const uint8 v) {
   return os;
 }
 
-/*istream &operator>>(istream &is, uint8 &v) {
+istream &operator>>(istream &is, uint8 &v) {
   int tmp;
   is >> tmp;
   v = (uint8)tmp;
   return is;
-}*/
+}
 
+inline uint8 min(uint8 a, uint8 b) {
+  return (a<b)?a:b;
+}
+inline uint8 max(uint8 a, uint8 b) {
+  return (a>b)?a:b;
+}
 
-class Object {
- public:
-  const int *arr;
-  Object(const int parr[]) {
-    arr = parr;
+// a,b could be negative
+// it always return positive remainder.
+int pmod(int a, int b) {
+  if (b < 0) {
+    return pmod(-a, -b);
   }
-  void f() const {
-    cout << arr[0] << endl;
-  }
-};
+  int ret = a % b;
+  if (ret < 0) ret += b;
+  return ret;
+}
 
+#define N 100
+int a[N];
 int main(int argc, const char *argv[])
 {
   
-  int h[] = {1,2};
-  Object obj(h);
-  obj.f();
 #ifdef SECK_DEBUG
   freopen("test.in", "r", stdin);
 #endif
-  
 
+  int n;
+  cin >> n;
+  for(int i = 0; i < n; i++) {
+    cin >> a[i];
+  }
+  std::sort(a, a+n);
+  int *end = std::unique(a, a+n);
+  if (end - a >= 2) {
+    cout << a[1] << endl;
+  } else {
+    cout << "NO" << endl;
+  }
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;
 #endif

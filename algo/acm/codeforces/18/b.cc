@@ -1,7 +1,8 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
 
 #include <iostream>
 #include <vector>
+#include <queue>
 #include <string>
 #include <cstring>
 #include <cstdlib>
@@ -41,35 +42,48 @@ ostream &operator<<(ostream &os, const uint8 v) {
   return os;
 }
 
-/*istream &operator>>(istream &is, uint8 &v) {
+istream &operator>>(istream &is, uint8 &v) {
   int tmp;
   is >> tmp;
   v = (uint8)tmp;
   return is;
-}*/
+}
 
+inline uint8 min(uint8 a, uint8 b) {
+  return (a<b)?a:b;
+}
+inline uint8 max(uint8 a, uint8 b) {
+  return (a>b)?a:b;
+}
 
-class Object {
- public:
-  const int *arr;
-  Object(const int parr[]) {
-    arr = parr;
+// a,b could be negative
+// it always return positive remainder.
+int pmod(int a, int b) {
+  if (b < 0) {
+    return pmod(-a, -b);
   }
-  void f() const {
-    cout << arr[0] << endl;
-  }
-};
+  int ret = a % b;
+  if (ret < 0) ret += b;
+  return ret;
+}
 
 int main(int argc, const char *argv[])
 {
   
-  int h[] = {1,2};
-  Object obj(h);
-  obj.f();
 #ifdef SECK_DEBUG
   freopen("test.in", "r", stdin);
 #endif
-  
+  int64 n, d, m, l;
+  cin >> n >> d >> m >> l;
+  //scanf("%d %d %d %d", &n, &d, &m, &l);
+  for (int64 k = 1; k <= n; k++) {
+     int64 x = (((k-1)*m+l)/d + 1) * d;
+     if ((k<n && x < k*m) || k == n) {
+       cout << x <<endl;
+       break;
+     }
+  }
+
 
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;

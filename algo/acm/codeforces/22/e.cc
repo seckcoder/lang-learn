@@ -1,4 +1,4 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
 
 #include <iostream>
 #include <vector>
@@ -67,6 +67,28 @@ int pmod(int a, int b) {
   return ret;
 }
 
+#define N 100001
+
+bool visited[N];
+int a[N];
+vector<int> cur;
+vector<int> pre;
+vector<std::pair<int, int> > edges;
+#define add_edge(u, v) edges.push_back(std::pair<int,int>((u), (v)))
+int dfs(int u) {
+  while (!visited[a[u]]) {
+    cur.push_back(a[u]);
+    visited[a[u]] = true;
+    u = a[u];
+  }
+  if (!pre.empty()) {
+    add_edge(pre.back(), cur.front());
+  }
+  pre.insert(pre.end(), cur.begin(), cur.end());
+  cur.clear();
+  return a[u];
+}
+int degree[N+1];
 int main(int argc, const char *argv[])
 {
   
@@ -74,6 +96,44 @@ int main(int argc, const char *argv[])
   freopen("test.in", "r", stdin);
 #endif
 
+  int n;
+  cin >> n;
+  for (int i = 1; i <= n; i++) {
+    scanf("%d", &a[i]);
+    //cin >> a[i];
+    degree[a[i]] += 1;
+  }
+  dfs(1);
+  if (pre.size() == n) {
+    printf("0\n");
+  } else {
+    memset(visited, false, sizeof(visited));
+    cur.clear();
+    pre.clear();
+    int last = 0;
+    for (int i = 1; i <= n; i++) {
+      if (degree[i] == 0) {
+        cur.push_back(i);
+        visited[i] = true;
+        last = dfs(i);
+      }
+    }
+    for (int i = 1; i <= n; i++) {
+      if (!visited[i]) {
+        cur.push_back(i);
+        visited[i] = true;
+        last = dfs(i);
+      }
+    }
+    if (last != pre.front()) {
+      add_edge(last, pre.front());
+    }
+    cout << edges.size() << endl;
+    for (int i = 0; i < edges.size(); i++) {
+      printf("%d %d\n", edges[i].first, edges[i].second);
+      //cout << edges[i].first << " " << edges[i].second << endl;
+    }
+  }
 
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;

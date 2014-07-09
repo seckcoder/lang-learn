@@ -1,5 +1,5 @@
 
-; right shift for k
+; left shift for k
 ; shift by reversion
 (define (shift! vec k)
   (let* ([len (vector-length vec)]

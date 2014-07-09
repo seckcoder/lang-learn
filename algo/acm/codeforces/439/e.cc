@@ -83,6 +83,9 @@ int gcd_ext(int a, int b, int &x, int &y) {
     int hx, hy;
     int g = gcd_ext(b, a % b, hx, hy);
     x = hy;
+    // Here, the fomula is based on
+    // the assumption that a,b>0.
+    // If a or b < 0, then use floor(a/b) instead of (a/b).
     y = hx - (a / b) * hy;
     return g;
   }

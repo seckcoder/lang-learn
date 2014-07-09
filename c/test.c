@@ -10,8 +10,7 @@
 
 
 int main(int argc, const char *argv[]) {
-  char c;
-  scanf("%c", &c);
-  printf("%c\n", c);
+  int a[2] = {0};
+  printf("%d", a[-1]);
   return 0;
 }
