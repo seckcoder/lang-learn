@@ -1,13 +1,16 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
+
+#undef NDEBUG
+#ifdef SECK_DEBUG
+#define _GLIBCXX_DEBUG
+#endif
+
 
 #include <iostream>
 #include <vector>
-#include <queue>
-#include <stack>
 #include <string>
 #include <cstring>
 #include <cstdlib>
-#include <list>
 #include <numeric>
 #include <ctime>
 #include <algorithm>
@@ -30,7 +33,7 @@ using std::string;
 using std::map;
 using std::cerr;
 using std::ostream;
-using std::istream;
+
 
 #define PI 3.14159265359
 #define IS_ODD(v) ((v) & 1)
@@ -43,16 +46,8 @@ ostream &operator<<(ostream &os, const uint8 v) {
   return os;
 }
 
-istream &operator>>(istream &is, uint8 &v) {
-  int tmp;
-  is >> tmp;
-  v = (uint8)tmp;
-  return is;
-}
 
-void solve() {
-}
-
+int fruits[3001];
 int main(int argc, const char *argv[])
 {
   
@@ -60,8 +55,31 @@ int main(int argc, const char *argv[])
   freopen("test.in", "r", stdin);
 #endif
 
-  solve();
-
+  int n, v;
+  scanf("%d %d", &n, &v);
+  for (int i = 0; i < n; i++) {
+    int ai, bi;
+    scanf("%d %d", &ai, &bi);
+    fruits[ai] += bi;
+  }
+  int ans = 0;
+  int yesterday_fruits = 0;
+  for (int i = 0; i <= 3000; i++) {
+    if (yesterday_fruits >= v) {
+      ans += v;
+      yesterday_fruits = fruits[i];
+    } else if (yesterday_fruits + fruits[i] >= v) {
+      ans += v;
+      //yesterday_fruits = yesterday_fruits + fruits[i] - v;
+      yesterday_fruits = fruits[i] - (v - yesterday_fruits);
+    } else {
+      ans += yesterday_fruits + fruits[i];
+      yesterday_fruits = 0;
+    }
+  }
+  ans += std::min(v, yesterday_fruits);
+  printf("%d\n", ans);
+  
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;
 #endif

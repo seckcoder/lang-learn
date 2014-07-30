@@ -1,13 +1,11 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
 
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <stack>
 #include <string>
 #include <cstring>
 #include <cstdlib>
-#include <list>
 #include <numeric>
 #include <ctime>
 #include <algorithm>
@@ -32,6 +30,7 @@ using std::cerr;
 using std::ostream;
 using std::istream;
 
+
 #define PI 3.14159265359
 #define IS_ODD(v) ((v) & 1)
 //#define IS_EVEN(v) (((v) - (((v) >> 1) << 1)) == 0)
@@ -50,9 +49,26 @@ istream &operator>>(istream &is, uint8 &v) {
   return is;
 }
 
-void solve() {
+inline uint8 min(uint8 a, uint8 b) {
+  return (a<b)?a:b;
+}
+inline uint8 max(uint8 a, uint8 b) {
+  return (a>b)?a:b;
 }
 
+// a,b could be negative
+// it always return positive remainder.
+int pmod(int a, int b) {
+  if (b < 0) {
+    return pmod(-a, -b);
+  }
+  int ret = a % b;
+  if (ret < 0) ret += b;
+  return ret;
+}
+
+#define N 3000
+bool flag[N+2];
 int main(int argc, const char *argv[])
 {
   
@@ -60,7 +76,19 @@ int main(int argc, const char *argv[])
   freopen("test.in", "r", stdin);
 #endif
 
-  solve();
+  int n;
+  scanf("%d" ,&n);
+  for (int i = 0; i < n; i++) {
+    int a;
+    scanf("%d", &a);
+    flag[a] = true;
+  }
+  for (int i = 1; i <= N+1; i++) {
+    if (!flag[i]) {
+      printf("%d\n", i);
+      break;
+    }
+  }
 
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;

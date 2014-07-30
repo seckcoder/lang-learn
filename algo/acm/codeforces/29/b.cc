@@ -1,9 +1,8 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
 
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <stack>
 #include <string>
 #include <cstring>
 #include <cstdlib>
@@ -50,7 +49,19 @@ istream &operator>>(istream &is, uint8 &v) {
   return is;
 }
 
-void solve() {
+double solve() {
+  int l,d,v,g,r;
+  scanf("%d %d %d %d %d", &l, &d, &v, &g, &r);
+  double t = double(d)/double(v);
+  int int_t = floor(t);
+  double mod_t = double(int_t % (g+r)) + t - double(int_t);
+  if (mod_t < g) {
+    return double(l) / double(v);
+  } else {
+    return double(l) / double(v) + double(g+r) - mod_t;
+  }
+  //t = std::modulo(t, float(g+r));
+  //t = t % (g+r);
 }
 
 int main(int argc, const char *argv[])
@@ -60,7 +71,7 @@ int main(int argc, const char *argv[])
   freopen("test.in", "r", stdin);
 #endif
 
-  solve();
+  printf("%.8f\n", solve());
 
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;

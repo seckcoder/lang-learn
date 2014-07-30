@@ -1,13 +1,11 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
 
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <stack>
 #include <string>
 #include <cstring>
 #include <cstdlib>
-#include <list>
 #include <numeric>
 #include <ctime>
 #include <algorithm>
@@ -32,6 +30,7 @@ using std::cerr;
 using std::ostream;
 using std::istream;
 
+
 #define PI 3.14159265359
 #define IS_ODD(v) ((v) & 1)
 //#define IS_EVEN(v) (((v) - (((v) >> 1) << 1)) == 0)
@@ -50,7 +49,22 @@ istream &operator>>(istream &is, uint8 &v) {
   return is;
 }
 
-void solve() {
+inline uint8 min(uint8 a, uint8 b) {
+  return (a<b)?a:b;
+}
+inline uint8 max(uint8 a, uint8 b) {
+  return (a>b)?a:b;
+}
+
+// a,b could be negative
+// it always return positive remainder.
+int pmod(int a, int b) {
+  if (b < 0) {
+    return pmod(-a, -b);
+  }
+  int ret = a % b;
+  if (ret < 0) ret += b;
+  return ret;
 }
 
 int main(int argc, const char *argv[])
@@ -60,7 +74,21 @@ int main(int argc, const char *argv[])
   freopen("test.in", "r", stdin);
 #endif
 
-  solve();
+  int n;
+  cin >> n;
+  int k = n>>1;
+  string phone;
+  cin >> phone;
+  string new_phone(n+(k-1), 'a');
+  for (int i = 0; i < k-1; i++) {
+    new_phone[3*i] = phone[2*i];
+    new_phone[3*i+1] = phone[2*i+1];
+    new_phone[3*i+2] = '-';
+  }
+  for (int i = 2*(k-1), j = 3*(k-1); i < n; i++, j++) {
+    new_phone[j] = phone[i];
+  }
+  cout << new_phone << endl;
 
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;

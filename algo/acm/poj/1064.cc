@@ -1,9 +1,8 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
 
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <stack>
 #include <string>
 #include <cstring>
 #include <cstdlib>
@@ -50,7 +49,45 @@ istream &operator>>(istream &is, uint8 &v) {
   return is;
 }
 
-void solve() {
+#define N 10000
+#define MAX_LEN 10000001
+#define MAX_PIECES 10000
+int a[N];
+int n, k;
+int countPieces(int len) {
+  int ans = 0;
+  for (int i = 0; i < n && ans <= MAX_PIECES; i++) {
+    ans += a[i]/len;
+  }
+  return ans;
+}
+
+int solve(int p, int r) {
+  scanf("%d %d", &n, &k);
+  for (int i = 0; i < n; i++) {
+    double l;
+    scanf("%lf", &l);
+    a[i] = l * 100;
+  }
+  int cnt = r - p;
+  int mark = 0;
+  while (cnt > 0) {
+    int i = p;
+    int step = cnt>>1;
+    i += step;
+    int pieces = countPieces(i);
+    //cout << i << " " << pieces << endl;
+    if (pieces >= k) {
+      // increase i
+      mark = i;
+      p = i + 1;
+      cnt -= step + 1;
+    } else {
+      // decrease i
+      cnt = step;
+    }
+  }
+  return mark;
 }
 
 int main(int argc, const char *argv[])
@@ -60,7 +97,7 @@ int main(int argc, const char *argv[])
   freopen("test.in", "r", stdin);
 #endif
 
-  solve();
+  printf("%.2lf\n", double(solve(1, MAX_LEN))/100.0);
 
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;

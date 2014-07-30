@@ -1,0 +1,13 @@
+#include <iostream>
+
+
+int main(int argc, const char *argv[])
+{
+	int t;
+	cin >> t;
+	for(int r = 0; r < t; r++) {
+		float x, y;
+		scanf("%f %f", &x, &y);
+		printf(
+	}
+}

@@ -1,13 +1,10 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
 
 #include <iostream>
 #include <vector>
-#include <queue>
-#include <stack>
 #include <string>
 #include <cstring>
 #include <cstdlib>
-#include <list>
 #include <numeric>
 #include <ctime>
 #include <algorithm>
@@ -32,6 +29,7 @@ using std::cerr;
 using std::ostream;
 using std::istream;
 
+
 #define PI 3.14159265359
 #define IS_ODD(v) ((v) & 1)
 //#define IS_EVEN(v) (((v) - (((v) >> 1) << 1)) == 0)
@@ -50,8 +48,7 @@ istream &operator>>(istream &is, uint8 &v) {
   return is;
 }
 
-void solve() {
-}
+#define N 100000
 
 int main(int argc, const char *argv[])
 {
@@ -60,7 +57,36 @@ int main(int argc, const char *argv[])
   freopen("test.in", "r", stdin);
 #endif
 
-  solve();
+  int n;
+  int ti[N];
+  cin >> n;
+  for (int i = 0; i < n; i++) {
+    cin >> ti[i];
+  }
+  int alice_t = 0, bob_t = 0,
+      alice_idx = 0, bob_idx = n-1;
+
+  while (alice_idx <= bob_idx) {
+    if (alice_t == bob_t &&
+        alice_idx == bob_idx) {
+      alice_t += ti[alice_idx];
+      alice_idx += 1;
+    } else if (alice_t == bob_t) {
+      alice_t += ti[alice_idx];
+      bob_t += ti[bob_idx];
+      alice_idx += 1;
+      bob_idx -= 1;
+    } else if (alice_t < bob_t) {
+      // alice consume
+      alice_t += ti[alice_idx];
+      alice_idx += 1;
+    } else {
+      // bob consume
+      bob_t += ti[bob_idx];
+      bob_idx -= 1;
+    }
+  }
+  cout << alice_idx << " " << (n-1) - bob_idx << endl;
 
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;

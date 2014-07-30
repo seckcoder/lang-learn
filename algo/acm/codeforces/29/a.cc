@@ -1,9 +1,8 @@
-#define SECK_DEBUG
+//#define SECK_DEBUG
 
 #include <iostream>
 #include <vector>
 #include <queue>
-#include <stack>
 #include <string>
 #include <cstring>
 #include <cstdlib>
@@ -32,6 +31,7 @@ using std::cerr;
 using std::ostream;
 using std::istream;
 
+
 #define PI 3.14159265359
 #define IS_ODD(v) ((v) & 1)
 //#define IS_EVEN(v) (((v) - (((v) >> 1) << 1)) == 0)
@@ -50,9 +50,32 @@ istream &operator>>(istream &is, uint8 &v) {
   return is;
 }
 
-void solve() {
-}
+#define N 100
+#define BASE 10000
+#define M (BASE<<1)+1
 
+uint8 idx[M];
+int x[N];
+int d[N];
+
+bool solve() {
+  int n;
+  scanf("%d", &n);
+  for (int i = 0; i < n; i++) {
+    scanf("%d %d", &x[i], &d[i]);
+    idx[x[i]+BASE] = i+1;
+  }
+  for (int i = 0; i < n; i++) {
+    int new_x = x[i] + d[i];
+    if (new_x <=BASE && new_x >= -BASE) {
+      int j = idx[new_x+BASE];
+      if (j > 0 && x[j-1] + d[j-1] == x[i]) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
 int main(int argc, const char *argv[])
 {
   
@@ -60,7 +83,11 @@ int main(int argc, const char *argv[])
   freopen("test.in", "r", stdin);
 #endif
 
-  solve();
+  if (solve()) {
+    printf("YES\n");
+  } else {
+    printf("NO\n");
+  }
 
 #ifdef SECK_DEBUG
   cerr << "\nTime = " << 1000* (double(clock()) / CLOCKS_PER_SEC) << "ms" << endl;
