@@ -1,6 +1,7 @@
 
 screen shot of top and mtop:
-
+Inline-style: 
+![alt text](httpshttps://raw.githubusercontent.com/seckcoder/lang-learn/master/markdown/mysql_innodb_4G.png "Logo Title Text 1")
 
 mysql status when cpu is 190%:
 
