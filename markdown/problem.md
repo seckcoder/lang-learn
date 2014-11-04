@@ -1,6 +1,6 @@
 
 screen shot of top and mtop:
-Inline-style: ![alt text](https://raw.githubusercontent.com/seckcoder/lang-learn/master/markdown/mysql_innodb_4G.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/seckcoder/lang-learn/master/markdown/mysql_innodb_4G.png "Logo Title Text 1")
 
 mysql variables:
 
