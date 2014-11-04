@@ -124,8 +124,8 @@ def test_RLock():
 		print inst
 
 def loopfunc():
-    while 1:
-        pass
+    time.sleep(2)
+    print "hello world"
 def test_Thread1():
     t = threading.Thread(name='thread', target=loopfunc)
     t.setDaemon(True)
@@ -148,11 +148,11 @@ def test_thread_exception():
         call_exception_thread()
     except AssertionError as inst:
         print inst
-test_thread_exception()
+#test_thread_exception()
 
-#test_Thread1()
+test_Thread1()
 #test_Thread_Object()
-config_log()
+#config_log()
 #test_Daemon_Thread()
 #test_Event()
 #test_RLock()

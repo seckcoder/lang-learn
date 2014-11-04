@@ -214,7 +214,6 @@ class WorkRequest:
         self.callable = callable_
         self.args = args or []
         self.kwds = kwds or {}
-        print 'hargs', self.args
 
     def __str__(self):
         return "<WorkRequest id=%s args=%r kwargs=%r exception=%s>" % \

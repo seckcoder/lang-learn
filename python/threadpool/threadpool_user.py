@@ -9,7 +9,6 @@ import threadpool
 from threadpool import *
 import traceback
 import sys
-import Queue
 def print_result(request, result):
     print "**** Result from request #%s: %r" % (request.requestID, result)
 def handle_exception(request, exc_info):
