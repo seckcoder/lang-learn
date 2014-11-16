@@ -1,10 +1,5 @@
 
 import java.io.IOException;
-import java.io.FileInputStream;
-import java.io.InputStreamReader;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.Reader;
 import java.util.*;
 import java.net.URI;
 
@@ -18,30 +13,23 @@ import org.apache.hadoop.mapreduce.lib.input.FileSplit;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import org.apache.hadoop.filecache.DistributedCache;
+import com.google.common.hash.BloomFilter;
+import com.google.common.hash.Funnels;
+import java.nio.charset.StandardCharsets;
+import java.io.FileInputStream;
 
 public class NGram {
 
   public static class Map extends Mapper<LongWritable, Text, Text, Text> {
     private Text word = new Text();
-    private HashSet<String> stopword_set = new HashSet<String>();
+    private BloomFilter<CharSequence> bloomFilter;
     @Override
     protected void setup(Context context) throws IOException {
-      //URI[] cacheFiles = DistributedCache.getCacheFiles(context.getConfiguration());
+      // load bloom filter
       Path[] cacheFiles = DistributedCache.getLocalCacheFiles(context.getConfiguration());
-      //loadStopWord("hdfs://english_stop");
-      // Don't know why only this works
-      loadStopWord(cacheFiles[0].toString());
-    }
-
-    private void loadStopWord(String uri) throws IOException {
-      BufferedReader reader = new BufferedReader(
-              new FileReader(uri));
-      String line;
-      while ((line = reader.readLine()) != null) {
-        line = line.trim();
-        stopword_set.add(line);
-      }
-      reader.close();
+      FileInputStream fs = new FileInputStream(cacheFiles[0].toString());
+      bloomFilter = BloomFilter.readFrom(fs, Funnels.stringFunnel(StandardCharsets.UTF_8));
+      fs.close();
     }
 
     public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
@@ -51,7 +39,7 @@ public class NGram {
       StringTokenizer tokenizer = new StringTokenizer(line);
       while (tokenizer.hasMoreTokens()) {
         String token = tokenizer.nextToken().toLowerCase();
-        if (!stopword_set.contains(token)) {
+        if (!bloomFilter.mightContain(token)) {
           word.set(token.replaceAll("\\W+", " "));
           context.write(word, location);
         }
@@ -63,7 +51,6 @@ public class NGram {
 
     public void reduce(Text key, Iterable<Text> values, Context context)
             throws IOException, InterruptedException {
-      //String books = new String("");
       HashSet<String> value_set = new HashSet<String>();
       for (Text loc : values) {
         value_set.add(loc.toString());
@@ -78,6 +65,11 @@ public class NGram {
     }
   }
 
+  /**
+   *
+   * @param args: [inputpath, outputpath, bloomfilter path]
+   * @throws Exception
+   */
   public static void main(String[] args) throws Exception {
     Configuration conf = new Configuration();
 
