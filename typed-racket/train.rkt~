@@ -1,0 +1,30 @@
+#lang typed/racket
+
+(require/typed racket
+               [string-split
+                 (case->
+                   [String -> (Listof String)]
+                   [String (U String Regexp) -> (Listof String)])])
+
+(require "nb.rkt")
+
+
+(: parse-input (String -> (Listof (Listof Number))))
+(define (parse-input fname)
+  (call-with-input-file
+    fname
+    (lambda: ([in : Input-Port])
+      (let: loop : (Listof (Listof Number))
+            ([records : (Listof (Listof Number)) null]
+             [line : (U String EOF) (read-line in 'any)])
+            (cond
+              ([eof-object? line]
+               (reverse records))
+              (else
+                 (loop 
+                   (apply
+                     (inst cons : (Listof Number) (Listof (Listof Number)))
+                     (list
+                       (map string->number (string-split line))
+                       records))
+                   (read-line in 'any))))))))

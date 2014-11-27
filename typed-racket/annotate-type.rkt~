@@ -1,0 +1,10 @@
+#lang typed/racket
+
+(require/typed racket
+               [string-split
+                 (case->
+                   [String -> (Listof String)]
+                   [String (U String Regexp) -> (Listof String)])])
+
+
+(string-split "def abc")

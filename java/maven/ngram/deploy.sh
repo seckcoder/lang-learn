@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-scp -i ~/15619Demo.pem.txt ./english.stop target/ngram-1.0-SNAPSHOT.jar run.sh hadoop@$1:~/
+scp -i ~/15619Demo.pem.txt out/artifacts/ngram_jar/ngram.jar run.sh hadoop@$1:~/

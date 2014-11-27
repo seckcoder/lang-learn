@@ -1,2 +1,2 @@
-prefix=project4.1_weili_q1
-files="README.md pom.xml src"
+prefix=project4.2_weili1_q1
+files="README.md src/main/java/GenNGram.java"

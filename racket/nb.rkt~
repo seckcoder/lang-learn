@@ -1,0 +1,10 @@
+#lang racket
+
+(provide (struct-out GaussNB))
+
+
+(struct GaussNB (p u sigma))
+
+(define (fit X Y)
+  (let ([y-lst (array->list Y)])
+    (letrec ([calc-prior (
