@@ -2,6 +2,7 @@
 
 module Maybe(
   Maybe(..),
+  Last(..)
   ) where
 
   import GHC.Base (Eq)
@@ -9,6 +10,8 @@ module Maybe(
   import Functor
   import Applicative
   import Monad
+  import Semigroup
+  import Monoid
 
   data Maybe a = Just a | Nothing deriving (Eq, Show)
 
@@ -25,3 +28,10 @@ module Maybe(
     return = Just
     Nothing >>= _ = Nothing
     (Just x) >>= f = (f x)
+
+-- To construct Last, we use Last (Maybe a). But the result has type: (Last a)
+  newtype Last a = Last { getLast :: Maybe a } deriving (Show)
+
+  instance Semigroup (Last a) where
+    (Last x) <> (Last Nothing) = (Last x)
+    _ <> (Last (Just x)) = (Last (Just x))
