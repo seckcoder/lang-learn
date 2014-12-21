@@ -2,7 +2,9 @@
 
 module Maybe(
   Maybe(..),
-  Last(..)
+  Last(..),
+  fromJust,
+  maybe
   ) where
 
   import GHC.Base (Eq)
@@ -35,3 +37,10 @@ module Maybe(
   instance Semigroup (Last a) where
     (Last x) <> (Last Nothing) = (Last x)
     _ <> (Last (Just x)) = (Last (Just x))
+
+  fromJust :: Maybe a -> a
+  fromJust (Just x) = x
+
+  maybe :: b -> (a -> b) -> Maybe a -> b
+  maybe y f (Just x) = f x
+  maybe y f Nothing = y

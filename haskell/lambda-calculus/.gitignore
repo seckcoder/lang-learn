@@ -1,3 +1,3 @@
 .cabal-sandbox
-*.hi
-*.o
+dist
+lib

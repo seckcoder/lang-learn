@@ -7,12 +7,13 @@ import Either
 import NonEmpty
 import Semigroup
 import Monoid
+import Applicative
 import Base
 import GHC.Base hiding (Functor, Maybe, Monad, fmap, return, (>>=))
 import Data.Fixed
 import GHC.Num
 import GHC.Real
-import GHC.Float
+import GHC.Float hiding ((**))
 import System.IO
 import Data.List
 import Data.Char (ord)
@@ -125,5 +126,27 @@ demo_monoid_Last = do
       x = (Last Nothing)
    in print x
 
+cmpLen w1 w2 =
+  compare (length w1) (length w2)
 
-main = demo_monoid_Last
+demo_monoid_Sort = do
+  -- sort first by length, then alphabatically
+  print (sortBy (cmpLen <> compare) (words "The reasoning behind this definition"))
+
+
+demo_applicative = do
+  print $ (pure id <*> ZipList [1])
+  let x :: (Num a) => ZipList a
+      x = pure 1
+   in print ((pure (\ x -> 2 * x)) <*> x)
+
+  print (ZipList [\ x -> 2*x, \ x -> 3*x] <*> pure 1)
+  print (pure ($ 1) <*> ZipList [\ x -> 2*x, \ x -> 3*x])
+
+  -- (+) <$> [1] creates partial function in `f` domain
+--  then, this function is applied with [2]
+  print (pure (+) <*> [1] <*> [2])
+  print ((+) <$> [1] <*> [2])
+
+
+main = demo_Monoidal

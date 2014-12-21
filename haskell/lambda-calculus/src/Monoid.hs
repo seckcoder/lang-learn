@@ -1,12 +1,17 @@
 {-# LANGUAGE NoImplicitPrelude #-}
 
-module Monoid ( Monoid(..), Sum(..), Product(..) ) where
+module Monoid (
+  Semigroup(..),
+  Monoid(..),
+  Sum(..),
+  Product(..) ) where
 
   import Prelude (foldr)
   import Semigroup
   import GHC.Num
   import GHC.Show
   import Data.List
+  import Data.Ord
 
   class Semigroup a => Monoid a where
     mempty :: a
@@ -41,3 +46,13 @@ module Monoid ( Monoid(..), Sum(..), Product(..) ) where
 
   instance Monoid [a] where
     mempty = []
+
+
+  instance Semigroup Ordering where
+    LT <> _ = LT
+    GT <> _ = GT
+    EQ <> y = y
+
+  instance Monoid Ordering where
+    mempty = EQ
+

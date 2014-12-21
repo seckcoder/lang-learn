@@ -11,3 +11,7 @@ module Functor( Functor(..) ) where
 
   instance Functor ((->) e) where
     fmap = (.)
+
+  instance Functor [] where
+    fmap = map
+

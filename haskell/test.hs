@@ -1,10 +1,6 @@
+{-# LANGUAGE MultiParamTypeClasses #-}
+class Collection e ce where
+  emptyColl :: ce
+  insert :: e -> ce -> ce
+  member :: e -> ce -> Bool
 
-import Data.Maybe
-
-
-foo :: Num a => Maybe a -> a
-foo Nothing = 3
-foo (Just v) = v
-
-
-main = foo 3

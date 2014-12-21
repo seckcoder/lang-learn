@@ -4,10 +4,12 @@
 module Base (
   Pair(..),
   flip,
-  Complex(..)
+  Complex(..),
+  Identity(..)
   ) where
     import Prelude ((+))
-    import GHC.Base hiding (Functor(..), flip)
+    import GHC.Base ((.), error)
+    import Data.List ((++))
     import GHC.Show
     import Data.Int
     import GHC.Num
@@ -16,6 +18,8 @@ module Base (
     import Functor
     import Semigroup
     import Monoid
+    import Applicative
+    import Monad
 
     flip f x y = f y x
 
@@ -50,16 +54,16 @@ module Base (
       signum a = error "Can't call signum of complex number"
       abs (Complex a b) = (Complex (abs a) (abs b))
 
-{-
-    instance Monoid (Sum Complex) where
 
-       mempty = Sum (Complex 0 0)
+    newtype Identity a = Identity { runIdentity :: a } deriving Show
 
+    instance Functor Identity where
+      fmap f (Identity a) = Identity (f a)
 
-    instance Semigroup Complex where
-       (Complex a0 b0) <> (Complex a1 b1) = Complex (a0 + a1) (b0 + b1)
+    instance Applicative Identity where
+      pure a = Identity a
+      (Identity f) <*> (Identity x) = Identity (f x)
 
-    instance Monoid Complex where
-       mempty = Complex 0 0
-
--}
+    instance Monad Identity where
+      return a = Identity a
+      (Identity a) >>= f = (f a)
