@@ -10,10 +10,13 @@ module Semigroup ( Semigroup(..) ) where
   infixr 6 <>
   class Semigroup a where
     (<>) :: a -> a -> a
+    (<>) = mappend
     sconcat :: NonEmpty a -> a
     sconcat (a :| as) = go a as where
       go b [] = b
       go b (c:cs) = go (b <> c) cs
+    mappend :: a -> a -> a
+    mappend = (<>)
 
     timeslp :: Int -> a -> a
     timeslp n x0 = pow x0 ((+1) n)
@@ -26,3 +29,5 @@ module Semigroup ( Semigroup(..) ) where
           | even e = pow_combine (base <> base) (e `quot` 2) const
           | e == 1 = (base <> const)
           | otherwise = pow_combine (base <> base) ((e - 1) `quot` 2) (base <> const)
+
+    {-# MINIMAL (<>) | mappend #-}

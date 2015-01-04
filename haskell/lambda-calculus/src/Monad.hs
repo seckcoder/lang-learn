@@ -3,10 +3,13 @@
 module Monad(
   Monad(..),
   when,
-  ap
+  ap,
+  liftM,
+  liftM2,
+  join
   ) where
 
-  import GHC.Base (id, (.), error)
+  import Prelude (id, (.), error, const, ($))
 
   import Data.Int
   import Functor
@@ -17,6 +20,7 @@ module Monad(
   import Data.Function (flip)
 
   infixl 1 >>=
+  infixl 1 >>
   class Applicative m => Monad m where
      return :: a -> m a
      (>>=) :: m a -> (a -> m b) -> m b
@@ -41,10 +45,12 @@ module Monad(
   -- ap mf m = m >>= (\ a -> (mf >>= \f -> return (f a)))
   ap mf m = mf >>= (\f -> (m >>= \a -> return (f a)))
 
-  -- liftM is unnecessary since we have the constraint that every monad is an applicative functor.
-  -- liftM :: Monad m => (a -> b) -> m a -> m b
-  -- liftM f m = m >>= (return . f)
+  -- liftM provide a default implementation for fmap
+  liftM :: Monad m => (a -> b) -> m a -> m b
+  liftM f m = m >>= (return . f)
 
+  liftM2 :: Monad m => (a1 -> a2 -> r) -> m a1 -> m a2 -> m r
+  liftM2 f m1 m2 = m1 >>= \ a1 -> m2 >>= \ a2 -> return $ f a1 a2
 
   replicateM :: Monad m => Int -> m a -> m [a]
   replicateM n m = sequence (replicate n m)
@@ -87,9 +93,6 @@ module Monad(
   instance Monad [] where
     return a = [a]
     vs >>= f = foldr ((++) . f) [] vs
-
-  const :: a -> b -> a
-  const x y = x
 
   instance Monad ((->) e) where
     return = const

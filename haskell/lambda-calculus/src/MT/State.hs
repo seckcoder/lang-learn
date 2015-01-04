@@ -10,6 +10,7 @@ module MT.State (
     import Functor
     import Applicative
     import Monad
+    import MonadZero
     import MT.Class
 
     newtype StateT s m a = StateT { runStateT :: s -> m (s, a) }
@@ -28,6 +29,10 @@ module MT.State (
       return x = StateT $ \s -> return (s, x)
       -- m >>= f = \s -> m s >>= \ (s1, x) -> (f x s1)
       m >>= f = StateT $ \s -> runStateT m s >>= \ (s1, x) -> runStateT (f x) s1
+
+
+    instance MonadZero m => MonadZero (StateT s m) where
+      mzero = StateT $ \s -> mzero
 
     instance MonadT (StateT s) where
       lift m = StateT $ \s -> m >>= \x -> return (s, x)

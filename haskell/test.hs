@@ -1,6 +1,8 @@
-{-# LANGUAGE MultiParamTypeClasses #-}
-class Collection e ce where
-  emptyColl :: ce
-  insert :: e -> ce -> ce
-  member :: e -> ce -> Bool
 
+
+
+
+
+test a = go a
+  where go a | a > 1 = True
+             | otherwise = False

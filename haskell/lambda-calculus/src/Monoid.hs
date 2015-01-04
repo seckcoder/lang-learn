@@ -4,12 +4,16 @@ module Monoid (
   Semigroup(..),
   Monoid(..),
   Sum(..),
-  Product(..) ) where
+  Product(..),
+  Endo(..),
+  Dual(..)
+  ) where
 
-  import Prelude (foldr)
+  import Prelude (foldr, id, (.))
   import Semigroup
   import GHC.Num
   import GHC.Show
+  import GHC.Generics
   import Data.List
   import Data.Ord
 
@@ -56,3 +60,18 @@ module Monoid (
   instance Monoid Ordering where
     mempty = EQ
 
+  newtype Endo a = Endo { appEndo :: a -> a }
+
+  instance Semigroup (Endo a) where
+    Endo f <> Endo g = Endo (f . g)
+
+  instance Monoid (Endo a) where
+    mempty = Endo id
+
+  newtype Dual a = Dual { getDual :: a }
+
+  instance Semigroup a => Semigroup (Dual a) where
+    Dual x `mappend` Dual y = Dual (y `mappend` x)
+
+  instance Monoid a => Monoid (Dual a) where
+    mempty = Dual mempty

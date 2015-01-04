@@ -5,7 +5,12 @@
 -- import Demo.ContT (demos)
 -- import Demo.Array (demos)
 
-import Demo.Surpassing
+-- import Demo.Surpassing
+
+-- import Demo.Search
+
+-- import Demo.Foldable
+import Demo.Monad
 
 runDemo demos = print demos
 
