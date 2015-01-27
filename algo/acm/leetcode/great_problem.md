@@ -4,3 +4,6 @@ https://oj.leetcode.com/problems/path-sum-ii/
 Convert Sorted List to Binary Search Tree
 https://oj.leetcode.com/problems/recover-binary-search-tree/
 interleave-string (The O(n) Space solution)
+https://oj.leetcode.com/problems/maximum-gap/
+https://oj.leetcode.com/problems/scramble-string/
+https://oj.leetcode.com/problems/sqrtx/   ( Integer overflow!!!)

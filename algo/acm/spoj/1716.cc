@@ -78,6 +78,7 @@ int max(int a, int b, int c) {
 class Node {
  public:
   int max_sum;
+  // range of Node is [u,v]
   int u_max_sum; // include u
   int v_max_sum; // include v
   int sum;
@@ -85,11 +86,19 @@ class Node {
   bool invalid() const {
     return max_sum == INVALID_V;
   }
+  // based on left child and right child value, update current node value
   void merge(const Node &lc, const Node &rc) {
-    sum = lc.sum + rc.sum;
-    u_max_sum = std::max(lc.u_max_sum, lc.sum + rc.u_max_sum);
-    v_max_sum = std::max(rc.v_max_sum, rc.sum + lc.v_max_sum);
-    max_sum = max(lc.max_sum, rc.max_sum, lc.v_max_sum + rc.u_max_sum);
+    sum = lc.sum + rc.sum; // sum value of all values in current node.
+    u_max_sum = std::max( // max sum value when including u
+        lc.u_max_sum, // max sum value of left child when including u
+        lc.sum + rc.u_max_sum // max sum value when not only including u, but also extend to right child
+        );
+    v_max_sum = std::max(rc.v_max_sum, rc.sum + lc.v_max_sum); // max sum value when including v
+    max_sum = max(
+        lc.max_sum, // left max sum
+        rc.max_sum, // right max sum
+        lc.v_max_sum + rc.u_max_sum // max sum including accross the middle value
+        );
   }
 };
 #define LC(i) (((i)<<1)+1)
@@ -106,6 +115,8 @@ void modify_rec(int nodeidx, int b, int e, int i, int v) {
     return;
   } else {
     int mid = (b+e)>>1;
+    // We don't need to propage here since the node modifed are all leaves.
+    // They don't have any child.
     if (i <= mid) {
       // left
       modify_rec(LC(nodeidx), b, mid, i, v);
@@ -131,8 +142,8 @@ Node query_rec(int nodeidx, int b, int e, int i, int j) {
   } else {
     int mid = (b+e)>>1;
     // intersect
-    Node left = query_rec(LC(nodeidx), b, mid, i, j);
-    Node right = query_rec(RC(nodeidx), mid+1, e, i, j);
+    Node left = query_rec(LC(nodeidx), b, mid, i, j); // max sum in [b, mid] and [i,j]
+    Node right = query_rec(RC(nodeidx), mid+1, e, i, j); // max sum in [mid+1, e] and [i,j]
     if (left.invalid()) return right;
     if (right.invalid()) return left;
     Node res;

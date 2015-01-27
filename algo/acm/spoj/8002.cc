@@ -72,6 +72,15 @@ int pmod(int a, int b) {
 #define RC(i) (((i)+1)<<1)
 //#define INVALID_V 0
 
+
+/*
+ * Basic idea:
+ * This is example of range editing/querying.
+ * For range editing, as we will change some non-leaf nodes, we need to propagate
+ * before querying so that some modification of current node can be reflected in
+ * children nodes.
+ *
+ */
 class Node {
  public:
   int64 sum;

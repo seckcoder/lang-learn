@@ -66,6 +66,8 @@ int pmod(int a, int b) {
   return ret;
 }
 
+
+
 #define N 200000
 int q;
 int A[N];
@@ -74,6 +76,20 @@ int intvn;
 
 #define LC(i) (((i)<<1)+1)
 #define RC(i) (((i)+1)<<1)
+
+/*
+ * basic Idea:
+ * For each node of segment tree, we store number of elements appeared in
+ * the range. The input number can be very large, so we compress it to fit 
+ * into range of segment tree by maintaining a mapping between values and index.
+ * The mapping is built by count values inserted(I), deleted(D) and counted(C).
+ *  - Insert and Delete correspond to modify operation of segment tree. After inserting/deleting a value, we modify the leaf node correspond to the value. 
+ *  - Querying k-th smallest, we use binary search based on number elements
+ *  in range.
+ *  - Count number elements smaller thant some value, we first get the index of the value
+ *  then this is as simple as querying number elements in [0, index]
+ */ 
+
 class Node {
  public:
   int v; // number of elements in the interval.
@@ -90,6 +106,8 @@ void modify(int ni, int b, int e, int i) {
     return; 
   } else {
     int mid = (b+e)>>1;
+    // we don't need to propagate since both methods of modifying segment tree
+    // only change leaf node.
     if (i <= mid) {
       modify<fn>(LC(ni), b, mid, i);
     } else {
@@ -99,6 +117,7 @@ void modify(int ni, int b, int e, int i) {
   }
 }
 
+// return total number of elements in [b,e] and [i,j]
 int query(int ni, int b, int e, int i, int j) {
   if (j < b || e < i) {
     return 0;
@@ -146,6 +165,8 @@ void build(int ni, int b, int e, int tmp_A[]) {
     nodes[ni].merge(nodes[LC(ni)], nodes[RC(ni)]);
   }
 }
+
+
 int main(int argc, const char *argv[])
 {
   
@@ -166,6 +187,11 @@ int main(int argc, const char *argv[])
         break;
     }
   }
+  /*
+   * tmp_A: store count elements (uniquely)
+   * qmap: (value in A , order of the value in A)
+   *       So qmap is used to map value to an index starting from 0. 
+   */
   std::sort(tmp_A, tmp_A+intvn);
   int *end = std::unique(tmp_A, tmp_A+intvn);
   intvn = end - tmp_A;
@@ -192,6 +218,7 @@ int main(int argc, const char *argv[])
         k = A[i];
         // k-th smallest
         if (query(0, 0, intvn-1, 0, intvn-1) < k) {
+          // if total number of elements is small than k
           printf("invalid\n");
         } else {
           //cout << query(0, 0, intvn-1, 2, 2) << endl;
