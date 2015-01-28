@@ -8,3 +8,5 @@ https://oj.leetcode.com/problems/maximum-gap/
 https://oj.leetcode.com/problems/scramble-string/
 https://oj.leetcode.com/problems/sqrtx/   ( Integer overflow!!!)
 https://oj.leetcode.com/problems/minimum-window-substring/
+https://oj.leetcode.com/problems/edit-distance/
+https://oj.leetcode.com/problems/text-justification/
