@@ -10,8 +10,6 @@
 
 using namespace std;
 
-// TODO: rank in time
-
 enum class ContentType {USER = 0, TOPIC, QUESTION, BOARD};
 enum class BoostType {USER = 0, TOPIC, QUESTION, BOARD, USERID };
 enum class CommandType {ADD = 0, QUERY, DEL, WQUERY };
@@ -33,7 +31,7 @@ void split(const string &line, char delimiter, vector<string> &res_strs) {
   stringstream stream(line);
   string one_word;
   while (getline(stream, one_word, delimiter)) {
-    res_strs.push_back(one_word);
+    if (!one_word.empty()) res_strs.push_back(one_word);
   }
 }
 
@@ -58,23 +56,34 @@ inline string restStr_(const string &line, size_t &start) {
   return line.substr(tmp, string::npos);
 }
 
-int parseInt_(const string &line, size_t &start) {
-  size_t end;
-  int ans = std::stoi(restStr_(line, start), &end);
-  start = end;
-  return ans;
-}
-float parseFloat_(const string &line, size_t &start) {
-  size_t end;
-  float ans = std::stof(restStr_(line, start), &end);
-  start = end;
-  return ans;
-}
-
 string substrUntil(const string &line, char delimiter, size_t &start) {
   int tmp = start;
   while (start < line.length() && line[start] != delimiter) start += 1;
   return line.substr(tmp, start-tmp);
+}
+
+int parseInt_(const string &line, size_t &start) {
+  string tmp_str = substrUntil(line, ' ', start);
+  int ans = stoi(tmp_str);
+  return ans;
+}
+float parseFloat_(const string &line, size_t &start) {
+  string tmp_str = substrUntil(line, ' ', start);
+  float ans = std::stof(tmp_str);
+  return ans;
+}
+
+inline char toLower(char c) {
+  if (c >= 'A' && c <= 'Z') {
+    return (c - 'A') + 'a';
+  }
+  return c;
+}
+// convert line to lower case
+void toLower(string &line) {
+  for (int i = 0; i < line.length(); i++) {
+    line[i] = toLower(line[i]);
+  }
 }
 
 
@@ -108,7 +117,15 @@ class Content {
       score = parseFloat_(line, start);
       skipSpaces_(line, start);
       tokens.clear();
-      split(restStr_(line, start), ' ', tokens);
+      string rest_s = restStr_(line, start); 
+      toLower(rest_s);
+      split(rest_s, ' ', tokens);
+    }
+    void copyCompareInfo(const Content &c) {
+      type = c.type;
+      id = c.id;
+      score = c.score;
+      time = c.time;
     }
 };
 
@@ -236,17 +253,18 @@ class Trie {
     }
 
     // given tokens, return ids that match the query tokens
-    void query(const vector<string> &tokens, vector<string> &res_ids) const {
+    void query(const vector<string> &tokens, vector<string> &query_ids) const {
       vector<Node *> nodes;
 
       // get all matching nodes for given query
       for (int i = 0; i < tokens.size(); i++) {
         Node *pn = query(tokens[i]);
-        if (pn) nodes.push_back(pn);
+        if (!pn) return; // can't find node for the token, directly break
+        nodes.push_back(pn);
       }
-      if (nodes.empty()) return;
+      assert(!nodes.empty());
 
-      vector<string> query_ids;
+      query_ids.clear();
       Node *pn0 = nodes[0];
       for (set<string>::const_iterator const_it0 = pn0->ids.begin();
           const_it0 != pn0->ids.end();
@@ -263,29 +281,25 @@ class Trie {
         if (match_for_all) query_ids.push_back(*const_it0);
       }
 
-      sortQueryIds(query_ids, compContentByScore);
+      sortQueryIds(query_ids, compContentMapIter);
     }
 
-    static bool compContentByScore(
+    static bool compContentMapIter(
         const ContentMap::const_iterator it1,
         const ContentMap::const_iterator it2) {
       const Content &content1 = it1->second;
       const Content &content2 = it2->second;
-      // descending order of score
-      if (content1.score > content2.score) return true;
-      // descending order of time(newer items first)
-      if (content1.time > content2.time) return true;
-      return false;
+      return compContent(content1, content2);
     }
 
-    static bool compContentByScoreBoosted(
+    static bool compContent(
         const Content &content1,
         const Content &content2) {
-       // descending order of score
       if (content1.score > content2.score) return true;
-      // descending order of time(newer items first)
-      if (content1.time > content2.time) return true;
-      return false;
+      else if (content1.score < content2.score) return false;
+      else if (content1.time > content2.time) return true;
+      else if (content1.time < content2.time) return false;
+      else return true;
     }
 
     // sort query ids according to content map info
@@ -307,7 +321,8 @@ class Trie {
         Compare comp) const {
       vector<Content> query_infos(query_ids.size());
       for (int i = 0; i < query_ids.size(); i++) {
-        query_infos[i] = content_map.find(query_ids[i])->second;
+        query_infos[i].copyCompareInfo(content_map.find(query_ids[i])->second);
+        //query_infos[i] = content_map.find(query_ids[i])->second;
         Content &content = query_infos[i];
         for (int j = 0; j < boosts.size(); j++) {
           switch (boosts[j].type) {
@@ -332,7 +347,7 @@ class Trie {
     void wquery(const vector<string> &tokens,
         const vector<Boost> &boosts, vector<string> &res_ids) const {
       query(tokens, res_ids);
-      sortQueryIdsBoosted(boosts, res_ids, compContentByScoreBoosted);
+      sortQueryIdsBoosted(boosts, res_ids, compContent);
     }
 
   private:
@@ -342,7 +357,9 @@ class Trie {
 
 class CommandBase {
   public:
-    virtual void parse(const string &line) = 0;
+    virtual void parse(const string &line) {
+      _cur = 0;
+    };
     void matchString(const string &line, const string &expected) {
       matchstring_(line, expected, _cur);
     }
@@ -366,6 +383,7 @@ class CommandAdd : public CommandBase {
   public:
     Content content;
     void parse(const string &line) {
+      CommandBase::parse(line);
       matchString(line, "ADD");
       skipSpaces(line);
       content.parse(line, _cur);
@@ -377,11 +395,15 @@ class CommandQuery: public CommandBase {
     int num_res;
     vector<string> tokens;
     virtual void parse(const string &line) {
+      CommandBase::parse(line);
+      tokens.clear();
       matchString(line, "QUERY");
       skipSpaces(line);
       num_res = parseInt(line);
       skipSpaces(line);
-      split(restStr(line), ' ', tokens);
+      string rest_s = restStr(line);
+      toLower(rest_s);
+      split(rest_s, ' ', tokens);
     }
 };
 
@@ -389,6 +411,7 @@ class CommandDel: public CommandBase {
   public:
     string id;
     virtual void parse(const string &line) {
+      CommandBase::parse(line);
       matchString(line, "DEL");
       skipSpaces(line);
       id = restStr(line);
@@ -402,18 +425,23 @@ class CommandWQuery: public CommandBase {
     int num_res;
     vector<string> tokens;
     virtual void parse(const string &line) {
+      CommandBase::parse(line);
       matchString(line, "WQUERY");
       skipSpaces(line);
       num_res = parseInt(line);
       skipSpaces(line);
       int num_boost = parseInt(line);
       skipSpaces(line);
-      boosts.resize(num_boost);
-      for (int i = 0; i < num_boost; i++) {
-        boosts[i].parse(line, _cur);
-        skipSpaces(line);
+      if (num_boost > 0) {
+        boosts.resize(num_boost);
+        for (int i = 0; i < num_boost; i++) {
+          boosts[i].parse(line, _cur);
+          skipSpaces(line);
+        }
       }
-      split(restStr(line), ' ', tokens);
+      string rest_s = restStr(line);
+      toLower(rest_s);
+      split(rest_s, ' ', tokens);
     }
 };
 
