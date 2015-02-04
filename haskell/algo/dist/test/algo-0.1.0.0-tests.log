@@ -1,0 +1,11 @@
+Test suite tests: RUNNING...
+postOrder traversal: [OK, passed 100 tests]
+preOrder traversal: [OK, passed 100 tests]
+inOrder traversal: [OK, passed 100 tests]
+
+         Properties  Total      
+ Passed  3           3          
+ Failed  0           0          
+ Total   3           3          
+Test suite tests: PASS
+Test suite logged to: dist/test/algo-0.1.0.0-tests.log

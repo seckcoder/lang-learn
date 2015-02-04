@@ -2,6 +2,8 @@
 
 
 #include <iostream>
+#include <fstream>
+#include <algorithm>
 #include <sstream>
 #include <map>
 #include <vector>
@@ -10,18 +12,19 @@
 
 using namespace std;
 
-enum class ContentType {USER = 0, TOPIC, QUESTION, BOARD};
-enum class BoostType {USER = 0, TOPIC, QUESTION, BOARD, USERID };
-enum class CommandType {ADD = 0, QUERY, DEL, WQUERY };
-inline bool contentBoostTypeEqual(ContentType t1, BoostType t2) {
-  return size_t(t1) == size_t(t2);
+enum ContentType {CONTENT_USER = 0, CONTENT_TOPIC, CONTENT_QUESTION,
+  CONTENT_BOARD, CONTENT_OTHER};
+
+
+template <class T>
+void debugVec(const vector<T> &vec) {
+  for (int i = 0; i < vec.size(); i++) {
+    cout << vec[i] << " ";
+  }
+  cout << endl;
 }
 
-class ParseError : std::exception {
-  const char* what() const noexcept {
-    return "Parse Error for Command";
-  }
-};
+
 
 inline bool isDigit(char c) {
   return c >= '0' && c <= '9';
@@ -33,44 +36,6 @@ void split(const string &line, char delimiter, vector<string> &res_strs) {
   while (getline(stream, one_word, delimiter)) {
     if (!one_word.empty()) res_strs.push_back(one_word);
   }
-}
-
-void matchstring_(const string &line, const string &expected, size_t &start) {
-  if (line.length() - start < expected.length()) throw ParseError();
-  for (int j = 0;
-      start < line.length() && j < expected.length();
-      start++, j++) {
-    if (line[start] != expected[j]) {
-      throw ParseError();
-    }
-  }
-}
-
-void skipSpaces_(const string &line, size_t &start) {
-  while (start < line.length() && line[start] == ' ') start++;
-}
-
-inline string restStr_(const string &line, size_t &start) {
-  size_t tmp = start;
-  start = line.length();
-  return line.substr(tmp, string::npos);
-}
-
-string substrUntil(const string &line, char delimiter, size_t &start) {
-  int tmp = start;
-  while (start < line.length() && line[start] != delimiter) start += 1;
-  return line.substr(tmp, start-tmp);
-}
-
-int parseInt_(const string &line, size_t &start) {
-  string tmp_str = substrUntil(line, ' ', start);
-  int ans = stoi(tmp_str);
-  return ans;
-}
-float parseFloat_(const string &line, size_t &start) {
-  string tmp_str = substrUntil(line, ' ', start);
-  float ans = std::stof(tmp_str);
-  return ans;
 }
 
 inline char toLower(char c) {
@@ -86,40 +51,37 @@ void toLower(string &line) {
   }
 }
 
+inline ContentType recognizeContentType(const string &type_s) {
+  if (type_s == "user") {
+    return CONTENT_USER;
+  } else if (type_s == "topic") {
+    return CONTENT_TOPIC;
+  } else if (type_s == "question") {
+    return CONTENT_QUESTION;
+  } else if (type_s == "board") {
+    return CONTENT_BOARD;
+  } else {
+    return CONTENT_OTHER;
+  }
+}
 
 class Content {
   public:
     ContentType type;
+    //string type;
     string id;
     float score;
     vector<string> tokens;
     int time;
-    //string data_str;
-    void parseContentType(const string &line, size_t &start) {
-      string type_v = substrUntil(line, ' ', start);
-      if (type_v == "user") {
-        type = ContentType::USER;
-      } else if (type_v == "topic") {
-        type = ContentType::TOPIC;
-      } else if (type_v == "question") {
-        type = ContentType::QUESTION;
-      } else if (type_v == "board") {
-        type = ContentType::BOARD;
-      } else {
-        throw ParseError();
-      }
-    }
-    void parse(const string &line, size_t &start) {
-      parseContentType(line, start);
-      skipSpaces_(line, start);
-      id = substrUntil(line, ' ', start);
-      skipSpaces_(line, start);
-      score = parseFloat_(line, start);
-      skipSpaces_(line, start);
+    void parse(istream &is) {
+      string type_s;
+      is >> type_s >> id >> score;
+      type = recognizeContentType(type_s);
       tokens.clear();
-      string rest_s = restStr_(line, start); 
-      toLower(rest_s);
-      split(rest_s, ' ', tokens);
+      string data_str;
+      std::getline(is, data_str);
+      toLower(data_str);
+      split(data_str, ' ', tokens);
     }
     void copyCompareInfo(const Content &c) {
       type = c.type;
@@ -132,29 +94,14 @@ class Content {
 
 class Boost {
   public:
-    BoostType type;
+    ContentType type;
     string id;
     float boost;
-    void parseType(const string &line, size_t &cur) {
-      string type_v = substrUntil(line, ':', cur);
-      if (type_v == "user") {
-        type = BoostType::USER;
-      } else if (type_v == "topic") {
-        type = BoostType::TOPIC;
-      } else if (type_v == "question") {
-        type = BoostType::QUESTION;
-      } else if (type_v == "board") {
-        type = BoostType::BOARD;
-      } else {
-        type = BoostType::USERID;
-        id = type_v;
-      }
-    }
-    void parse(const string &line, size_t &cur) {
-      if (line.empty()) throw ParseError();
-      parseType(line, cur);
-      cur += 1; // skip ':'
-      boost = parseFloat_(line, cur);
+    void parse(istream &is) {
+      is >> std::ws;
+      std::getline(is, id, ':');
+      type = recognizeContentType(id);
+      is >> boost;
     }
 };
 
@@ -174,6 +121,10 @@ class Node {
       if (cur >= data.length()) {
         return;
       }
+      if (data == "uneonclofpu") {
+        cout << "bravo" << endl;
+      }
+
       BranchMap::iterator it = branches.find(data[cur]);
       if (it == branches.end()) {
         Node *pn = new Node();
@@ -235,13 +186,14 @@ class Trie {
       content_map[content.id].time = _timer;
       _timer += 1;
       for (int i = 0; i < content.tokens.size(); i++) {
+        cout << "adding ...  " << content.tokens[i] << " " << endl;
         root.insert(content.tokens[i], content.id);
       }
     }
     void del(const string &id) {
       if (content_map.find(id) == content_map.end()) return;
       Content &content = content_map[id];
-      for (int i = 0; i < content.tokens[i].size(); i++) {
+      for (int i = 0; i < content.tokens.size(); i++) {
         root.remove(content.tokens[i], content.id);
       }
       content_map.erase(id);
@@ -326,13 +278,13 @@ class Trie {
         Content &content = query_infos[i];
         for (int j = 0; j < boosts.size(); j++) {
           switch (boosts[j].type) {
-            case BoostType::USERID:
+            case CONTENT_OTHER:
               if (content.id == boosts[j].id) {
                 content.score *= boosts[j].boost;
               }
               break;
             default:
-              if (contentBoostTypeEqual(content.type, boosts[j].type)) {
+              if (content.type == boosts[j].type) {
                 content.score *= boosts[j].boost;
               }
               break;
@@ -357,36 +309,14 @@ class Trie {
 
 class CommandBase {
   public:
-    virtual void parse(const string &line) {
-      _cur = 0;
-    };
-    void matchString(const string &line, const string &expected) {
-      matchstring_(line, expected, _cur);
-    }
-    void skipSpaces(const string &line) {
-      skipSpaces_(line, _cur);
-    }
-    int parseInt(const string &line) {
-      return parseInt_(line, _cur);
-    }
-    float parseFloat(const string &line) {
-      return parseFloat_(line, _cur);
-    }
-    string restStr(const string &line) {
-      return restStr_(line, _cur);
-    }
-  protected:
-    size_t _cur;
+    virtual void parse(istream &is) = 0;
 };
 
 class CommandAdd : public CommandBase {
   public:
     Content content;
-    void parse(const string &line) {
-      CommandBase::parse(line);
-      matchString(line, "ADD");
-      skipSpaces(line);
-      content.parse(line, _cur);
+    void parse(istream &is) {
+      content.parse(is);
     }
 };
 
@@ -394,27 +324,21 @@ class CommandQuery: public CommandBase {
   public:
     int num_res;
     vector<string> tokens;
-    virtual void parse(const string &line) {
-      CommandBase::parse(line);
+    virtual void parse(istream &is) {
       tokens.clear();
-      matchString(line, "QUERY");
-      skipSpaces(line);
-      num_res = parseInt(line);
-      skipSpaces(line);
-      string rest_s = restStr(line);
-      toLower(rest_s);
-      split(rest_s, ' ', tokens);
+      is >> num_res;
+      string query;
+      std::getline(is, query);
+      toLower(query);
+      split(query, ' ', tokens);
     }
 };
 
 class CommandDel: public CommandBase {
   public:
     string id;
-    virtual void parse(const string &line) {
-      CommandBase::parse(line);
-      matchString(line, "DEL");
-      skipSpaces(line);
-      id = restStr(line);
+    virtual void parse(istream &is) {
+      is >> id;
     }
 };
 
@@ -424,60 +348,26 @@ class CommandWQuery: public CommandBase {
     vector<Boost> boosts;
     int num_res;
     vector<string> tokens;
-    virtual void parse(const string &line) {
-      CommandBase::parse(line);
-      matchString(line, "WQUERY");
-      skipSpaces(line);
-      num_res = parseInt(line);
-      skipSpaces(line);
-      int num_boost = parseInt(line);
-      skipSpaces(line);
+    virtual void parse(istream &is) {
+      int num_boost;
+      is >> num_res >> num_boost;
       if (num_boost > 0) {
         boosts.resize(num_boost);
         for (int i = 0; i < num_boost; i++) {
-          boosts[i].parse(line, _cur);
-          skipSpaces(line);
+          boosts[i].parse(is);
         }
       }
-      string rest_s = restStr(line);
-      toLower(rest_s);
-      split(rest_s, ' ', tokens);
+      string query;
+      std::getline(is, query);
+      toLower(query);
+      split(query, ' ', tokens);
     }
 };
 
-class Command {
-  public:
-    void parse(const string &line) {
-      if (line.empty()) throw ParseError();
-      switch (line[0]) {
-        case 'A':
-          type = CommandType::ADD;
-          cmd_add.parse(line);
-          break;
-        case 'Q':
-          type = CommandType::QUERY;
-          cmd_query.parse(line);
-          break;
-        case 'W':
-          type = CommandType::WQUERY;
-          cmd_wquery.parse(line);
-          break;
-        case 'D':
-          type = CommandType::DEL;
-          cmd_del.parse(line);
-          break;
-      }
-    }
-    CommandType type;
-    CommandAdd cmd_add;
-    CommandQuery cmd_query;
-    CommandDel cmd_del;
-    CommandWQuery cmd_wquery;
-};
 
 void execute(
     const CommandAdd &cmd_add, Trie &trie) {
-  trie.add(cmd_add.content);
+  if (cmd_add.content.tokens.size() > 0) trie.add(cmd_add.content);
 }
 void execute(
     const CommandDel &cmd_del, Trie &trie) {
@@ -486,46 +376,93 @@ void execute(
 void execute(
     const CommandQuery &cmd_query, const Trie &trie) {
   vector<string> ids;
-  trie.query(cmd_query.tokens, ids);
-  for (int i = 0; i < ids.size() && i < cmd_query.num_res; i++) {
-    printf("%s ", ids[i].c_str());
+  if (cmd_query.tokens.size() > 0) {
+    trie.query(cmd_query.tokens, ids);
   }
-  printf("\n");
+  /* if (ids.size() > 0 && cmd_query.num_res > 0) { */
+  /*   printf("%s", ids[0].c_str()); */
+  /*   for (int i = 1; i < ids.size() && i < cmd_query.num_res; i++) { */
+  /*     printf(" %s", ids[i].c_str()); */
+  /*   } */
+  /* } */
+  /* printf("\n"); */
 }
 
 void execute(
     const CommandWQuery &cmd_wquery, const Trie &trie) {
   vector<string> ids;
-  trie.wquery(cmd_wquery.tokens, cmd_wquery.boosts, ids);
-  for (int i = 0; i < ids.size() && i < cmd_wquery.num_res; i++) {
-    printf("%s ", ids[i].c_str());
+  if (cmd_wquery.tokens.size() > 0) {
+      trie.wquery(cmd_wquery.tokens, cmd_wquery.boosts, ids);
   }
-  printf("\n");
+  /* if (ids.size() > 0 && cmd_wquery.num_res > 0) { */
+  /*   printf("%s", ids[0].c_str()); */
+  /*   for (int i = 1; i < ids.size() && i < cmd_wquery.num_res; i++) { */
+  /*     printf(" %s", ids[i].c_str()); */
+  /*   } */
+  /* } */
+  /* printf("\n"); */
 }
 
+ostream& operator<<(ostream &os, const CommandAdd &cmd) {
+  os << "add " << cmd.content.type << " " << cmd.content.id <<
+    " " << cmd.content.score << " ";
+  for (int i = 0; i < cmd.content.tokens.size(); i++) {
+    os << cmd.content.tokens[i] << " ";
+  }
+  return os;
+}
+ostream& operator<<(ostream &os, const CommandDel &cmd) {
+  os << "del " << cmd.id << endl;
+  return os;
+}
+ostream& operator<<(ostream &os, const CommandQuery &cmd) {
+  os << "query ";
+  for (int i = 0; i < cmd.tokens.size(); i++) {
+    os << cmd.tokens[i] << " ";
+  }
+  os << endl;
+  return os;
+}
+ostream& operator<<(ostream &os, const CommandWQuery &cmd) {
+  os << "wquery ";
+  for (int i = 0; i < cmd.tokens.size(); i++) {
+    os << cmd.tokens[i] << " ";
+  }
+  os << endl;
+  return os;
+}
 int main() {
   int cmd_num;
-  Command cmd;
   Trie trie;
-  scanf("%d\n", &cmd_num);
-  string input_line;
+  // cin >> cmd_num;
+  ifstream ifs("small_sample.txt", std::ifstream::in);
+  ifs >> cmd_num;
   for (int i = 1; i <= cmd_num; i++) {
-    std::getline(std::cin, input_line);
-    cmd.parse(input_line);
-    switch (cmd.type) {
-      case CommandType::ADD:
-        execute(cmd.cmd_add, trie);
-        break;
-      case CommandType::QUERY:
-        execute(cmd.cmd_query, trie);
-        break;
-      case CommandType::DEL:
-        execute(cmd.cmd_del, trie);
-        break;
-      case CommandType::WQUERY:
-        execute(cmd.cmd_wquery, trie);
-        break;
+    string type;
+    ifs >> type;
+    cout << type << endl;
+    if (type == "ADD") {
+      CommandAdd cmd;
+      cmd.parse(ifs);
+      cout << i << " " << cmd << endl;
+      execute(cmd, trie);
+    } else if (type == "DEL") {
+      CommandDel cmd;
+      cmd.parse(ifs);
+      cout << i << " " << cmd << endl;
+      execute(cmd, trie);
+    } else if (type == "QUERY") {
+      CommandQuery cmd;
+      cmd.parse(ifs);
+      cout << i << " " << cmd << endl;
+      execute(cmd, trie);
+    } else if (type == "WQUERY") {
+      CommandWQuery cmd;
+      cmd.parse(ifs);
+      cout << i << " " << cmd << endl;
+      execute(cmd, trie);
     }
   }
+  ifs.close();
   return 0;
 }

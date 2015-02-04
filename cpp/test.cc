@@ -1,5 +1,6 @@
 #include <initializer_list>
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <cstdlib>
 
@@ -7,7 +8,14 @@ using namespace std;
 
 
 int main(int argc, const char *argv[]) {
-  string str = "10 0 Adam D’A";
-  cout << std::stoi(str) << endl;
+  ifstream ifs("test.txt");
+  string type1, type2, id;
+  int score;
+  ifs >> type1 >> type2 >> id >> score;
+  string rest;
+  ifs >> std::ws;
+  std::getline(ifs, rest);
+  cout << rest.length() << endl;
+  ifs.close();
   return 0;
 }
