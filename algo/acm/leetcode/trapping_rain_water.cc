@@ -4,42 +4,27 @@ using namespace std;
 class Solution {
 public:
     int trap(int A[], int n) {
-      return recur(A, 0, n-1);
-    }
-    // A[p-r] forms a U shape
-    int U(int A[], int p, int r) {
-      int base_height = std::min(A[p], A[r]);
-      int area = 0;
-      for (int i = p+1; i < r; i++) {
-        area += std::max(0, base_height - A[i]);
+      if (n == 0) return 0;
+      int *max_left = (int *)malloc(n*sizeof(int));
+      int *max_right = (int *)malloc(n*sizeof(int));
+      max_left[0] = 0;
+      for (int i = 1; i < n; i++) {
+        max_left[i] = std::max(max_left[i-1], A[i-1]);
       }
-      return area;
-    }
-    int recur(int A[], int p, int r) {
-      if (p >= r) return 0;
-      //if (A[p] <= A[p+1]) return recur(A, p+1, r);
-
-      // get to the left point
-      while (p < r && A[p] <= A[p+1]) {
-        p += 1;
+      max_right[n-1] = 0;
+      for (int i = n-2; i >= 0; i--) {
+        max_right[i] = std::max(max_right[i+1], A[i+1]);
       }
-
-      if (p >= r) return 0;
-
-      int left = p;
-
-      // get to the middle point
-      while (p < r && A[p] >= A[p+1]) {
-        p += 1;
+      int total_trapped_water = 0;
+      for (int i = 1; i < n-1; i++) {
+        int max_level = std::min(max_left[i], max_right[i]);
+        if (max_level > A[i]) {
+          total_trapped_water += max_level - A[i];
+        }
       }
-      if (p >= r) return 0;
-
-      // get to the right point
-      while (p < r && A[p] <= A[p+1]) {
-        p += 1;
-      }
-      cout << left << " " << p << endl;
-      return U(A, left, p) + recur(A, p, r);
+      free(max_left);
+      free(max_right);
+      return total_trapped_water;
     }
 };
 

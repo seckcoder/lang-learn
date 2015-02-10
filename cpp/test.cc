@@ -8,14 +8,11 @@ using namespace std;
 
 
 int main(int argc, const char *argv[]) {
-  ifstream ifs("test.txt");
-  string type1, type2, id;
-  int score;
-  ifs >> type1 >> type2 >> id >> score;
-  string rest;
-  ifs >> std::ws;
-  std::getline(ifs, rest);
-  cout << rest.length() << endl;
-  ifs.close();
+  int a = 0, b = 0;
+  while (a != 1) {
+    cin >> a >> b;
+    cout << a << " " << b << endl;
+    cin.clear();
+  }
   return 0;
 }
