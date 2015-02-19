@@ -3,16 +3,21 @@
 #include <fstream>
 #include <string>
 #include <cstdlib>
+#include <vector>
 
 using namespace std;
 
+void foo(const vector<string> &vec) {
+  for (int i = 0; i < vec.size(); i++) {
+    for (int j = 0; j < vec[i].length(); j++) {
+      cout << vec[i][j] << endl;
+    }
+  }
+}
 
 int main(int argc, const char *argv[]) {
-  int a = 0, b = 0;
-  while (a != 1) {
-    cin >> a >> b;
-    cout << a << " " << b << endl;
-    cin.clear();
-  }
+  vector<string> vec;
+  vec.push_back("ab");
+  foo(vec);
   return 0;
 }

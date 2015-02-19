@@ -1,15 +1,15 @@
 #include <iostream>
-#include <map>
+#include <unordered_map>
 #include <cassert>
 #include <list>
-using std::map;
+using std::unordered_map;
 using std::cout;
 using std::endl;
 
 class LRUCache{
  public:
-  typedef std::list<std::pair<int, int> > lruq_type;
-  typedef map<int, lruq_type::iterator> kvmap_type;
+  typedef std::list<std::pair<int, int> > lruq_type; // key, value. lru
+  typedef unordered_map<int, lruq_type::iterator> kvmap_type;
   kvmap_type kv_;
   lruq_type lruq_;
   int capacity_;
