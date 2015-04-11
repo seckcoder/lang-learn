@@ -1,5 +1,10 @@
 
-// this version start its index from 1
+/*
+ * Max heap with index starting from 1
+ *
+ *
+ *
+ */
 
 
 #include <cstdlib>

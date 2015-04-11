@@ -13,13 +13,6 @@
       #messages li:nth-child(odd) { background: #eee; }
     </style>
     <script src="https://cdn.socket.io/socket.io-1.1.0.js"></script>
-    <script>
-        var socket = io();
-        socket.emit("updateAll");
-        socket.on('updateAll', function () {
-            console.log('update all');
-        });
-    </script>
   </head>
   <body>
     <ul id="messages"></ul>
