@@ -4,10 +4,15 @@
 #include <list>
 using namespace std;
 
+// teh same question. I have on twitter. Just copy this.
 
 typedef list<list<int> > ElemList;
 typedef list<int> IntList;
 
+// First describe your idea.
+//
+// 1. I will use an exception to represent the end of list iteration
+// 2. After we finish d`
 
 class EndOfIteratorExcept : public exception {
   public:
@@ -28,13 +33,22 @@ class Iterator {
     }
 
     int next() {
+      // next will return the next element in the iterator
+      
+      // end of iteration, throw an excepiotn
       if (elemCur == elemEnd) throw EndOfIteratorExcept();
+
+      // in the first branch of if-else,
       if (intCur == elemCur->end()) {
+        // if the end of current list
+        // we move to the next list 
         elemCur++;
         if (elemCur == elemEnd) throw EndOfIteratorExcept();
         intCur = elemCur->begin();
         return next();
       } else {
+        // other wise, we directly return the next element
+        // of current list
         int value = *intCur;
         intCur++;
         return value;
@@ -42,6 +56,10 @@ class Iterator {
     }
 };
 
+// since in C++, we can't represent a list of integer and list.
+// so I assume that the list is represented as a list of list.
+// for the single integer, I will store 
+// Just Say this: let me check it for a moment.
 
 int main() {
   list<list<int> > data_list;
@@ -57,3 +75,6 @@ int main() {
   cout << iter.next() << " " << iter.next() << endl;
   return 0;
 }
+
+
+
