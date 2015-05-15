@@ -21,7 +21,10 @@ int cmp_less(int cur, int target) {
 }
 
 
-class Solution {
+/* First, we find the rotate position. Then we do a binary
+ * in both parts
+ */
+class Solution1 {
 public:
     int search(int A[], int n, int target) {
         if (n == 0) return -1;
@@ -66,6 +69,42 @@ public:
         return -1;
     }
 };
+
+
+
+/* The second method doesn't have to find the rotation point first */
+
+class Solution {
+  public:
+    int search(int A[], int n, int target) {
+      
+      int p = 0, r = n-1;
+      int base = A[r];
+      while (p <= r) {
+        int m = p + (r-p)/2; // avoid overflow!!!
+        if (A[m] == target) return m;
+        if (A[m] < base) {
+          // mono increasing between [m,r]
+          if (A[m] < target && target <= A[r]) {
+            p = m + 1;
+          } else {
+            // A[m] > target or A[r] < target
+            r = m - 1;
+          }
+        } else {
+          // mono increasing between [p,m]
+          if (A[m] > target && target >= A[p]) {
+            r = m - 1;
+          } else {
+            // A[m] < target or target < A[p]
+            p = m + 1;
+          }
+        }
+      }
+      return -1;
+    }
+};
+
 
 int main() {
   int A[] = {3,5,1};

@@ -51,6 +51,9 @@
 - Intersection of Two Linked Lists
 - Min Stack (Faster solution?)
 - ZigZag Conversion (Better solution?)
+- Course Schedule (Seems dfs is really slow. Faster solution?)
+- Palindrome Number
+- word break 2 Dynamic programming solution TLE...
 
 
 TODO:
