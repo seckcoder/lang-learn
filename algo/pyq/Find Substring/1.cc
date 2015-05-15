@@ -46,15 +46,19 @@ using namespace std;
 int numSubstrs(string s1, string s2) {
 
   vector<vector<int>> dp(2, vector<int>(s2.length()+1, 0));
+
+  // initially, s2[s2.length():] is empty, so every substring of s1
+  // contain it once.
   dp[0][s2.length()] = 1;
   dp[1][s2.length()] = 1;
 
   for (int i = s1.length()-1; i>=0; i--) {
     for (int j = s2.length()-1; j >= 0; j--) {
       if (s1[i] == s2[j]) {
-        dp[i%2][j] = dp[(i+1)%2][j+1] + dp[(i+1)%2][j];
+        dp[i%2][j] = dp[(i+1)%2][j+1] // match i and j
+          + dp[(i+1)%2][j];  // not match i and j
       } else {
-        dp[i%2][j] = dp[(i+1)%2][j];
+        dp[i%2][j] = dp[(i+1)%2][j]; // not match i and j
       }
       // cout << i << " " << j << " " << dp[i%2][j] << endl;
     }
@@ -71,7 +75,9 @@ int numSubstrs(string s1, string s2) {
  */
 
 
+/* match a unit from s2 at s1 starting at i. return true for matching */
 inline bool unitEqual(const string &s1, int i, const string &s2, int j) {
+  /* count: number of chars */
   int count = (s2[j+1] == '+')?2:4;
   for (int num = 0; num < count; num++) {
     if (s1[i+num] != s2[j]) return false;
@@ -81,6 +87,9 @@ inline bool unitEqual(const string &s1, int i, const string &s2, int j) {
 
 int numSubstrs1(string s1, string s2) {
 
+  // each unit is a single block that we need to match.
+  // For example, for unit a+, we should match aa,
+  // for unit a-, we should match aaaa
   int num_units = s2.length() / 2;
   vector<vector<int>> dp(2, vector<int>(num_units+1, 0));
   dp[0][num_units] = 1;
