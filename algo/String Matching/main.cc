@@ -140,14 +140,14 @@ void compute_prefix_function(const string pattern, vector<int> &pi) {
   int patt_len = pattern.length();
 
   int k = 0; // number of characters matched
-  pi[0] = 0;
+  pi[1] = k;
 
-  for (int i = 1; i < patt_len; i++) {
-    while (k > 0 && pattern[k] != pattern[i]) {
+  for (int i = 2; i <= patt_len; i++) {
+    while (k > 0 && pattern[k] != pattern[i-1]) {
       k = pi[k];
     }
 
-    if (pattern[k] == pattern[i]) {
+    if (pattern[k] == pattern[i-1]) {
       k += 1;
     }
     pi[i] = k;
@@ -159,7 +159,7 @@ vector<int> kmp(const string str, const string pattern) {
   int patt_len = pattern.length();
   int str_len = str.length();
 
-  vector<int> pi(patt_len, -1);
+  vector<int> pi(patt_len+1, 0);
 
 
   compute_prefix_function(pattern, pi);
