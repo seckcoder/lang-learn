@@ -142,6 +142,7 @@ void compute_prefix_function(const string pattern, vector<int> &pi) {
   int k = 0; // number of characters matched
   pi[1] = k;
 
+  /* Question: what does i and k mean? */
   for (int i = 2; i <= patt_len; i++) {
     while (k > 0 && pattern[k] != pattern[i-1]) {
       k = pi[k];
@@ -159,6 +160,17 @@ vector<int> kmp(const string str, const string pattern) {
   int patt_len = pattern.length();
   int str_len = str.length();
 
+  /**
+   * Definition of pi:
+   * P_i = P.substr(0, i)
+   * q represent number of characters matched.
+   * pi[q] = max{k: k < q and P_k is suffix of P_q}
+   *
+   * Intuitively, it means when we are at a position that has q characters matched to the pattern, what should we do if we give up the current match. Apparently,
+   * we should go to another position with as many characters matched to the pattern as possibled .
+   *
+   *
+   */
   vector<int> pi(patt_len+1, 0);
 
 
@@ -166,6 +178,8 @@ vector<int> kmp(const string str, const string pattern) {
 
   int k = 0;  // number of characters matched
   vector<int> indices;
+  
+  /* i represent current index of str to match */
   for (int i = 0; i < str_len; i++) {
     while (k > 0 && pattern[k] != str[i]) {
       k = pi[k];
@@ -195,6 +209,11 @@ void printVec(const vector<T> &vec) {
     cout << vec[i] << " ";
   }
   cout << endl;
+}
+
+
+void test_kmp() {
+  
 }
 
 int main() {
