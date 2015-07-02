@@ -202,6 +202,9 @@ instance Arbitrary a => Arbitrary (BinTree a) where
 prop_postOrder bt = postOrder bt == postOrderT bt
   where types = [bt :: BinTree Int]
 
+prop_postOrder1 bt = postOrder bt == postOrderT1 bt
+  where types = [bt :: BinTree Int]
+
 prop_preOrder bt = preOrder bt == preOrderT bt
   where types = [bt :: BinTree Int]
 
@@ -215,6 +218,7 @@ tests = [
   -- testProperty "nQueen num of solutions right" prop_nQueenSolutionNumRight,
   -- testProperty "nQueenM solution is right" prop_nQueenMSolutionRight,
   -- testProperty "nQueenM num of solutions right" prop_nQueenMSolutionNumRight,
+  -- testProperty "postOrder traversal 1" prop_postOrder1
   testProperty "postOrder traversal" prop_postOrder,
   testProperty "preOrder traversal" prop_preOrder,
   testProperty "inOrder traversal" prop_inOrder

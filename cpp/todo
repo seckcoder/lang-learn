@@ -1,2 +1,37 @@
-raii
-oo model -- inside C++ object model
+rvalue reference:
+
+optimize this using rvalue reference.
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    vector<vector<int>> pathSum(TreeNode* root, int sum) {
+        vector<vector<int>> ans;
+        vector<int> acc;
+        recur(root, sum, acc, ans);
+        return ans;
+    }
+    void recur(TreeNode *root, int sum, vector<int> &acc, vector<vector<int>> &ans) {
+        if (!root) return;
+        sum -= root->val;
+        acc.push_back(root->val);
+        if (isLeaf(root) && sum == 0) {
+            ans.push_back(acc);
+            acc.pop_back();
+            return;
+        }
+        recur(root->left, sum, acc, ans);
+        recur(root->right ,sum, acc, ans);
+        acc.pop_back();
+    }
+    bool isLeaf(TreeNode *root) {
+        return (!root->left) && (!root->right);
+    }
+};

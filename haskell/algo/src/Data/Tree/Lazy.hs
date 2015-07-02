@@ -5,7 +5,8 @@ module Data.Tree.Lazy (
   inOrder,
   inOrderT,
   postOrder,
-  postOrderT
+  postOrderT,
+  postOrderT1
   ) where
 
 data BinTree a = EmptyTree
@@ -45,6 +46,22 @@ postOrderT bt = go [bt] []
   where go [] xs = xs
         go (EmptyTree:ts) xs = go ts xs
         go (Branch v left right:ts) xs = go (right:left:ts) (v:xs)
+
+
+postOrderT1 :: BinTree a -> [a]
+postOrderT1 tree = go [tree] [] [] []
+  where go :: [BinTree a] -> [BinTree a] -> [a] -> [a] -> [a]
+        go [] [] [] vs = reverse vs
+        go (EmptyTree:ts) [] [] vs = go [] [] [] vs
+        go [] (EmptyTree:r_acc) [] vs = go [] [] [] vs
+        go (EmptyTree:ts) (EmptyTree:r_acc) [] vs =
+          go ts r_acc [] vs
+        go (EmptyTree:ts) (EmptyTree:r_acc) (v:v_acc) vs =
+          go ts r_acc v_acc (v:vs)
+        go (EmptyTree:ts) (Branch v l r:r_acc) v_acc vs =
+          go (l:ts) (r:r_acc) (v:v_acc) vs
+        go (Branch v l r:ts) r_acc v_acc vs =
+          go (l:ts) (r:r_acc) (v:v_acc) vs
 
 
 sampleTree :: BinTree Int

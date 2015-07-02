@@ -1,0 +1,141 @@
+140
+ADD user 1 11 qmacedxqxplizhgbg qcvne tac zmbpbbthfsxekkmjsu yqccmqgwlib jpjbsnwzupyyzjkkdhw xz jrpiczlniaylvniu 
+QUERY 17 zm qmacedxqxplizhgbg
+ADD topic 3 83 kqbjdqtfofacn lmsrmy 
+WQUERY 17 3 user:8 question:80 topic:42 q jpjbsnwzu
+ADD question 5 86 kmywklstxvoifganinzv aax jtoinwuaw kijghgwpndsdnf jjejhzucpep zrkscudibmgt jlczsg bntimpmbwcpxt 
+WQUERY 13 2 user:84 1:48 qcvne x
+ADD topic 7 9 oddpmtiutnitl elljuh rhxsxnopwkdaosmhd cqqyducphllrscapw fmodxsfnmrwpbbhs lodcxqnq rqapqhbekaysn lmcnnmho xtbujonuhfuwvdxcpy 
+ADD question 8 43 bsgqepefmxgijw ddbzzy y 
+WQUERY 20 2 question:96 topic:52 jrpicz lodcx
+ADD topic 10 90 y nksbfwkd ucicdop 
+ADD user 11 37 qjrn dcndr okd inzkhbumhkdfdj ozjfomkqzpibdufzcua edjsktvpyeqmf ttlfmkvwoa 
+ADD topic 12 5 
+ADD topic 13 62 tl pj npxcvwxqkdcw akaqfcmxfxqkq cfnlvckxziu szupzxbapjecgjzyw cazrluwxrxfnpanmro soybucjebiavmaugno khbrurrjdkyofomgjrs 
+ADD user 14 62 orjuezyqgahb bmwlmmqb zmrtbmvsbjjle ke temuxp vdvhvyiwkzpnlmfpwoa dmgiflwbkomgrhnof nrxeekrjznzbrcqxmxki vwlbpu 
+ADD question 15 25 un yzojbdicumusysegrz ecuavabjtvytvxhgylod cxzapeiifnmkkofmrq oobjnipmvfrdjoeje smqhbatrhgjxo np az 
+ADD question 16 11 apuezaptohcr wjscspspejyekxvh ajuwqv hqnqtezrnrv 
+ADD topic 17 69 wtsispqzqbuorrlyi qdepwsirxseug qbkkqckiegxxxkyhiom 
+WQUERY 5 3 topic:4 question:65 user:13 ddbz d
+QUERY 14 t jlczs
+QUERY 9 lmsrmy q
+DEL 8
+ADD user 22 86 
+QUERY 3 oobjnipmvfrdjoeje vdvhvy
+DEL 14
+ADD topic 25 99 ahxgszjmwdodhdkmb 
+QUERY 7 xz hq
+ADD user 27 35 u blrzhvls rimdzamqgfb eicspbpvvkxidwpz jhdrtgtvsjdznlgv ymqpinzhvfdm oxnroizjgsv tiuzfj 
+QUERY 3 apuezap ttlf
+ADD user 29 49 gpnvwklmwrsglkrto ijggoxtbjmesemh jfdwrz lgdvxwjvgvbojah jvqba ktqpxogye eh dgayovcdg ktoilriqcditcwc 
+QUERY 3 bsgqepefmxg a
+ADD user 31 68 kbhheacdklytus zed glgrlerwuldixgr nriqdwrysjvtpazvn oy 
+ADD question 32 98 apr gyvzioeef yocrfcqdpxrpiz qrlh uqjrprfwyk 
+ADD user 33 12 ghelyecnmbyevmmgi 
+ADD user 34 5 frg sdsxtaezlcdprsrs oekwmonnkvsdckw evaeaz efgyxz 
+ADD topic 35 45 jiywvkuqowamdghfkjg qljoijegyaoi mgfzaxnyzbdfkir rumcealpgrn hxsvezugxhhwiketv pmqbowdbljuytbwl 
+QUERY 11 o nrxeekrjznzbrcqxmxk
+ADD user 37 28 mxlevzfyujrcejjemn vioqshaptihkuhyaex ctrvyvfjcrx oh hzcjoxsvkmeipihx cqicnnmp 
+ADD user 38 66 serwnhufeeujm rviexynclcoblzzg rmkozrif mbeakyxucwsryd mgfni gzzs aj hhjinlunioqfghdm sukhczoeagrbsrib 
+QUERY 7 nrx jfdwrz
+ADD topic 40 86 ooxfewmdplmrbmkt jouiwbl 
+ADD question 41 26 
+DEL 35
+ADD topic 43 27 rztuqgjihv dsftmopnbtbrxno 
+QUERY 12 jiywvkuqowam ymqpinzh
+WQUERY 6 3 question:28 user:94 1:4 akaqfcm mbeakyxucwsryd
+ADD topic 46 2 xglerdndyidalpamk mxgbexknckrskqzxvqdk btabeqetcrhaxkew uyelrqcsozk 
+ADD user 47 23 h l 
+ADD topic 48 84 
+ADD topic 49 58 imucma frszftjweqqjyouxqaz nb mk goch hyw frsdwjvfjkzgczimolna djmfqqmqpv 
+ADD topic 50 68 
+QUERY 3 oy ei
+ADD user 52 95 tbystobvn bskckhyq baosjpodwolljpj izfdnwghjltqlk mmze qv 
+ADD question 53 79 ubkyjk ozbvimgbdrnofbnkxf xtqjtmmfkv pm thyhpckiryntnzs gpmybhlnmxlenzuig pxzcfscslqsfia wzydknqh 
+ADD user 54 26 ghn 
+DEL 33
+ADD question 56 45 euuyafyxbxvhjkxtlvr naudayrckygovbmvi ujkpq 
+ADD question 57 39 mibaivd v kfv tqvhnduhpeyhbzz qlarlkoqujngpiy auspzmwoswytv lnkney so 
+ADD user 58 83 lyflsxarjyidui sfkfrympxeepih dtm 
+ADD user 59 60 ashkvc uwxfb dngcu ret imwrtdz dtlnp hlleqpuv c 
+ADD topic 60 70 ibnuygpbfrgzfvqucd 
+QUERY 10 qv h
+ADD question 62 94 kms we 
+ADD user 63 95 qbsbjxbl th inlwghkl zdcxjjvxeo hiqrgrcf lvvbithpeulda alwyid 
+QUERY 16 lyflsxarjyidui euuyafyxbxvhjkxtl
+QUERY 18 kmyw kijghgwpndsdnf
+ADD question 66 54 zzukovgtgkqppo etpvkvjcrpbbyjx 
+ADD topic 67 2 mabgin xemdjisguqswh zk jh tiaquduc halopoxxjf zxqggpsqyb 
+DEL 10
+QUERY 20 e go
+DEL 15
+ADD question 71 37 
+ADD user 72 91 cqnfjoypu gkpkhdljwz ajgxzptqfzvv aedavzjcjzo 
+DEL 58
+ADD topic 74 94 
+ADD user 75 45 ieubjwwe ylpyg ikajysnawpycskp 
+ADD user 76 87 eotlyryqsegapilp ypxpqbha duot thjghdexvkexzoi pigoxwqhyjkt fj ouaxxgv rbrsrbj 
+DEL 48
+ADD user 78 75 spaeka tuzpxypdtjwwbroc zouwznoreqvosghnhym npbxozafpcjosg 
+ADD user 79 47 xthlm ub sneie fs fzwjjkepzxkckhwruij lhkylscszxzeyxq juajrkldtj 
+ADD user 80 13 enqcbkhtkguo rgodaqmubzx jumecrjqjnr wmechujabzddprxqtxn 
+ADD user 81 91 srmchfwdrciawrd qgbhaaatxnxrofnizbkg ijx rahkdgcljkl 
+ADD topic 82 50 dcplpxkqisysdy xymhbs mewaoigzj cyzrvlkfdiaggdfepnh zwnxwdhedqsfqryncith 
+DEL 43
+ADD topic 84 40 pkpallo jtrqwhibxaclemg fbghbbpsogszsgkdadt 
+ADD topic 85 86 eexkqfayigfjkwb cwz 
+ADD topic 86 39 rvfez qfnosdvsdebipl tljpmhtaj r fvgolmbbggxymdzuum pxmg tamfc kj 
+DEL 38
+DEL 79
+ADD user 89 57 mnurmrlbudyijkdlwin uyznxlvxyiikvebj ok rlbdxfownexkcxxakuzi 
+ADD topic 90 6 xllnxdhke kly zeflh ihoegyhqsiervpftumf wp wvnbdykhirwnzuwrpgv c nxjzemxubwrqzurjcbca dwovnvs 
+ADD topic 91 7 tlcfiwigqzfkqqotuok l vyvpuuxgu rzxbxginhpyzgmscd cobxo nlvmrpeioblmjtb jzrroktrowf 
+QUERY 3 spa uj
+QUERY 4 b ieubjw
+QUERY 18 tljpmh rvfe
+WQUERY 4 7 user:55 question:34 1:55 3:3 5:34 8:77 7:54 pi jvq
+ADD topic 96 56 atmvoiu szsqwgpblzmdainiz 
+ADD user 97 89 zntl htfoofie pwccvqhx vfaarxpqyfjjq evhuarbeiximsbupbrvd 
+ADD user 98 82 apq fjsdsoflpjum g vcwyttcohgz jodwwoozgdesso hiulfzhdsah 
+ADD user 99 80 zwav pmtxryrjofsycedbniv 
+QUERY 4 o h
+ADD user 101 39 
+WQUERY 12 7 question:25 user:44 1:6 3:50 5:98 8:19 7:95 pigoxwqhy v
+QUERY 3 jto xgler
+WQUERY 2 6 user:79 5:51 3:28 7:98 1:92 8:62 dsftmopnbt u
+QUERY 11 u cqqyducp
+QUERY 18 qmacedxqxplizhgb zxq
+ADD topic 107 49 kzanhrvxiekbkvx 
+WQUERY 1 7 question:1 user:97 7:75 1:26 8:40 3:32 5:45 ij xtbujonuhfuwvdxcpy
+QUERY 11 ttlfmkv cob
+QUERY 12 qljoijegy bsgqepef
+ADD user 111 73 ibbbfkwrwar klnvcdowbkkfpu lfqjnumozwkqu jbxwpuz kvvvicmegxjxi runsszj osq phhqbunx 
+ADD question 112 23 idmhllagysazdnny apkkhleu xuoavydifpthxtz sfmifrkubwbpcxbzrr ppdzwuudtnf hkhrrzclcyotblxado uegtccngy 
+WQUERY 10 5 3:0 5:25 7:37 8:77 1:20 qdepwsirxs hiqrgrc
+ADD user 114 94 h mkgizlatcuknfglxtg ulwqemeyuahl 
+ADD question 115 55 
+QUERY 16 lgdv izfdnwgh
+ADD user 117 37 tkokwhdzfajzlkj igwiuygid tpzuntgbfelif irrtd 
+ADD topic 118 87 ufpcntshisdwllzqsmyx ioybrbufmkbtzdisw doubbiarcnrz 
+ADD question 119 88 jsw ggpbivk rbdhygiij kwsl rbjvnd bmctnkqzkhbqozwwjhxt pexiigfvjyyv tlkjkxsnngolextbq sxx 
+WQUERY 5 3 user:22 1:50 3:86 etpvkvjcr dgayovcd
+ADD question 121 50 qb wokggpupystxqtw djoafydq elmumjqd yjkuzlpuifpgesqs vswoyczkwotpro cbkdmzaugp litddqybewegicuernsh vtthuveakh 
+ADD question 122 36 srxzpdfxfbbxowgfrbab vfzionaqgyixxh aolfrpehnmn nphklokvczxsfvdeu swbfeuuic 
+ADD user 123 37 exzrmlmqkmjrhoxea cdwgytracorqaxqzrc 
+ADD question 124 38 fnbtmfwdhzaqzthzvv oxqgzhk meiekxfdkmznvb laiscgpuwnkcmtmxgq mcfr pfjeakuonegpkylil mzpyyxrgjvncdejni zcamhidtgpetnquertc 
+ADD user 125 23 slubycnzhnoqy je pyvgsczne qtqglbapbd bks aqklwtdwqjrskeyt slbfncwqhbtttktl gjqj guxbebbzytlcbagxqny 
+QUERY 2 ozbv jiywvkuqowamdgh
+WQUERY 6 5 1:91 3:32 5:64 8:25 7:96 nlvmrpe yocrfcqdpx
+WQUERY 8 5 8:93 7:98 1:71 3:70 5:97 kqbjdqtf nphklokvczxsfvd
+DEL 41
+WQUERY 12 6 question:94 user:94 topic:36 1:56 3:15 5:56 a alwyid
+ADD question 131 92 mycpbpqgwuiyckr xkwz se rffwjzawzelaud sxqqzdhcarbcqti mpui 
+QUERY 12 su imucm
+ADD user 133 99 afamjefrtfrslplfh zbnciioroegnogtrve awqgpitfvzod 
+ADD topic 134 10 
+ADD question 135 75 xzgnhzecdedbu tfeyadodggxkhadascza izylf o 
+DEL 81
+QUERY 4 ibbbfkw bmctnkq
+ADD topic 138 33 uxgzfflxrjk przgmvgjzirfbumatkgp pqpuconnyc 
+ADD question 139 22 zrlaze cyudtelkoaafw tmsrqwhuhkuyxuz cebxjwdugr 
+ADD question 140 40 rjhlag uneonclofpu mddqym xviukbesmeyg nlpcncssrnbeqhwqthp 
