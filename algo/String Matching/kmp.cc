@@ -142,7 +142,14 @@ void compute_prefix_function(const string pattern, vector<int> &pi) {
   int k = 0; // number of characters matched
   pi[1] = k;
 
-  /* Question: what does i and k mean? */
+
+  /**
+   * When caculating the prefix function, we should forget S.
+   *
+   * Here, we are only trying to calculate the function pi, so that
+   * pi[q] = max{k < q and P_k siffix of P_q}
+   *
+   */
   for (int i = 2; i <= patt_len; i++) {
     while (k > 0 && pattern[k] != pattern[i-1]) {
       k = pi[k];
