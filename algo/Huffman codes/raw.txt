@@ -1,0 +1,169 @@
+LeBron James: 'I'm The Best Player In The World'
+LeBron James, the greatest basketball player in the world, correctly stated that he was the greatest basketball player in the world after his Cleveland Cavaliers lost to the Golden State Warriors in Game 5 of the NBA Finals on Sunday.
+
+"I feel confident [despite being down 3-2 in the series] because I'm the best player in the world," James said Sunday. "It's that simple."
+
+James was responding to a question about the team’s plethora of injuries and whether they have changed his mentality in the finals:
+
+You seem to be playing a lot more comfortable this finals series. There was a play I think you had a behind-the-back layup where you went up, and you are making crazy threes. Do you feel a lot less pressure this finals run just because you are undermanned and you had some injuries as opposed to previous years?
+After the exchange, LeBron was then asked: “But in regards to pressure with the games played, do you feel as if this finals team is a little less…”
+
+“No, it's the finals,” James said. “Something you dream of when you’re a kid. And for me, I put the work in. I put the work in every single day, either when you guys are there, or when you guys are not there. Some of our beat writers see me, they know how much work I put into it."
+
+“And I give everything to my teammates,” he added. “And you're true to the game, does not matter if it is a regular season game or a finals game. You just go out and trust what you put into the game, and you live with the results. So, it shouldn't not be crazy when i make threes, though. It is just a shot.”
+
+James has averaged 36.6 points, 12.4 rebounds and 8.8 assists through the first five games of the NBA Finals. There’s chatter he’s played so overwhelmingly well that he should win the Finals MVP trophy even if his team loses, which has only happened once before. (It’s not just the finals either. LeBron averaged 30.3 points, 11.0 rebounds and 9.3 assists in the conference finals against the Atlanta Hawks.)
+
+Stephen Curry was deserving of the MVP this year, but at full strength, there’s still no question about it: LeBron James is the best player in the world.
+
+Guy Steele is a true programming polyglot. When I asked him what languages he has used seriously he came up with this list: COBOL, Fortran, IBM 1130 assembly, PDP-10 machine language, APL, C, C++, Bliss, GNAL, Common Lisp, Scheme, Maclisp, S-1 Lisp, *Lisp, C*, Java, JavaScript, Tcl, Haskell, FOCAL, BASIC, TECO, and TeX. “Those would be the main ones, I guess,” he added.
+
+He had a hand in the creation of both of the major surviving general-purpose Lisp dialects: Common Lisp and Scheme. He served on the standards bodies that defined Common Lisp, Fortran, C, ECMAScript, and Scheme and was recruited by Bill Joy to help write the official language specification for Java. He is now at work designing Fortress, a new language for high-performance scientific computing.
+
+Steele’s academic career included an AB from Harvard and an SM and PhD from MIT. While at MIT he collaborated with Gerald Sussman on a series of papers now known as “The Lambda Papers,” which included the original definition of the Scheme programming language. He has also been a chronicler of hacker culture as one of the original compilers of the Jargon File and editor of the book version, The Hacker’s Dictionary (subsequently updated and expanded by Eric S. Raymond as The New Hacker’s Dictionary). And he played an important role in the birth of Emacs and was one of the first programmers to port Donald Knuth’s program TeX.
+
+Steele is a Fellow of the Association for Computing Machinery and the American Academy of Arts and Sciences and a member of the U.S. National Academy of Engineering. He won the ACM’s Grace Murray Hopper Award in 1988 and Dr. Dobb’s Excellence in Programming Award in 2005.
+
+In this interview he talks about designing software and the relation between writing and programming, and he gives one of the best explanations I’ve ever heard of the value—and limitations—of formal proofs of correctness.
+
+
+Lisp hacker, early Netscape developer, and nightclub owner Jamie Zawinski, a.k.a. jwz, is a member of the select group of hackers who are as well known by their three-letter initials as by their full names.
+
+Zawinski started working as a programmer as a teenager when he was hired to hack Lisp at a Carnegie Mellon artificial intelligence lab. After attending college just long enough to discover that he hated it, he worked in the Lisp and AI world for nearly a decade, getting a strange immersion in a fading hacker subculture when other programmers his age were growing up with microcomputers.
+
+He worked at UC Berkeley for Peter Norvig, who has described him as “one of the of the best programmers I ever hired,” and later at Lucid, the Lisp company, where he ended up leading the development of Lucid Emacs, later renamed XEmacs, which eventually led to the great Emacs schism, one of the most famous open source forks.
+
+In 1994 he finally left Lucid and the Lisp world to join Netscape, then a fledgling start-up, where he was one of the original developers of the Unix version of the Netscape browser and later of the Netscape mail reader.
+
+In 1998 Zawinski was one of the prime movers, along with Brendan Eich, behind mozilla.org, the organization that took the Netscape browser open source. A year later, discouraged by the lack of progress toward a release, he quit the project and bought a San Francisco nightclub, the DNA Lounge, which he now runs. He is currently devoting his energies to battling the California Department of Alcoholic Beverage Control in an attempt to convert the club to an all-ages venue for live music.
+
+In this interview we talked about, among other things, why C++ is an abomination, the joy of having millions of people use your software, and the importance of tinkering for budding programmers.
+
+
+Brad Fitzpatrick is the youngest person I interviewed and the only one who has never lived in a world without the Internet or personal computers. Born in 1980, he got an early start as a programmer, learning to program at age five on a home-built Apple II clone. By his teenage years the Internet revolution was in full swing and he was deep into it, building his first commercial web site while still in high school and starting work on the popular community site LiveJournal the summer before he went to college.
+
+Keeping up with LiveJournal’s ever-growing popularity forced Fitzpatrick to learn the hard way about building scalable web sites and along the way he and the programmers at the company he founded, Danga Interactive, ended up building several pieces of open source software, including memcached, Perlbal, and MogileFS, which are now used on the servers of many of the world’s busiest web sites.
+
+Fitzpatrick is a prototypical—if exceptionally accomplished—turn-of-the-century web programmer: his primary programming languages have been Perl and C, though he also works in Java, C++, Python, JavaScript, and C# as needed. And almost all the programming he does is somehow network-related, whether it’s building better back-end infrastructure for web sites, designing protocols and software to improve the way blog-reading software knows when blogs have been updated, or programming his cell phone to automatically open his garage door when he rides up on his motorcycle.
+
+We talked about learning to program at the same age as he was reading Clifford the Big Red Dog, why he was glad he stayed in college while running LiveJournal, and how he learned not to be afraid of reading other people’s code.
+
+A senior JavaScript Architect at Yahoo!, Douglas Crockford has been a programmer since the early ’70s when he took a Fortran course in college after being unable to get studio time for his major in television broadcasting. Over the course of his career, he has combined computers with media in various ways at places like Atari, Lucasfilm, Electric Communities, and now Yahoo!
+
+Crockford is, by nature, a simplifier and a tidier. He invented JSON, the data interchange format widely used in Ajax applications, because he found XML too complicated. His recently published book, JavaScript: The Good Parts, argues that JavaScript is actually quite a nice language if one avoids certain features. When I talked to him he stressed the importance of subsetting as a way of managing complexity and described a code-reading process he uses that starts with simply tidying up the code.
+
+At the time of our interview, Crockford had become well known as an outspoken critic of the proposed ECMAScript 4 (ES4) revision to the ECMAScript (JavaScript) language standard, on the grounds that it was too complex. He was in favor of a more modest proposal labeled ES3.1, and since then he and the other ES3.1 advocates have largely prevailed—ES3.1 has been renamed ES5, and the ES4 effort has been officially abandoned.
+
+Crockford and I talked about what he disliked about the ES4 proposal, the importance of code reading as a team activity, and how to move the Web forward despite the legacy of existing systems.
+
+
+Creator of JavaScript, perhaps the most widely used and most reviled programming language on the modern Web, Brendan Eich is now CTO of the Mozilla Corporation, the subsidiary of the Mozilla Foundation responsible for continuing development of the Firefox browser.
+
+With an appreciation of both elegant theory and good pragmatic engineering, Eich spent the early days of his career hacking network and kernel code at Silicon Graphics and MicroUnity. After MicroUnity, he moved to Netscape, where he worked on the Netscape browser and, under intense time pressure, invented JavaScript.
+
+In 1998, along with Jamie Zawinski, he was one of the leaders of the effort to convince Netscape to open-source its browser, leading to the formation of mozilla.org, where he was chief architect.
+
+In recent years Eich has been involved in both high-level direction setting for the Mozilla platform and in low-level hacking on a new JIT’ing JavaScript virtual machine called TraceMonkey. And, as he explains in this interview, he has also been trying to find ways for the Mozilla project to “move the research needle,” bringing practical-minded academics into the Mozilla fold in order to bridge the gap between academic theory and industrial practice.
+
+Other topics we touched on include why JavaScript had to look somewhat like Java but not too much, why JavaScript does still need to grow as a language despite the failure of the ECMAScript 4 project, and the need for more kinds of static code analysis.
+
+Now Chief Java Architect at Google, Bloch previously was a Distinguished Engineer at Sun Microsystems, where he led the design and implementation of the Java Collections Framework introduced in Java 2 and was involved in the design of several language additions in the Java 5 release. He has a BS from Columbia University and a PhD from Carnegie-Mellon University, where he worked on the Camelot distributed transaction processing system, which later became Encina, a product of Transarc, where he was a Senior Systems Designer. He wrote the 2001 Jolt Award–winning book Effective Java and coauthored Java Puzzlers and Java Concurrency in Practice.
+
+As you might expect from someone whose job is to encourage the use of Java at Google, Bloch is a strong advocate of the language. Despite the recent flurry of interest in approaches to concurrency such as Software Transactional Memory or Erlang’s message passing, Bloch thinks Java has “the best approach of any language out there” to concurrency and predicts a resurgence of interest in Java as more and more programmers are forced to deal with programming for machines with multicore CPUs.
+
+Bloch is also a strong advocate of treating programming as API design, and we talked about how that affects his own design process, as well as whether Java has gotten too complex and why picking a programming language is like picking a bar.
+
+Joe Armstrong is best known as the creator of the programming language Erlang and the Open Telecom Platform (OTP), a framework for building Erlang applications.
+
+In the modern language landscape, Erlang is a bit of an odd duck. It is both older and younger than many popular languages: Armstrong started work on it in 1986—a year before Perl appeared—but it was available only as a commercial product and used primarily within Ericsson until it was released as open source in 1998, three years after Java and Ruby appeared. Its roots are in the logic programming language Prolog rather than some member of the Algol family. And it was designed for a fairly specific kind of software: highly available, highly reliable systems like telephone switches.
+
+But the characteristics that made it good for building telephone switches also—and almost inadvertently—made it quite well suited to writing concurrent software, something which has drawn notice as programmers have started wrestling with the consequences of the multicore future.
+
+Armstrong, too, is a bit of an odd duck. Originally a physicist, he switched to computer science when he ran out of money in the middle of his physics PhD and landed a job as a researcher working for Donald Michie—one of the founders of the field of artificial intelligence in Britain. At Michie’s lab, Armstrong was exposed to the full range of AI goodies, becoming a founding member of the British Robotics Association and writing papers about robotic vision.
+
+When funding for AI dried up as a result of the famous Lighthill, it was back to physics-related programming for more than half a decade, first at the EISCAT scientific association and later the Swedish Space Corporation, before finally joining the Ericsson Computer Science Lab, where he invented Erlang.
+
+In our several days of conversation over his kitchen table in Stockholm, we talked about, among other things, the Erlang approach to concurrency, the need for better and simpler ways of connecting programs, and the importance of opening up black boxes.
+
+
+One of the instigators, back in 1987, of the project that led to the definition of the programming language Haskell, Simon Peyton Jones is a Principal Researcher at Microsoft Research’s lab in Cambridge, England. He edited the Haskell 98 Revised Report, the current stable definition of the language; he is the architect and lead developer of the Glasgow Haskell Compiler (GHC), the “de facto standard compiler” according to haskell.org; and he gave Haskell its widely cited unofficial motto: “Avoid success at all costs.”
+
+A high-powered researcher and former professor who never got a PhD, Peyton Jones values both the practical and the theoretically beautiful. He learned to program on a machine with no permanent storage and only 100 memory locations, and in college he worked on both writing high-level compilers for the school’s big iron and building his own primitive computers out of parts he could afford on a student’s budget. But he was drawn to functional programming by a professor’s demonstration of how to build doubly linked lists without using mutation and the beauty of the idea of lazy evaluation. Peyton Jones saw the ideas of functional programming “as a radical and elegant attack on the whole enterprise of writing programs”: a way, rather than “just putting one more brick in the wall,” to “build a whole new wall.” In 2004 the Association for Computing Machinery elected him a Fellow, citing his “contributions to functional programming languages.”
+
+Among the topics we covered in this interview are why he thinks functional programming shows increasing promise of changing the way software is written, why Software Transactional Memory is a much better way of writing concurrent software than locks and condition variables, and why it is so difficult, even at a place like Microsoft Research, to do real studies of whether different programming languages make programmers more or less productive.
+
+Peter Norvig is a broad thinker and a hacker at heart. He once wrote a program to find in Google’s search logs series of three consecutive searches by the same user that, when put together, made a haiku (one of the most memorable: “java ECC / java elliptical curve / playboy faq”).
+
+On his web site Norvig has links to the usual stuff: books and papers he’s written, slides from talks he’s given, and various bits of his code. But there are also links to items he’s had published in McSweeney’s Quarterly Concern, his witty recounting of writing a program to generate the world’s longest palindromic sentence, and his “Gettysburg Powerpoint Presentation,” a send-up of Microsoft’s PowerPoint software, which has been cited by Edward Tufte and which appears on the first page of results if you Google “PowerPoint.”
+
+He is now the Director of Research at Google, after having been the Director of Search Quality. Prior to that he had been the head of the Computational Sciences Division at NASA Ames Research Center and before that, an early employee at the late-’90s Internet startup Junglee. He won the NASA Exceptional Achievement Award in 2001 and is a Fellow of the American Association for Artificial Intelligence and the Association for Computing Machinery.
+
+Between Google, NASA, and Junglee, Norvig has experience with both the “hacker” and “engineer” approaches to building software and talks in this interview about the advantages and disadvantages of each. As a former computer-science professor and now an insider at one of the biggest industrial software shops in the world, he also has an interesting perspective on the relation between academic computer science and industrial practice.
+
+Other topics in our conversation included how programming has changed in recent years, why no design technique can make up for not knowing what you’re doing, and why NASA might be better off with less-reliable but cheaper software.
+
+If Alan Kay is Smalltalk’s father, Dan Ingalls is its mother—Smalltalk may have started as a gleam in Alan Kay’s eye, but Ingalls is the one who did the hard work of bringing it into the world. Starting with the first implementation of Smalltalk, written in BASIC and based on one page of notes from Kay, Ingalls has been involved in implementing seven generations of Smalltalk from the first prototype to the present-day open source implementation, Squeak.
+
+Originally a physicist, Ingalls started programming with Fortran, made a business selling a profiler he wrote while in grad school, and eventually found his way to Xerox PARC, where he joined Kay’s Learning Research Group, which built Smalltalk and explored the use of computers in children’s education.
+
+While at PARC, Ingalls also invented the BitBlt operation used in bit-mapped graphics and coded it in microcode for PARC’s Alto computer, allowing the high-performance bit-mapped graphics that enabled UI innovations such as pop-up menus that we now all take for granted. (At one of Ingalls’s in-house demonstrations of the Smalltalk system, a pop-up menu caused the subject of my next chapter, L Peter Deutsch, to leap to his feet and exclaim, “Did you just do what I thought you did?”)
+
+Now a Distinguished Engineer at Sun Microsystems, Ingalls is working on Lively Kernel, a Smalltalk-like programming environment that runs completely in the browser using JavaScript and browser-provided graphics. He received the Association for Computing Machinery Grace Murray Hopper Award in 1984 and the ACM Software System Award in 1987 for his work on Smalltalk. In 2002 he won the Dr. Dobb’s Excellence in Programming Award.
+
+In our conversation, we talked about the importance of interactive programming environments, why it was a lucky thing he never learned Lisp, and why it’s better to build flexible, dynamic systems and then lock them down rather than building static systems and then trying to add dynamic features.
+
+A prodigy, L Peter Deutsch started programming in the late ’50s, at age 11, when his father brought home a memo about the programming of design calculations for the Cambridge Electron Accelerator at Harvard. He was soon hanging out at MIT, implementing Lisp on a PDP-1, and hacking on and improving code written by MIT hackers nearly twice his age.
+
+As a sophomore at UC Berkeley, he got involved with Project Genie, one of the first minicomputer-based timesharing systems, writing most of the operating system’s kernel. (Ken Thompson, inventor of Unix and the subject of Chapter 12, would also work on the project while a grad student at Berkeley, influencing his later work on Unix.) After participating in a failed attempt to commercialize the Project Genie system, Deutsch moved to Xerox PARC, where he worked on the Interlisp system and on the Smalltalk virtual machine, helping to invent the technique of just-in-time compilation.
+
+He served as Chief Scientist at the PARC spin-off, ParcPlace, and was a Fellow at Sun Microsystems, where he put to paper the now famous “Seven Fallacies of Distributed Computing.” He is also the author of Ghostscript, the Postscript viewer. In 1992, he was part of the group that received the Association for Computing Machinery Software System Award, for their work on Interlisp, and in 1994 he was elected a Fellow of the ACM.
+
+In 2002 Deutsch quit work on Ghostscript in order to study musical composition. Today he is more likely to be working on a new musical composition than on a new program, but still can’t resist the urge to hack every now and then, mostly on a musical score editor of his own devising.
+
+Among the topics we covered in our conversation were the deep problems he sees with any computer language that includes the notion of a pointer or a reference, why software should be treated as a capital asset rather than an expense, and why he ultimately retired from professional programming.
+
+
+Ken Thompson is the original bearded Unix hacker. He has spent a career working on whatever he finds interesting, which has, at various times, included analog computing, systems programming, regular expressions, and computer chess.
+
+Hired as a researcher at Bell Labs to work on the MULTICS project, after Bell Labs pulled out of MULTICS, Thompson went on, with Dennis Ritchie, to invent Unix, an endeavor for which he fully expected to be fired. He also invented the B programming language, the precursor to Dennis Ritchie’s C.
+
+Later he got interested in computer chess, building Belle, the first special-purpose chess computer and the strongest computerized chess player of its time. He also helped expand chess endgame tablebases to cover all four- and five-piece endgames.
+
+When working on Bell Labs’ Plan 9 operating system, he devised the now ubiquitous UTF-8 Unicode encoding.
+
+In 1983, Thompson and Ritchie received the Turing Award for their “development of generic operating systems theory and specifically for the implementation of the Unix operating system.” He was also awarded the National Medal of Technology and the Institute of Electrical and Electronics Engineers Tsutomu Kanai Award, both for his work on Unix.
+
+In this interview he talked about his early love of electronics, a rather unorthodox academic career that had him teaching courses while he was still a student, and why modern programming scares him.
+
+
+Planning to be a math teacher but needing to pay off her student loans, in 1957 Fran Allen took what she intended to be a temporary job as a programmer at IBM Research. Her first assignment: teach resistive IBM scientists the newly invented language Fortran.
+
+Instead of returning to teaching, Allen stayed at IBM for 45 years and worked on a series of compiler projects, including the compilers for the STRETCH-HARVEST machine and the ambitious but never-built ACS-1 supercomputer as well as her own PTRAN project, which developed techniques for automatic parallelization of Fortran programs and developed the Static Single Assignment intermediate representation, which is now widely used in both static and just-in-time compilers.
+
+In 2002 Allen was awarded the Turing Award for her “pioneering contributions to the theory and practice of optimizing compiler techniques,” becoming the first female recipient in the 40-year history of the prize. She was also the first woman to be named an IBM Fellow, IBM’s top technical honor. She is also a fellow of the IEEE and the Association for Computing Machinery and a member of the National Academy of Engineering, the American Academy of Arts and Sciences, and the American Philosophical Society.
+
+Over her career, Allen has observed the changing role of women in computing, from her earliest days when women were specifically recruited by companies like IBM for the new and ill-defined job of “programmer,” to later decades when the field became largely male-dominated.
+
+In our conversation she talks about what that transition was like as well as why it is important to increase the diversity in the field and how C has grievously wounded the study of computer science.
+
+
+In 1969 when the first two nodes of the ARPANET—the network that would become the core of the Internet—came on line, every packet that flowed over 50 kilobit/second leased lines was routed through two specialized computers called Interface Message Processors, or IMPs. The IMPs were designed and built by Bolt Beranek and Newman (BBN), and the software that ran the IMPs had been written by a team of three programmers, one of whom was Bernie Cosell, who had left MIT three years before, at the beginning of his junior year, to join BBN.
+
+Originally hired as an application programmer on a project building one of the earliest timesharing systems, Cosell quickly moved to the systems programming side of things and was soon “czar of the PDP-1 timesharing system” responsible for finishing the operating-system code and keeping the system running.
+
+Over a 26-year career at BBN, Cosell would work on a little bit of everything, earning a reputation within BBN as a master debugger and “fixer” who could be thrown onto a struggling project to make the software work. And he hacked just for fun: to hone his Lisp skills he wrote DOCTOR, a version of Joseph Weizenbaum’s ELIZA, based on Weizenbaum’s description in a journal article. Written in BBN-LISP, which spread around the ARPANET along with the TENEX operating system, Cosell’s version of DOCTOR also had a wide distribution—wider than Weizenbaum’s original—inspiring new implementations and related programs.
+
+In 1991 Cosell left BBN and bought a sheep farm in Virginia, where he now lives with his wife Lynn, three dogs, innumerable cats, and lots of sheep. He does some programming for a local ISP, hacks a bit on his own projects, and teaches a few courses in programming and computer security but is glad he no longer works as a full-time programmer. Ironically, as a result of his move to the country, Cosell—one of the fathers of the Internet—now has only dial-up access from his home.
+
+In this interview we talked about how he won his reputation as a master debugger, the importance of writing clear code, and how he convinced the other programmers on the IMP project to stop patching the binary.
+
+
+Of all the subjects of this book, Donald Knuth perhaps least needs an introduction. For the past four decades he has been at work on his multivolume masterwork The Art of Computer Programming, the bible of fundamental algorithms and data structures, which American Scientist included on its list of the top 12 physical-sciences monographs of the century, in the company of works by Russell and Whitehead, Einstein, Dirac, Feynman, and von Neumann. He popularized the use of asymptotic (a.k.a. Big-O) notation in analyzing algorithms, invented LR parsing, and defended goto statements from Dijkstra’s criticism.
+
+But he is not simply a theorist. After finishing Volume III of The Art of Computer Programming in 1976, Knuth took what was supposed to be a year off to write the typesetting software TeX and METAFONT so he could see his books typeset to his own satisfaction. Ten years later he was done, having along the way invented a new style of programming, “literate programming,” and an algorithm for breaking paragraphs of text into lines for typesetting that is still pretty much the state of the art.
+
+His numerous awards have included the first Association for Computing Machinery Grace Murray Hopper Award (1971), the Turing Award (1974), and the National Medal of Science (1979). In 1990 he stopped using email, explaining that his job was not “to be on top of things” but “to be on the bottom of things” deeply understanding and explaining large areas of computer science so he could explain them in his books.
+
+In this interview we talked about Knuth’s enthusiasm for literate programming, his ambivalence about black boxes, and what he sees as a regrettable “overemphasis on reusable software.”
+
+Lebron will finally bring the Cavs a championship.
