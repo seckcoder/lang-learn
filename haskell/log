@@ -1,0 +1,558 @@
+Using a sandbox located at
+/Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox
+Reading available packages...
+Reading available packages...
+Reading installed packages...
+/Applications/ghc-7.8.3.app/Contents/bin/ghc-pkg dump '--package-db=/Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d' -v0
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --print-libdir
+Found no modified add-source deps.
+Reading available packages...
+Choosing modular solver.
+Resolving dependencies...
+In order, the following will be installed:
+base64-bytestring-1.0.0.1 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added
+byteable-0.1.1 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added
+cereal-0.4.1.0 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, containers-0.5.5.1 added
+cryptohash-0.11.6 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added
+data-default-class-0.0.1 (reinstall) changes: base-4.7.0.1 added
+data-default-instances-base-0.0.1 (reinstall) changes: base-4.7.0.1 added
+data-default-instances-containers-0.0.1 (reinstall) changes: base-4.7.0.1
+added, containers-0.5.5.1 added
+data-default-instances-old-locale-0.0.1 (reinstall) changes: base-4.7.0.1
+added
+dlist-0.7.1 (reinstall) changes: base-4.7.0.1 added, deepseq-1.3.0.2 added
+data-default-instances-dlist-0.0.1 (reinstall) changes: base-4.7.0.1 added
+data-default-0.5.3 (reinstall) changes: base-4.7.0.1 added
+hourglass-0.2.6 (reinstall) changes: base-4.7.0.1 added, deepseq-1.3.0.2 added
+asn1-types-0.3.0 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added
+crypto-pubkey-types-0.4.2.3 (reinstall) changes: base-4.7.0.1 added
+network-2.6.0.2 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, unix-2.7.0.1 added
+parallel-3.2.0.4 (reinstall) changes: base-4.7.0.1 added, containers-0.5.5.1
+added, deepseq-1.3.0.2 added
+prelude-extras-0.4 (reinstall) changes: base-4.7.0.1 added
+primitive-0.5.4.0 (reinstall) changes: base-4.7.0.1 added
+random-1.1 (reinstall) changes: base-4.7.0.1 added, time-1.4.2 added
+reflection-1.5.1 (reinstall) changes: base-4.7.0.1 added,
+template-haskell-2.9.0.0 added
+securemem-0.1.4 (new version)
+crypto-cipher-types-0.0.9 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added, securemem-0.1.3 -> 0.1.4
+cipher-aes-0.2.9 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, securemem-0.1.3 -> 0.1.4
+cipher-des-0.0.6 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, securemem-0.1.3 -> 0.1.4
+cipher-rc4-0.1.4 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added
+socks-0.5.4 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0 added
+split-0.2.2 (reinstall) changes: base-4.7.0.1 added
+stm-2.4.3 (reinstall) changes: base-4.7.0.1 added
+async-2.0.1.6 (reinstall) changes: base-4.7.0.1 added
+syb-0.4.2 (reinstall) changes: base-4.7.0.1 added
+tagged-0.7.3 (reinstall) changes: base-4.7.0.1 added
+text-1.2.0.0 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, deepseq-1.3.0.2 added
+blaze-builder-0.3.3.4 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added, text-1.1.1.3 -> 1.2.0.0
+cookie-0.4.1.4 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, deepseq-1.3.0.2 added, text-1.1.1.3 -> 1.2.0.0, time-1.4.2 added
+hashable-1.2.2.0 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, text-1.1.1.3 -> 1.2.0.0
+case-insensitive-1.2.0.1 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added, deepseq-1.3.0.2 added, text-1.1.1.3 -> 1.2.0.0
+http-types-0.8.5 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, text-1.1.1.3 -> 1.2.0.0
+mime-types-0.1.0.4 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added, containers-0.5.5.1 added, text-1.1.1.3 -> 1.2.0.0
+nats-0.2 (reinstall) changes: base-4.7.0.1 added
+scientific-0.3.3.2 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added, deepseq-1.3.0.2 added, text-1.1.1.3 -> 1.2.0.0
+attoparsec-0.12.1.2 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added, containers-0.5.5.1 added, deepseq-1.3.0.2 added,
+text-1.1.1.3 -> 1.2.0.0
+tagsoup-0.13.3 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, containers-0.5.5.1 added, text-1.1.1.3 -> 1.2.0.0
+transformers-0.4.2.0 (reinstall) changes: base-4.7.0.1 added
+mtl-2.2.1 (reinstall) changes: base-4.7.0.1 added
+asn1-encoding-0.9.0 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added
+asn1-parse-0.9.0 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, text-1.1.1.3 -> 1.2.0.0
+exceptions-0.6.1 (reinstall) changes: base-4.7.0.1 added
+parsec-3.1.7 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, text-1.1.1.3 -> 1.2.0.0
+network-uri-2.6.0.1 (reinstall) changes: base-4.7.0.1 added
+HTTP-4000.2.18 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added
+pem-0.2.2 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0 added
+transformers-compat-0.3.3.4 (reinstall) changes: base-4.7.0.1 added
+distributive-0.4.4 (reinstall) changes: base-4.7.0.1 added
+unordered-containers-0.2.5.1 (reinstall) changes: base-4.7.0.1 added,
+deepseq-1.3.0.2 added
+semigroups-0.15.4 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, containers-0.5.5.1 added, deepseq-1.3.0.2 added, text-1.1.1.3 ->
+1.2.0.0
+utf8-string-0.3.8 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added
+publicsuffixlist-0.1 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added, containers-0.5.5.1 added, text-1.1.1.3 -> 1.2.0.0
+vector-0.10.12.1 (reinstall) changes: base-4.7.0.1 added, deepseq-1.3.0.2
+added
+aeson-0.8.0.2 +old-locale (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added, containers-0.5.5.1 added, deepseq-1.3.0.2 added,
+template-haskell-2.9.0.0 added, text-1.1.1.3 -> 1.2.0.0, time-1.4.2 added
+crypto-random-0.0.8 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added, securemem-0.1.3 -> 0.1.4, unix-2.7.0.1 added
+cprng-aes-0.6.1 (new version)
+crypto-numbers-0.2.3 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added
+crypto-pubkey-0.2.4 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added
+void-0.6.1 (reinstall) changes: base-4.7.0.1 added
+contravariant-1.2 (reinstall) changes: base-4.7.0.1 added
+comonad-4.2.2 (reinstall) changes: base-4.7.0.1 added, containers-0.5.5.1
+added
+semigroupoids-4.2 (reinstall) changes: base-4.7.0.1 added, containers-0.5.5.1
+added
+bifunctors-4.2 (reinstall) changes: base-4.7.0.1 added
+profunctors-4.3.2 (reinstall) changes: base-4.7.0.1 added
+free-4.9 (reinstall) changes: base-4.7.0.1 added, template-haskell-2.9.0.0
+added
+lens-4.6 (new version)
+lens-aeson-1.0.0.3 (new version)
+x509-1.5.0.1 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, containers-0.5.5.1 added, directory-1.2.1.0 added, process-1.2.0.0
+added
+x509-store-1.5.0 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, containers-0.5.5.1 added, directory-1.2.1.0 added, process-1.2.0.0
+added
+x509-system-1.5.0 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, containers-0.5.5.1 added, directory-1.2.1.0 added, process-1.2.0.0
+added
+x509-validation-1.5.1 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added, containers-0.5.5.1 added, directory-1.2.1.0 added,
+process-1.2.0.0 added
+tls-1.2.13 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0 added
+connection-0.2.3 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, containers-0.5.5.1 added, cprng-aes-0.6.0 -> 0.6.1
+zlib-0.5.4.2 (new version)
+streaming-commons-0.1.6 (new version)
+http-client-0.4.6 (new version)
+http-client-tls-0.2.2 (reinstall) changes: base-4.7.0.1 added,
+bytestring-0.10.4.0 added, http-client-0.4.2.2 -> 0.4.6
+wreq-0.2.0.0 (reinstall) changes: base-4.7.0.1 added, bytestring-0.10.4.0
+added, http-client-0.4.2.2 -> 0.4.6, lens-4.4 -> 4.6, lens-aeson-1.0.0.2 ->
+1.0.0.3, template-haskell-2.9.0.0 added, text-1.1.1.3 -> 1.2.0.0, time-1.4.2
+added
+Notice: installing into a sandbox located at
+/Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox
+Ready to install base64-bytestring-1.0.0.1
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/base64-bytestring/1.0.0.1/base64-bytestring-1.0.0.1.tar.gz
+Ready to install byteable-0.1.1
+to
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/base64-bytestring-1.0.0.1-10996...
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/byteable/0.1.1/byteable-0.1.1.tar.gz
+Ready to install cereal-0.4.1.0
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/byteable-0.1.1-10996...
+Updating base64-bytestring.cabal with the latest revision from the index.
+Updating byteable.cabal with the latest revision from the index.
+Extracting
+Ready to install data-default-class-0.0.1
+Configuring base64-bytestring-1.0.0.1...
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/cereal/0.4.1.0/cereal-0.4.1.0.tar.gz
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/cereal-0.4.1.0-10996...
+Configuring byteable-0.1.1...
+creating
+Extracting
+Ready to install dlist-0.7.1
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/base64-bytestring-1.0.0.1-10996/base64-bytestring-1.0.0.1/dist/dist-sandbox-80b25535/setup
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/data-default-class/0.0.1/data-default-class-0.0.1.tar.gz
+Updating cereal.cabal with the latest revision from the index.
+to
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/data-default-class-0.0.1-10996...
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/byteable-0.1.1-10996/byteable-0.1.1/dist/dist-sandbox-80b25535/setup
+Extracting
+Ready to install hourglass-0.2.6
+creating
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/dlist/0.7.1/dlist-0.7.1.tar.gz
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/base64-bytestring-1.0.0.1-10996/base64-bytestring-1.0.0.1/dist/dist-sandbox-80b25535
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/dlist-0.7.1-10996...
+Updating data-default-class.cabal with the latest revision from the index.
+creating
+Configuring cereal-0.4.1.0...
+Ready to install network-2.6.0.2
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/byteable-0.1.1-10996/byteable-0.1.1/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/base64-bytestring-1.0.0.1-10996/base64-bytestring-1.0.0.1/dist
+Updating dlist.cabal with the latest revision from the index.
+Extracting
+creating
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/hourglass/0.2.6/hourglass-0.2.6.tar.gz
+Ready to install parallel-3.2.0.4
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/cereal-0.4.1.0-10996/cereal-0.4.1.0/dist/dist-sandbox-80b25535/setup
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/hourglass-0.2.6-10996...
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/byteable-0.1.1-10996/byteable-0.1.1/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/base64-bytestring-1.0.0.1-10996/base64-bytestring-1.0.0.1/dist/dist-sandbox-80b25535
+Ready to install prelude-extras-0.4
+creating
+creating
+Updating hourglass.cabal with the latest revision from the index.
+Configuring data-default-class-0.0.1...
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/cereal-0.4.1.0-10996/cereal-0.4.1.0/dist/dist-sandbox-80b25535
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/byteable-0.1.1-10996/byteable-0.1.1/dist/dist-sandbox-80b25535
+creating
+Ready to install primitive-0.5.4.0
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/base64-bytestring-1.0.0.1-10996/base64-bytestring-1.0.0.1/dist/dist-sandbox-80b25535/setup
+creating
+creating
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/data-default-class-0.0.1-10996/data-default-class-0.0.1/dist/dist-sandbox-80b25535/setup
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/cereal-0.4.1.0-10996/cereal-0.4.1.0/dist
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/byteable-0.1.1-10996/byteable-0.1.1/dist/dist-sandbox-80b25535/setup
+Ready to install random-1.1
+creating
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/data-default-class-0.0.1-10996/data-default-class-0.0.1/dist/dist-sandbox-80b25535
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/cereal-0.4.1.0-10996/cereal-0.4.1.0/dist/dist-sandbox-80b25535
+Ready to install reflection-1.5.1
+creating
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/data-default-class-0.0.1-10996/data-default-class-0.0.1/dist
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/cereal-0.4.1.0-10996/cereal-0.4.1.0/dist/dist-sandbox-80b25535/setup
+Ready to install split-0.2.2
+creating
+Ready to install stm-2.4.3
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/data-default-class-0.0.1-10996/data-default-class-0.0.1/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/data-default-class-0.0.1-10996/data-default-class-0.0.1/dist/dist-sandbox-80b25535/setup
+Ready to install syb-0.4.2
+Ready to install tagged-0.7.3
+Ready to install text-1.2.0.0
+Ready to install transformers-0.4.2.0
+Ready to install utf8-string-0.3.8
+Ready to install zlib-0.5.4.2
+Waiting for install task to finish...
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/base64-bytestring-1.0.0.1-10996/base64-bytestring-1.0.0.1/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/base64-bytestring-1.0.0.1-10996/base64-bytestring-1.0.0.1/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/base64-bytestring-1.0.0.1-10996/base64-bytestring-1.0.0.1 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/base64-bytestring-1.0.0.1-10996/base64-bytestring-1.0.0.1/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/base64-bytestring-1.0.0.1-10996/base64-bytestring-1.0.0.1/dist/dist-sandbox-80b25535/setup/setup -threaded
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/network/2.6.0.2/network-2.6.0.2.tar.gz
+Failed to install base64-bytestring-1.0.0.1
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/data-default-class-0.0.1-10996/data-default-class-0.0.1/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/data-default-class-0.0.1-10996/data-default-class-0.0.1/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/data-default-class-0.0.1-10996/data-default-class-0.0.1 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/data-default-class-0.0.1-10996/data-default-class-0.0.1/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/data-default-class-0.0.1-10996/data-default-class-0.0.1/dist/dist-sandbox-80b25535/setup/setup -threaded
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/network-2.6.0.2-10996...
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/base64-bytestring-1.0.0.1.log ):
+Waiting for install task to finish...
+Updating network.cabal with the latest revision from the index.
+Configuring dlist-0.7.1...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/dlist-0.7.1-10996/dlist-0.7.1/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/dlist-0.7.1-10996/dlist-0.7.1/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/dlist-0.7.1-10996/dlist-0.7.1/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/dlist-0.7.1-10996/dlist-0.7.1/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/dlist-0.7.1-10996/dlist-0.7.1/dist/dist-sandbox-80b25535/setup
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/cereal-0.4.1.0-10996/cereal-0.4.1.0/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/cereal-0.4.1.0-10996/cereal-0.4.1.0/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/cereal-0.4.1.0-10996/cereal-0.4.1.0 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/cereal-0.4.1.0-10996/cereal-0.4.1.0/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/cereal-0.4.1.0-10996/cereal-0.4.1.0/dist/dist-sandbox-80b25535/setup/setup -threaded
+Extracting
+Failed to install data-default-class-0.0.1
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/parallel/3.2.0.4/parallel-3.2.0.4.tar.gz
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/parallel-3.2.0.4-10996...
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/data-default-class-0.0.1.log ):
+Updating parallel.cabal with the latest revision from the index.
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/prelude-extras/0.4/prelude-extras-0.4.tar.gz
+to
+Waiting for install task to finish...
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/prelude-extras-0.4-10996...
+Updating prelude-extras.cabal with the latest revision from the index.
+Configuring hourglass-0.2.6...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/hourglass-0.2.6-10996/hourglass-0.2.6/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/hourglass-0.2.6-10996/hourglass-0.2.6/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/hourglass-0.2.6-10996/hourglass-0.2.6/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/hourglass-0.2.6-10996/hourglass-0.2.6/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/hourglass-0.2.6-10996/hourglass-0.2.6/dist/dist-sandbox-80b25535/setup
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/byteable-0.1.1-10996/byteable-0.1.1/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/byteable-0.1.1-10996/byteable-0.1.1/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/byteable-0.1.1-10996/byteable-0.1.1 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/byteable-0.1.1-10996/byteable-0.1.1/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/byteable-0.1.1-10996/byteable-0.1.1/dist/dist-sandbox-80b25535/setup/setup -threaded
+Extracting
+Failed to install cereal-0.4.1.0
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/cereal-0.4.1.0.log ):
+Waiting for install task to finish...
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/primitive/0.5.4.0/primitive-0.5.4.0.tar.gz
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/primitive-0.5.4.0-10996...
+Updating primitive.cabal with the latest revision from the index.
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/random/1.1/random-1.1.tar.gz
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/random-1.1-10996...
+Updating random.cabal with the latest revision from the index.
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/reflection/1.5.1/reflection-1.5.1.tar.gz
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/reflection-1.5.1-10996...
+Updating reflection.cabal with the latest revision from the index.
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/split/0.2.2/split-0.2.2.tar.gz
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/split-0.2.2-10996...
+Updating split.cabal with the latest revision from the index.
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/stm/2.4.3/stm-2.4.3.tar.gz
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/stm-2.4.3-10996...
+Updating stm.cabal with the latest revision from the index.
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/syb/0.4.2/syb-0.4.2.tar.gz
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/syb-0.4.2-10996...
+Updating syb.cabal with the latest revision from the index.
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/tagged/0.7.3/tagged-0.7.3.tar.gz
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/tagged-0.7.3-10996...
+Updating tagged.cabal with the latest revision from the index.
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/text/1.2.0.0/text-1.2.0.0.tar.gz
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/text-1.2.0.0-10996...
+Updating text.cabal with the latest revision from the index.
+Extracting
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/transformers/0.4.2.0/transformers-0.4.2.0.tar.gz
+Extracting
+to
+Failed to install byteable-0.1.1
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/utf8-string/0.3.8/utf8-string-0.3.8.tar.gz
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/transformers-0.4.2.0-10996...
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/utf8-string-0.3.8-10996...
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/byteable-0.1.1.log ):
+Updating transformers.cabal with the latest revision from the index.
+Extracting
+Updating utf8-string.cabal with the latest revision from the index.
+Configuring network-2.6.0.2...
+/Users/seckcoder/.cabal/packages/hackage.haskell.org/zlib/0.5.4.2/zlib-0.5.4.2.tar.gz
+to /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/zlib-0.5.4.2-10996...
+Waiting for install task to finish...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/network-2.6.0.2-10996/network-2.6.0.2/dist/dist-sandbox-80b25535/setup
+Updating zlib.cabal with the latest revision from the index.
+Configuring parallel-3.2.0.4...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/network-2.6.0.2-10996/network-2.6.0.2/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/parallel-3.2.0.4-10996/parallel-3.2.0.4/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/network-2.6.0.2-10996/network-2.6.0.2/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/parallel-3.2.0.4-10996/parallel-3.2.0.4/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/network-2.6.0.2-10996/network-2.6.0.2/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/parallel-3.2.0.4-10996/parallel-3.2.0.4/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/network-2.6.0.2-10996/network-2.6.0.2/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/parallel-3.2.0.4-10996/parallel-3.2.0.4/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/parallel-3.2.0.4-10996/parallel-3.2.0.4/dist/dist-sandbox-80b25535/setup
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/dlist-0.7.1-10996/dlist-0.7.1/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/dlist-0.7.1-10996/dlist-0.7.1/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/dlist-0.7.1-10996/dlist-0.7.1 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/dlist-0.7.1-10996/dlist-0.7.1/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/dlist-0.7.1-10996/dlist-0.7.1/dist/dist-sandbox-80b25535/setup/setup -threaded
+Failed to install dlist-0.7.1
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/dlist-0.7.1.log ):
+Configuring prelude-extras-0.4...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/prelude-extras-0.4-10996/prelude-extras-0.4/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/prelude-extras-0.4-10996/prelude-extras-0.4/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/prelude-extras-0.4-10996/prelude-extras-0.4/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/prelude-extras-0.4-10996/prelude-extras-0.4/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/prelude-extras-0.4-10996/prelude-extras-0.4/dist/dist-sandbox-80b25535/setup
+Waiting for install task to finish...
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/hourglass-0.2.6-10996/hourglass-0.2.6/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/hourglass-0.2.6-10996/hourglass-0.2.6/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/hourglass-0.2.6-10996/hourglass-0.2.6 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/hourglass-0.2.6-10996/hourglass-0.2.6/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/hourglass-0.2.6-10996/hourglass-0.2.6/dist/dist-sandbox-80b25535/setup/setup -threaded
+Configuring primitive-0.5.4.0...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/primitive-0.5.4.0-10996/primitive-0.5.4.0/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/primitive-0.5.4.0-10996/primitive-0.5.4.0/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/primitive-0.5.4.0-10996/primitive-0.5.4.0/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/primitive-0.5.4.0-10996/primitive-0.5.4.0/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/primitive-0.5.4.0-10996/primitive-0.5.4.0/dist/dist-sandbox-80b25535/setup
+Failed to install hourglass-0.2.6
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/hourglass-0.2.6.log ):
+Waiting for install task to finish...
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/parallel-3.2.0.4-10996/parallel-3.2.0.4/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/parallel-3.2.0.4-10996/parallel-3.2.0.4/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/parallel-3.2.0.4-10996/parallel-3.2.0.4 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/parallel-3.2.0.4-10996/parallel-3.2.0.4/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/parallel-3.2.0.4-10996/parallel-3.2.0.4/dist/dist-sandbox-80b25535/setup/setup -threaded
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/network-2.6.0.2-10996/network-2.6.0.2/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/network-2.6.0.2-10996/network-2.6.0.2/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/network-2.6.0.2-10996/network-2.6.0.2 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/network-2.6.0.2-10996/network-2.6.0.2/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/network-2.6.0.2-10996/network-2.6.0.2/dist/dist-sandbox-80b25535/setup/setup -threaded
+Configuring random-1.1...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/random-1.1-10996/random-1.1/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/random-1.1-10996/random-1.1/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/random-1.1-10996/random-1.1/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/random-1.1-10996/random-1.1/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/random-1.1-10996/random-1.1/dist/dist-sandbox-80b25535/setup
+Failed to install parallel-3.2.0.4
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/parallel-3.2.0.4.log ):
+Waiting for install task to finish...
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/prelude-extras-0.4-10996/prelude-extras-0.4/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/prelude-extras-0.4-10996/prelude-extras-0.4/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/prelude-extras-0.4-10996/prelude-extras-0.4 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/prelude-extras-0.4-10996/prelude-extras-0.4/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/prelude-extras-0.4-10996/prelude-extras-0.4/dist/dist-sandbox-80b25535/setup/setup -threaded
+Failed to install network-2.6.0.2
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/network-2.6.0.2.log ):
+Waiting for install task to finish...
+Configuring reflection-1.5.1...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/reflection-1.5.1-10996/reflection-1.5.1/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/reflection-1.5.1-10996/reflection-1.5.1/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/reflection-1.5.1-10996/reflection-1.5.1/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/reflection-1.5.1-10996/reflection-1.5.1/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/reflection-1.5.1-10996/reflection-1.5.1/dist/dist-sandbox-80b25535/setup
+Configuring split-0.2.2...
+Failed to install prelude-extras-0.4
+creating
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/primitive-0.5.4.0-10996/primitive-0.5.4.0/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/primitive-0.5.4.0-10996/primitive-0.5.4.0/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/primitive-0.5.4.0-10996/primitive-0.5.4.0 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/primitive-0.5.4.0-10996/primitive-0.5.4.0/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/primitive-0.5.4.0-10996/primitive-0.5.4.0/dist/dist-sandbox-80b25535/setup/setup -threaded
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/split-0.2.2-10996/split-0.2.2/dist/dist-sandbox-80b25535/setup
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/prelude-extras-0.4.log ):
+Waiting for install task to finish...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/split-0.2.2-10996/split-0.2.2/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/split-0.2.2-10996/split-0.2.2/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/split-0.2.2-10996/split-0.2.2/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/split-0.2.2-10996/split-0.2.2/dist/dist-sandbox-80b25535/setup
+Configuring stm-2.4.3...
+Failed to install primitive-0.5.4.0
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/stm-2.4.3-10996/stm-2.4.3/dist/dist-sandbox-80b25535/setup
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/primitive-0.5.4.0.log ):
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/stm-2.4.3-10996/stm-2.4.3/dist/dist-sandbox-80b25535
+Waiting for install task to finish...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/stm-2.4.3-10996/stm-2.4.3/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/stm-2.4.3-10996/stm-2.4.3/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/stm-2.4.3-10996/stm-2.4.3/dist/dist-sandbox-80b25535/setup
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/random-1.1-10996/random-1.1/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/random-1.1-10996/random-1.1/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/random-1.1-10996/random-1.1 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/random-1.1-10996/random-1.1/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/random-1.1-10996/random-1.1/dist/dist-sandbox-80b25535/setup/setup -threaded
+Configuring syb-0.4.2...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/syb-0.4.2-10996/syb-0.4.2/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/syb-0.4.2-10996/syb-0.4.2/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/syb-0.4.2-10996/syb-0.4.2/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/syb-0.4.2-10996/syb-0.4.2/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/syb-0.4.2-10996/syb-0.4.2/dist/dist-sandbox-80b25535/setup
+Failed to install random-1.1
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/random-1.1.log ):
+Waiting for install task to finish...
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/reflection-1.5.1-10996/reflection-1.5.1/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/reflection-1.5.1-10996/reflection-1.5.1/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/reflection-1.5.1-10996/reflection-1.5.1 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/reflection-1.5.1-10996/reflection-1.5.1/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/reflection-1.5.1-10996/reflection-1.5.1/dist/dist-sandbox-80b25535/setup/setup -threaded
+Configuring tagged-0.7.3...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/tagged-0.7.3-10996/tagged-0.7.3/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/tagged-0.7.3-10996/tagged-0.7.3/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/tagged-0.7.3-10996/tagged-0.7.3/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/tagged-0.7.3-10996/tagged-0.7.3/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/tagged-0.7.3-10996/tagged-0.7.3/dist/dist-sandbox-80b25535/setup
+Failed to install reflection-1.5.1
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/reflection-1.5.1.log ):
+Waiting for install task to finish...
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/split-0.2.2-10996/split-0.2.2/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/split-0.2.2-10996/split-0.2.2/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/split-0.2.2-10996/split-0.2.2 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/split-0.2.2-10996/split-0.2.2/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/split-0.2.2-10996/split-0.2.2/dist/dist-sandbox-80b25535/setup/setup -threaded
+Configuring text-1.2.0.0...
+Failed to install split-0.2.2
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/text-1.2.0.0-10996/text-1.2.0.0/dist/dist-sandbox-80b25535/setup
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/split-0.2.2.log ):
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/text-1.2.0.0-10996/text-1.2.0.0/dist/dist-sandbox-80b25535
+Waiting for install task to finish...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/text-1.2.0.0-10996/text-1.2.0.0/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/text-1.2.0.0-10996/text-1.2.0.0/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/text-1.2.0.0-10996/text-1.2.0.0/dist/dist-sandbox-80b25535/setup
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/stm-2.4.3-10996/stm-2.4.3/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/stm-2.4.3-10996/stm-2.4.3/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/stm-2.4.3-10996/stm-2.4.3 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/stm-2.4.3-10996/stm-2.4.3/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/stm-2.4.3-10996/stm-2.4.3/dist/dist-sandbox-80b25535/setup/setup -threaded
+Configuring transformers-0.4.2.0...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/transformers-0.4.2.0-10996/transformers-0.4.2.0/dist/dist-sandbox-80b25535/setup
+Failed to install stm-2.4.3
+creating
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/stm-2.4.3.log ):
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/transformers-0.4.2.0-10996/transformers-0.4.2.0/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/transformers-0.4.2.0-10996/transformers-0.4.2.0/dist
+Waiting for install task to finish...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/transformers-0.4.2.0-10996/transformers-0.4.2.0/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/transformers-0.4.2.0-10996/transformers-0.4.2.0/dist/dist-sandbox-80b25535/setup
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/syb-0.4.2-10996/syb-0.4.2/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/syb-0.4.2-10996/syb-0.4.2/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/syb-0.4.2-10996/syb-0.4.2 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/syb-0.4.2-10996/syb-0.4.2/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/syb-0.4.2-10996/syb-0.4.2/dist/dist-sandbox-80b25535/setup/setup -threaded
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/tagged-0.7.3-10996/tagged-0.7.3/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/tagged-0.7.3-10996/tagged-0.7.3/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/tagged-0.7.3-10996/tagged-0.7.3 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/tagged-0.7.3-10996/tagged-0.7.3/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/tagged-0.7.3-10996/tagged-0.7.3/dist/dist-sandbox-80b25535/setup/setup -threaded
+Configuring utf8-string-0.3.8...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/utf8-string-0.3.8-10996/utf8-string-0.3.8/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/utf8-string-0.3.8-10996/utf8-string-0.3.8/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/utf8-string-0.3.8-10996/utf8-string-0.3.8/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/utf8-string-0.3.8-10996/utf8-string-0.3.8/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/utf8-string-0.3.8-10996/utf8-string-0.3.8/dist/dist-sandbox-80b25535/setup
+Failed to install syb-0.4.2
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/syb-0.4.2.log ):
+Waiting for install task to finish...
+Failed to install tagged-0.7.3
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/tagged-0.7.3.log ):
+Waiting for install task to finish...
+Configuring zlib-0.5.4.2...
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/zlib-0.5.4.2-10996/zlib-0.5.4.2/dist/dist-sandbox-80b25535/setup
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/zlib-0.5.4.2-10996/zlib-0.5.4.2/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/zlib-0.5.4.2-10996/zlib-0.5.4.2/dist
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/zlib-0.5.4.2-10996/zlib-0.5.4.2/dist/dist-sandbox-80b25535
+creating
+/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/zlib-0.5.4.2-10996/zlib-0.5.4.2/dist/dist-sandbox-80b25535/setup
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/text-1.2.0.0-10996/text-1.2.0.0/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/text-1.2.0.0-10996/text-1.2.0.0/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/text-1.2.0.0-10996/text-1.2.0.0 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/text-1.2.0.0-10996/text-1.2.0.0/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/text-1.2.0.0-10996/text-1.2.0.0/dist/dist-sandbox-80b25535/setup/setup -threaded
+Failed to install text-1.2.0.0
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/text-1.2.0.0.log ):
+Waiting for install task to finish...
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/transformers-0.4.2.0-10996/transformers-0.4.2.0/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/transformers-0.4.2.0-10996/transformers-0.4.2.0/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/transformers-0.4.2.0-10996/transformers-0.4.2.0 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/transformers-0.4.2.0-10996/transformers-0.4.2.0/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/transformers-0.4.2.0-10996/transformers-0.4.2.0/dist/dist-sandbox-80b25535/setup/setup -threaded
+Failed to install transformers-0.4.2.0
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/transformers-0.4.2.0.log ):
+Waiting for install task to finish...
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/utf8-string-0.3.8-10996/utf8-string-0.3.8/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/utf8-string-0.3.8-10996/utf8-string-0.3.8/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/utf8-string-0.3.8-10996/utf8-string-0.3.8 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/utf8-string-0.3.8-10996/utf8-string-0.3.8/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/utf8-string-0.3.8-10996/utf8-string-0.3.8/dist/dist-sandbox-80b25535/setup/setup -threaded
+/Applications/ghc-7.8.3.app/Contents/bin/ghc --make -odir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/zlib-0.5.4.2-10996/zlib-0.5.4.2/dist/dist-sandbox-80b25535/setup -hidir /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/zlib-0.5.4.2-10996/zlib-0.5.4.2/dist/dist-sandbox-80b25535/setup -i -i/var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/zlib-0.5.4.2-10996/zlib-0.5.4.2 -package-db /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/x86_64-osx-ghc-7.8.3-packages.conf.d -package-id Cabal-1.20.0.2-b862897337f86101d0e1a35135984eff /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/zlib-0.5.4.2-10996/zlib-0.5.4.2/dist/dist-sandbox-80b25535/setup/setup.hs -o /var/folders/nt/qbg5g6g12t14hrv3mr9_9h4m0000gn/T/zlib-0.5.4.2-10996/zlib-0.5.4.2/dist/dist-sandbox-80b25535/setup/setup -threaded
+Failed to install utf8-string-0.3.8
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/utf8-string-0.3.8.log ):
+Waiting for install task to finish...
+Failed to install zlib-0.5.4.2
+Build log ( /Users/seckcoder/code/lang-learn/haskell/.cabal-sandbox/logs/zlib-0.5.4.2.log ):
+World file is already up to date.
