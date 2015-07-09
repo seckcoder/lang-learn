@@ -50,20 +50,14 @@ int main(int argc, const char *argv[]) {
     cout << (Object<int>(1) < 3) << endl;
     cout << (Object<int,std::less<int> >(1) < 3) << endl;
 
-    auto comp_int = [&](int a, int b) { return a < b ; };
-    cout << (Object<int,bool(*)(int,int)>(1, comp_int) < 3) << endl; 
-
-
     /* using functor */
     cout << (Object<int, CompFunctor<int> >(1) < 3) << endl;
 
     /* pass aliased function type */
     cout << (Object<int, CompareInt>(1, comp_int) < 3) << endl;
 
-    /* using `using`` to declare a function type */
-    using CompareChar = bool (*) (char ,char);
     auto comp_char = [&](char a, char b) { return a < b; };
-    cout << (Object<char, CompareChar>('a', comp_char) < 'b') << endl;
+    cout << (Object<char, decltype(comp_char)>('a', comp_char) < 'b') << endl;
 
     /* c++11 doesn't support polymorphic lambdas.
      * */
