@@ -36,7 +36,7 @@ bool comp_T(T a, T b) {
 
 
 template <class T>
-struct CompFunctor {
+struct CompFunctor: binary_function<T,T,bool> {
     bool operator()(T a, T b) const {
         return a < b;
     }
