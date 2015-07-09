@@ -66,6 +66,7 @@ class Heap {
             idxmap.erase(v);
             vec.pop_back();
             top_down(idx);
+            /* bottom-up is necessary. See test1.cc */
             bottom_up(idx);
         }
         void pop() {
