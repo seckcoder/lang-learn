@@ -40,6 +40,7 @@ class PreOrderIter {
       return tmp;
     }
 };
+/* pre order traversal of the mirrored tree */
 void preOrderRev(const TreeNode *root, vector<int> &trav) {
   vector<const TreeNode *> ts;
   trav.clear();
