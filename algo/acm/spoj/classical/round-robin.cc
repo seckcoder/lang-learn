@@ -31,9 +31,9 @@ void modify(vector<int> &bit, int i, int delta) {
         bit[j] += delta;
 }
 
-vector<int> calcFinishTime(vector<int> &running_t) {
+vector<long long int> calcFinishTime(vector<int> &running_t) {
     int n = running_t.size();
-    vector<int> finish_t(n, 0);
+    vector<long long int> finish_t(n, 0);
     vector<pair<int,int>> running_pairs(n);
     for (int i = 0; i < n; i++) {
         running_pairs[i].first = running_t[i];
@@ -49,11 +49,11 @@ vector<int> calcFinishTime(vector<int> &running_t) {
         modify(bit, i, 1);
     }
 
-    int less_sum = 0;
+    long long int less_sum = 0;
     int last_less_idx = -1;
     for (int i = 0; i < n; i++) {
         if (i > 0 && running_pairs[i].first > running_pairs[i-1].first) {
-            less_sum += (i - last_less_idx - 1) * running_pairs[i-1].first;
+            less_sum += ((long long int)(i - last_less_idx - 1)) * running_pairs[i-1].first;
             last_less_idx = i-1;
         }
         int j = running_pairs[i].second;
@@ -63,7 +63,7 @@ vector<int> calcFinishTime(vector<int> &running_t) {
         int e = (n - last_less_idx - 1);
         int f = query(bit, j+1);
 
-        finish_t[j] = less_sum + (running_t[j]-1) * e + f;
+        finish_t[j] = less_sum + ((long long int)(running_t[j]-1)) * e + f;
         modify(bit, j+1, -1);
     }
     return finish_t;
@@ -77,7 +77,7 @@ int main() {
   }
   
   for (auto t:calcFinishTime(running_t)) {
-    printf("%d\n", t);
+    printf("%lld\n", t);
   }
   return 0;
 }
