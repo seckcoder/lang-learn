@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cinttypes>
 using namespace std;
 
 /*
@@ -31,9 +32,9 @@ void modify(vector<int> &bit, int i, int delta) {
         bit[j] += delta;
 }
 
-vector<long long int> calcFinishTime(vector<int> &running_t) {
+vector<int64_t> calcFinishTime(vector<int> &running_t) {
     int n = running_t.size();
-    vector<long long int> finish_t(n, 0);
+    vector<int64_t> finish_t(n, 0);
     vector<pair<int,int>> running_pairs(n);
     for (int i = 0; i < n; i++) {
         running_pairs[i].first = running_t[i];
@@ -49,11 +50,11 @@ vector<long long int> calcFinishTime(vector<int> &running_t) {
         modify(bit, i, 1);
     }
 
-    long long int less_sum = 0;
+    int64_t less_sum = 0;
     int last_less_idx = -1;
     for (int i = 0; i < n; i++) {
         if (i > 0 && running_pairs[i].first > running_pairs[i-1].first) {
-            less_sum += ((long long int)(i - last_less_idx - 1)) * running_pairs[i-1].first;
+            less_sum += int64_t(i - last_less_idx - 1) * running_pairs[i-1].first;
             last_less_idx = i-1;
         }
         int j = running_pairs[i].second;
@@ -63,7 +64,7 @@ vector<long long int> calcFinishTime(vector<int> &running_t) {
         int e = (n - last_less_idx - 1);
         int f = query(bit, j+1);
 
-        finish_t[j] = less_sum + ((long long int)(running_t[j]-1)) * e + f;
+        finish_t[j] = less_sum + int64_t(running_t[j]-1) * e + f;
         modify(bit, j+1, -1);
     }
     return finish_t;

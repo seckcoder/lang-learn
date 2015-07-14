@@ -1,7 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <cstdlib>
 using namespace std;
+
 
 #define lowbit(x) ((x) & (-(x)))
 // A[0, k). Time complexity is O(lg(n))
@@ -54,6 +56,61 @@ vector<int> calcFinishTime(vector<int> &running_t) {
     }
     return finish_t;
 }
+
+struct Job {
+  public:
+    int a, r, f; /* arrival, running, finish */
+};
+
+
+struct Node {
+  Job *p;
+  Node *prev, *next;
+};
+struct JobQueue {
+  Node *fs, ts; // front sentinel and tail sentinel
+  void push_back(Job *p) {
+  }
+  void remove(Node *pn) {
+  }
+};
+
+class RoundRobin {
+  public:
+    // vector<int> arrival_t, running_t, finish_t;
+    vector<Job> jobs;
+    JobQueue que;
+    int q;
+    Node *last_iter;
+    int last_t;
+    int n;
+    double avg_waiting() {
+      last_t = 0;
+      for (int i = 0; i < n; i++) {
+        if (last_t < jobs[i].a) {
+          int ex_time = jobs[i].a - last_t;
+          while (ex_time >= 0) {
+            runNext(ex_time, i);
+          }
+        }
+        que.push_back(&jobs[i]);
+      }
+      // after execution, all jobs have arrived
+      // calcFinishTime();
+      return 0.0f;
+    }
+    void runNext(int &rest_time, int k) {
+      last_iter = last_iter->next;
+      int runtime = std::min(q, last_iter->p->r);
+      rest_time -= runtime;
+      last_iter->p->r -= runtime;
+      last_t += runtime;
+      if (last_iter->p->r == 0) {
+        last_iter->p->f = last_t;
+        que.remove(last_iter);
+      }
+    }
+};
 
 int main() {
     vector<int> running_t = {8,1,3,3,8};
