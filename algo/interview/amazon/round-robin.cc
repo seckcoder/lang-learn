@@ -60,36 +60,36 @@ vector<int> calcFinishTime(vector<int> &running_t) {
 struct Job {
   public:
     int a, r, f; /* arrival, running, finish */
+    Job() {}
+    Job(int a_, int r_)
+        :a(a_), r(r_), f(0) {}
 };
 
-
-struct Node {
-  Job *p;
-  Node *prev, *next;
-};
-struct JobQueue {
-  Node *fs, ts; // front sentinel and tail sentinel
-  void push_back(Job *p) {
-  }
-  void remove(Node *pn) {
-  }
-};
 
 class RoundRobin {
   public:
     // vector<int> arrival_t, running_t, finish_t;
     vector<Job> jobs;
-    JobQueue que;
-    int q;
-    Node *last_iter;
+    CList<Job*> que;
+    const int q;
+    typedef CList<Job*>::iterator JobIter;
+    JobIter last_iter;
     int last_t;
     int n;
+    RoundRobin(
+            const vector<int> &arrival_t,
+            const vector<int> &running_t, int unit):n(arrival_t.size()), q(unit) {
+        for (int i = 0; i < n; i++) {
+            jobs.push_back(Job(arrival_t[i], running_t[i]));
+        }
+    }
     double avg_waiting() {
       last_t = 0;
+      last_iter = que.begin();
       for (int i = 0; i < n; i++) {
         if (last_t < jobs[i].a) {
           int ex_time = jobs[i].a - last_t;
-          while (ex_time >= 0) {
+          while (!que.empty() && ex_time >= 0) {
             runNext(ex_time, i);
           }
         }
@@ -100,23 +100,32 @@ class RoundRobin {
       return 0.0f;
     }
     void runNext(int &rest_time, int k) {
-      last_iter = last_iter->next;
+      do {
+          last_iter++;
+      } while (last_iter == que.begin());
       int runtime = std::min(q, last_iter->p->r);
       rest_time -= runtime;
       last_iter->p->r -= runtime;
       last_t += runtime;
       if (last_iter->p->r == 0) {
         last_iter->p->f = last_t;
-        que.remove(last_iter);
+        que.erase(last_iter);
       }
     }
 };
 
+void testCircularList() {
+    CList<int> lst;
+    for (int i = 1; i <= 4; i++) {
+        lst.push_back()
+    }
+}
 int main() {
-    vector<int> running_t = {8,1,3,3,8};
-    vector<int> finish_t = calcFinishTime(running_t);
-    // 22,2,11,12,23
-    for (auto x: finish_t) cout << x << " ";
-    cout << endl;
+    testCircularList();
+    return 0
+    vector<int> arrival_t {0,1,3,9};
+    vector<int> running_t {2,1,7,5};
+    RoundRobin rb(arrival_t, running_t, 2);
+    rb.avg_waiting();
     return 0;
 }
