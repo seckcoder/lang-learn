@@ -2,68 +2,32 @@
 #include <vector>
 #include <algorithm>
 #include <cstdlib>
+#include <cmath>
+#include <cassert>
+#include "circular-list.hpp"
 using namespace std;
 
 
-#define lowbit(x) ((x) & (-(x)))
-// A[0, k). Time complexity is O(lg(n))
-int query(const vector<int> &bit, int k) {
-    int ans = 0;
-    for (int i = k; i > 0; i -= lowbit(i))
-        ans += bit[i];
-    return ans;
-}
 
-// Time complexity is O(lg(n))
-void modify(vector<int> &bit, int i, int delta) {
-    for (int j = i; j < bit.size(); j += lowbit(j))
-        bit[j] += delta;
-}
-
-vector<int> calcFinishTime(vector<int> &running_t) {
-    int n = running_t.size();
-    vector<int> finish_t(n, 0);
-    vector<pair<int,int>> running_pairs(n);
-    for (int i = 0; i < n; i++) {
-        running_pairs[i].first = running_t[i];
-        running_pairs[i].second = i;
-    }
-    std::sort(running_pairs.begin(), running_pairs.end(), [&](
-          const pair<int,int> &p1, const pair<int,int> &p2) {
-        return p1.first < p2.first || (p1.first == p2.first && p1.second > p2.second);
-        });
-
-    vector<int> bit(n+1, 0);
-    for (int i = 1; i <= n; i++) {
-        modify(bit, i, 1);
-    }
-
-    int less_sum = 0;
-    int last_less_idx = -1;
-    for (int i = 0; i < n; i++) {
-        if (i > 0 && running_pairs[i].first > running_pairs[i-1].first) {
-            less_sum += (i - last_less_idx - 1) * running_pairs[i-1].first;
-            last_less_idx = i-1;
-        }
-        int j = running_pairs[i].second;
-        /* e: count(j: running_t[j] >= running_t[i])
-         * f: count(j: running_t[j] >= running_t[i] and j <= i)
-         * */
-        int e = (n - last_less_idx - 1);
-        int f = query(bit, j+1);
-        finish_t[j] = less_sum + (running_t[j]-1) * e + f;
-        modify(bit, j+1, -1);
-    }
-    return finish_t;
-}
+#define PERIOD(t,q) (int(std::ceil(double(t)/double(q))))
+#define precision 1000000
+#define ROUND(d) ((std::floor(d*precision))/precision)
 
 struct Job {
   public:
-    int a, r, f; /* arrival, running, finish */
+    int a, r, f; /* arrival, running, finish
+                  * Note here the finish time is actually the last time
+                  * the job starts to execute.
+                  */
     Job() {}
     Job(int a_, int r_)
         :a(a_), r(r_), f(0) {}
 };
+
+ostream& operator<<(ostream &os, const Job &job) {
+  os << job.a << " " << job.r << " " << job.f;
+  return os;
+}
 
 
 class RoundRobin {
@@ -95,21 +59,64 @@ class RoundRobin {
         }
         que.push_back(&jobs[i]);
       }
+      for (auto pj:que) {
+        cout << (*pj) << endl;
+      }
       // after execution, all jobs have arrived
-      // calcFinishTime();
-      return 0.0f;
+      calcFinishTime();
+      double sum_t = 0.0;
+      for (auto job: jobs) {
+        cout << job.f << " " << job.a << endl;
+        sum_t += job.f - job.a;
+      }
+      return ROUND(sum_t / n);
     }
     void runNext(int &rest_time, int k) {
-      do {
-          last_iter++;
-      } while (last_iter == que.begin());
-      int runtime = std::min(q, last_iter->p->r);
+      for (;;) {
+        if (last_iter == que.end()) ++last_iter;
+        else if ((*last_iter)->r == 0) {
+          (*last_iter)->f = last_t;
+          last_iter = que.erase(last_iter);
+        } else {
+          break;
+        }
+      }
+      int runtime = std::min(q, (*last_iter)->r);
       rest_time -= runtime;
-      last_iter->p->r -= runtime;
+      (*last_iter)->r -= runtime;
       last_t += runtime;
-      if (last_iter->p->r == 0) {
-        last_iter->p->f = last_t;
-        que.erase(last_iter);
+      if ((*last_iter)->r == 0) {
+        (*last_iter)->f = last_t-runtime;
+        last_iter = que.erase(last_iter);
+      }
+    }
+    void calcFinishTime() {
+      for (auto it1 = que.begin(); it1 != que.end(); ++it1) {
+        int rt1 = (*it1)->r;
+        int rt1_periods = PERIOD(rt1, q);
+        int ft1 = 0;
+        /* for it2 < it1 */
+        for (auto it2 = que.begin(); it2 != it1; ++it2) {
+          int rt2 = (*it2)->r;
+          int rt2_periods = PERIOD(rt2, q);
+          if (rt2_periods <= rt1_periods) {
+            ft1 += rt2;
+          } else {
+            ft1 += rt1_periods * q;
+          }
+        }
+        /* for it2 > it1 */
+        for (auto it2 = (it1+1); it2 != que.end(); ++it2) {
+          int rt2 = (*it2)->r;
+          int rt2_periods = PERIOD(rt2, q);
+          if (rt2_periods < rt1_periods) {
+            ft1 += rt2;
+          } else {
+            ft1 += (rt1_periods-1)*q;
+          }
+        }
+        ft1 += (rt1_periods-1)*q;
+        (*it1)->f = ft1;
       }
     }
 };
@@ -117,15 +124,21 @@ class RoundRobin {
 void testCircularList() {
     CList<int> lst;
     for (int i = 1; i <= 4; i++) {
-        lst.push_back()
+        lst.push_back(i);
+    }
+    for (auto v: lst) {
+      cout << v << endl;
     }
 }
+
+
+double run_test(const vector<int> &at, const vector<int> &rt, int q) {
+  RoundRobin rb(at, rt, q);
+  return rb.avg_waiting();
+}
+
 int main() {
-    testCircularList();
-    return 0
-    vector<int> arrival_t {0,1,3,9};
-    vector<int> running_t {2,1,7,5};
-    RoundRobin rb(arrival_t, running_t, 2);
-    rb.avg_waiting();
-    return 0;
+  assert(run_test({0,1,3,9}, {2,1,7,5}, 2) == 1.000000);
+  // assert(run_test({0,2,4,5}, {7,4,1,4}, 3) == 6.250000);
+  return 0;
 }
