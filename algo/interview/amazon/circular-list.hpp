@@ -39,6 +39,15 @@ class Iterator:public std::iterator<std::bidirectional_iterator_tag,
         ++(*this);
         return tmp;
       }
+      Iterator<T>& operator--() {
+        pn_ = pn_->prev;
+        return (*this);
+      }
+      Iterator<T>& operator--(int) {
+        Iterator<T> tmp(*this);
+        --(*this);
+        return tmp;
+      }
       Iterator<T> operator+(int k) {
         Iterator<T> tmp(*this);
         for (int i = 1; i <= k; i++) ++tmp;

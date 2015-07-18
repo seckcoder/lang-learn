@@ -47,49 +47,52 @@ class RoundRobin {
             jobs.push_back(Job(arrival_t[i], running_t[i]));
         }
     }
-    double avg_waiting() {
+    double avg_waiting(const vector<int> &running_t) {
       last_t = 0;
       last_iter = que.begin();
       for (int i = 0; i < n; i++) {
-        if (last_t < jobs[i].a) {
-          int ex_time = jobs[i].a - last_t;
-          while (!que.empty() && ex_time >= 0) {
-            runNext(ex_time, i);
-          }
+        while (!jobs.empty() && last_t < jobs[i].a) {
+          runNext();
         }
+
         que.push_back(&jobs[i]);
+        if (last_iter == que.end()) {
+          --last_iter;
+        }
       }
-      for (auto pj:que) {
-        cout << (*pj) << endl;
+
+      while (last_iter != que.end()) {
+        // cout << "ha " << *(*last_iter) << endl;
+        runNext();
       }
-      // after execution, all jobs have arrived
+      /* cout << last_t << endl; */
+      /* for (auto pj:que) { */
+      /*   cout << *pj << endl; */
+      /* } */
       calcFinishTime();
       double sum_t = 0.0;
-      for (auto job: jobs) {
-        cout << job.f << " " << job.a << endl;
-        sum_t += job.f - job.a;
+      for (int i = 0; i < jobs.size(); i++) {
+        const Job &job = jobs[i];
+        // cout << job.a << " " << job.f << endl;
+        sum_t += job.f - job.a - running_t[i];
       }
+      // cout << ROUND(sum_t / n) << endl;
       return ROUND(sum_t / n);
     }
-    void runNext(int &rest_time, int k) {
-      for (;;) {
-        if (last_iter == que.end()) ++last_iter;
-        else if ((*last_iter)->r == 0) {
-          (*last_iter)->f = last_t;
-          last_iter = que.erase(last_iter);
-        } else {
-          break;
-        }
-      }
+    void runNext() {
+      if (last_iter == que.end()) ++last_iter;
       int runtime = std::min(q, (*last_iter)->r);
-      rest_time -= runtime;
-      (*last_iter)->r -= runtime;
       last_t += runtime;
+      (*last_iter)->r -= runtime;
+      // cout << "running:  " << *(*last_iter) << endl;
       if ((*last_iter)->r == 0) {
-        (*last_iter)->f = last_t-runtime;
+        (*last_iter)->f = last_t;
         last_iter = que.erase(last_iter);
+      } else {
+        ++last_iter;
       }
     }
+
     void calcFinishTime() {
       for (auto it1 = que.begin(); it1 != que.end(); ++it1) {
         int rt1 = (*it1)->r;
@@ -115,8 +118,8 @@ class RoundRobin {
             ft1 += (rt1_periods-1)*q;
           }
         }
-        ft1 += (rt1_periods-1)*q;
-        (*it1)->f = ft1;
+        ft1 += rt1;
+        (*it1)->f = ft1 + last_t;
       }
     }
 };
@@ -134,11 +137,11 @@ void testCircularList() {
 
 double run_test(const vector<int> &at, const vector<int> &rt, int q) {
   RoundRobin rb(at, rt, q);
-  return rb.avg_waiting();
+  return rb.avg_waiting(rt);
 }
 
 int main() {
   assert(run_test({0,1,3,9}, {2,1,7,5}, 2) == 1.000000);
-  // assert(run_test({0,2,4,5}, {7,4,1,4}, 3) == 6.250000);
+  assert(run_test({0,2,4,5}, {7,4,1,4}, 3) == 6.250000);
   return 0;
 }
