@@ -54,7 +54,6 @@ class RoundRobin {
         while (!jobs.empty() && last_t < jobs[i].a) {
           runNext();
         }
-
         que.push_back(&jobs[i]);
         if (last_iter == que.end()) {
           --last_iter;
@@ -65,10 +64,6 @@ class RoundRobin {
         // cout << "ha " << *(*last_iter) << endl;
         runNext();
       }
-      /* cout << last_t << endl; */
-      /* for (auto pj:que) { */
-      /*   cout << *pj << endl; */
-      /* } */
       calcFinishTime();
       double sum_t = 0.0;
       for (int i = 0; i < jobs.size(); i++) {
