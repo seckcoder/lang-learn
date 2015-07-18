@@ -29,16 +29,14 @@ ostream& operator<<(ostream &os, const Job &job) {
   return os;
 }
 
-
 class RoundRobin {
   public:
-    // vector<int> arrival_t, running_t, finish_t;
     vector<Job> jobs;
-    CList<Job*> que;
-    const int q;
+    CList<Job*> que; //`que` is a circular list which can be used to simulate round-robin
+    const int q; // unit execution time
     typedef CList<Job*>::iterator JobIter;
-    JobIter last_iter;
-    int last_t;
+    JobIter last_iter; /* the next job to execute */
+    int last_t; /* the last time we execute a job */
     int n;
     RoundRobin(
             const vector<int> &arrival_t,
@@ -50,40 +48,69 @@ class RoundRobin {
     double avg_waiting(const vector<int> &running_t) {
       last_t = 0;
       last_iter = que.begin();
+      /* First we run a simulation of the jobs.
+       * Time complexity of the following simulation is O(100*n)
+       * */
       for (int i = 0; i < n; i++) {
+        /* If we have a list of jobs and the last time we execute a job
+         * is smaller than the current job's arrival time, we run all the
+         * jobs in the circular-list
+         */
         while (!jobs.empty() && last_t < jobs[i].a) {
           runNext();
         }
         que.push_back(&jobs[i]);
+        /* If last_iter points to the fake node, we know that the next
+         * job to execute is actually the newly added job. So we step back the
+         * last_iter to point to the newly added job.
+         */
         if (last_iter == que.end()) {
           --last_iter;
         }
       }
 
+      /* It's possible that after the above simulation, last_iter points
+       * to the middle of the list. So we execute the jobs after last_iter once
+       * so that the next job to execute is the first job of the list
+       */
       while (last_iter != que.end()) {
-        // cout << "ha " << *(*last_iter) << endl;
         runNext();
       }
+      /* After the above simulation, we can treat the rest jobs in the
+       * circular list like this:
+       *    All of the jobs starts at time last_t. With this assumption,
+       *    we could easily calculate the finish time in O(n^2) time.
+       *
+       *    P.S., if this is a real round-robin queue, i.e., each run will
+       *    take time q(no less, no more), then we could calculate the finish
+       *    time in O(n*lg(n)). But this question, it requests that when
+       *    the rest running_time of a job < q, then the execution time should
+       *    be < q.
+       */
       calcFinishTime();
       double sum_t = 0.0;
       for (int i = 0; i < jobs.size(); i++) {
         const Job &job = jobs[i];
-        // cout << job.a << " " << job.f << endl;
+        /* waiting_time = finish_time - running_time - arrival_time */
         sum_t += job.f - job.a - running_t[i];
       }
-      // cout << ROUND(sum_t / n) << endl;
       return ROUND(sum_t / n);
     }
     void runNext() {
+      /* If last_iter points to the end of the list, we need to move
+       * to the next since que.end() is a fake node
+       */
       if (last_iter == que.end()) ++last_iter;
       int runtime = std::min(q, (*last_iter)->r);
       last_t += runtime;
       (*last_iter)->r -= runtime;
-      // cout << "running:  " << *(*last_iter) << endl;
       if ((*last_iter)->r == 0) {
+        /* remove a job when we don't need to execute it */
         (*last_iter)->f = last_t;
+        /* last_iter will point to the next one */
         last_iter = que.erase(last_iter);
       } else {
+        /* last_iter will point to the next one */
         ++last_iter;
       }
     }
@@ -91,9 +118,17 @@ class RoundRobin {
     void calcFinishTime() {
       for (auto it1 = que.begin(); it1 != que.end(); ++it1) {
         int rt1 = (*it1)->r;
+        /* period is the number of times that the job will get executed */
         int rt1_periods = PERIOD(rt1, q);
         int ft1 = 0;
-        /* for it2 < it1 */
+        /* suppose the index of current job is i.
+         * Then:
+         * finish_t(i) = sum{running_t[j] if PERIOD(j) < PERIOD(i)} +
+         *               sum{running_t[j] if PERIOD(j) == PERIOD(i) and j <= i} +
+         *               sum{(PERIOD(j)-1) * q if PERIOD(j) == PERIOD(i) and j > i}
+         */
+
+        /* First consider jobs in front of i */
         for (auto it2 = que.begin(); it2 != it1; ++it2) {
           int rt2 = (*it2)->r;
           int rt2_periods = PERIOD(rt2, q);
@@ -103,7 +138,7 @@ class RoundRobin {
             ft1 += rt1_periods * q;
           }
         }
-        /* for it2 > it1 */
+        /* Next consider jobs after i */
         for (auto it2 = (it1+1); it2 != que.end(); ++it2) {
           int rt2 = (*it2)->r;
           int rt2_periods = PERIOD(rt2, q);
@@ -113,22 +148,11 @@ class RoundRobin {
             ft1 += (rt1_periods-1)*q;
           }
         }
-        ft1 += rt1;
-        (*it1)->f = ft1 + last_t;
+        ft1 += rt1; /* finaly the execution time of current job */
+        (*it1)->f = ft1 + last_t; /* last_t */
       }
     }
 };
-
-void testCircularList() {
-    CList<int> lst;
-    for (int i = 1; i <= 4; i++) {
-        lst.push_back(i);
-    }
-    for (auto v: lst) {
-      cout << v << endl;
-    }
-}
-
 
 double run_test(const vector<int> &at, const vector<int> &rt, int q) {
   RoundRobin rb(at, rt, q);
