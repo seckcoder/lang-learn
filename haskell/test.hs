@@ -3,6 +3,7 @@
 
 
 
-test a = go a
-  where go a | a > 1 = True
-             | otherwise = False
+
+main : IO ()
+main = foldr (+) 0 [1,2,3]
+
