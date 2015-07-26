@@ -141,7 +141,6 @@ type Eval4 a = ReaderT Env (ExceptT String (StateT Integer Identity)) a
 runEval4 :: Env -> Integer -> Eval4 Value -> Either String Value
 runEval4 env st ev = runIdentity $ runStateT st $ runExceptT (runReaderT env ev)
 
-eval4a :: Exp -> Eval4 Value
-eval4a (Lit i) = get \s ->
 
+main :: IO a
 main = test runEval3With

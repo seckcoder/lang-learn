@@ -149,4 +149,4 @@ demo_applicative = do
   print ((+) <$> [1] <*> [2])
 
 
-main = demo_Monoidal
+main = demo_monoid1
