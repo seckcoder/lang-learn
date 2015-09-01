@@ -12,9 +12,8 @@ import Prelude
 catchIO :: IO a -> (Exception.IOException -> IO a) -> IO a
 catchIO = Exception.catch
 
-
 version :: Version
-version = Version {versionBranch = [0,1,0,0], versionTags = []}
+version = Version [0,1,0,0] []
 bindir, libdir, datadir, libexecdir, sysconfdir :: FilePath
 
 bindir     = "/Users/seckcoder/code/lang-learn/haskell/samples/.cabal-sandbox/bin"

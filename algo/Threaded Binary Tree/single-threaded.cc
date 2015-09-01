@@ -16,7 +16,7 @@ struct TreeNode {
 
 
 
-/* */
+/* right branch points to the successor of threaded node */
 vector<int> inOrder(TreeNode *p) {
   vector<int> ans;
   TreeNode sentinel(0); /* a fake node used as the parent of the root */

@@ -16,7 +16,7 @@ build-type:          Simple
 cabal-version:       >=1.10
 
 executable samples
-  main-is:             Logic.hs
+  main-is:             LinkedList.hs
   -- other-modules:       
   -- other-extensions:    
   build-depends:       base >=4.7 && <4.8, vector
