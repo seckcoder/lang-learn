@@ -13,6 +13,8 @@
 #include <cstddef>
 #include <algorithm>
 #include <initializer_list>
+#include <deque>
+#include <sys/time.h>
 
 using namespace std;
 struct Interval {
@@ -144,3 +146,23 @@ struct Point {
   Point(): x(0), y(0) {}
   Point(int a, int b): x(a), y(b) {}
 };
+
+
+struct UndirectedGraphNode {
+  int label;
+  vector<UndirectedGraphNode *> neighbors;
+  UndirectedGraphNode(int x) : label(x) {};
+};
+
+static double wtime(void) {
+    double          now_time;
+    struct timeval  etstart;
+    struct timezone tzp;
+
+    if (gettimeofday(&etstart, &tzp) == -1)
+        perror("Error: calling gettimeofday() not successful.\n");
+
+    now_time = ((double)etstart.tv_sec) +              /* in seconds */
+               ((double)etstart.tv_usec) / 1000000.0;  /* in microseconds */
+    return now_time;
+}
