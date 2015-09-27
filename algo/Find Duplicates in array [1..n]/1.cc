@@ -27,7 +27,7 @@ int findDuplicate(const vector<int> &vec, int p, int r) {
     else bucket_right++;
   }
 
-  if (bucket_left >= m-p+1) return findDuplicate(vec, p,m);
+  if (bucket_left > m-p+1) return findDuplicate(vec, p,m);
   else return findDuplicate(vec, m+1, r);
 }
 
