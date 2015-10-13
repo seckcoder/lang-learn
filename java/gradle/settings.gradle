@@ -1,0 +1,6 @@
+rootProject.name = 'Demo1'
+
+include 'Demo2'
+
+include 'HelloLucene'
+
